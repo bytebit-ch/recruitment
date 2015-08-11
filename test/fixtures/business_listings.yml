@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  skills_wanted: MyText
+  title: MyText
+  part_time: false
+  full_time: false
+  contract: false
+  job_description: MyText
+  contact_email: MyText
+
+two:
+  skills_wanted: MyText
+  title: MyText
+  part_time: false
+  full_time: false
+  contract: false
+  job_description: MyText
+  contact_email: MyText

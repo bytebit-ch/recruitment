@@ -1,0 +1,45 @@
+<%= form_for(@business_listing) do |f| %>
+  <% if @business_listing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business_listing.errors.count, "error") %> prohibited this business_listing from being saved:</h2>
+
+      <ul>
+      <% @business_listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :skills_wanted %><br>
+    <%= f.text_area :skills_wanted %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_area :title %>
+  </div>
+  <div class="field">
+    <%= f.label :part_time %><br>
+    <%= f.check_box :part_time %>
+  </div>
+  <div class="field">
+    <%= f.label :full_time %><br>
+    <%= f.check_box :full_time %>
+  </div>
+  <div class="field">
+    <%= f.label :contract %><br>
+    <%= f.check_box :contract %>
+  </div>
+  <div class="field">
+    <%= f.label :job_description %><br>
+    <%= f.text_area :job_description %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email %><br>
+    <%= f.text_area :contact_email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

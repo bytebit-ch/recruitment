@@ -1,0 +1,69 @@
+<%= form_for(@student_profile) do |f| %>
+  <% if @student_profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student_profile.errors.count, "error") %> prohibited this student_profile from being saved:</h2>
+
+      <ul>
+      <% @student_profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :student_id %><br>
+    <%= f.number_field :student_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_area :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_area :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :github_url %><br>
+    <%= f.text_area :github_url %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_img %><br>
+    <%= f.text_area :profile_img %>
+  </div>
+  <div class="field">
+    <%= f.label :short_description %><br>
+    <%= f.text_area :short_description %>
+  </div>
+  <div class="field">
+    <%= f.label :long_decription %><br>
+    <%= f.text_area :long_decription %>
+  </div>
+  <div class="field">
+    <%= f.label :skills %><br>
+    <%= f.text_area :skills %>
+  </div>
+  <div class="field">
+    <%= f.label :part_time %><br>
+    <%= f.check_box :part_time %>
+  </div>
+  <div class="field">
+    <%= f.label :full_time %><br>
+    <%= f.check_box :full_time %>
+  </div>
+  <div class="field">
+    <%= f.label :contract %><br>
+    <%= f.check_box :contract %>
+  </div>
+  <div class="field">
+    <%= f.label :public %><br>
+    <%= f.check_box :public %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

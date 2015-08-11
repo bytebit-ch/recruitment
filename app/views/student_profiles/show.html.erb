@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @student_profile.student_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @student_profile.user_id %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @student_profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @student_profile.last_name %>
+</p>
+
+<p>
+  <strong>Github url:</strong>
+  <%= @student_profile.github_url %>
+</p>
+
+<p>
+  <strong>Profile img:</strong>
+  <%= @student_profile.profile_img %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @student_profile.short_description %>
+</p>
+
+<p>
+  <strong>Long decription:</strong>
+  <%= @student_profile.long_decription %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @student_profile.skills %>
+</p>
+
+<p>
+  <strong>Part time:</strong>
+  <%= @student_profile.part_time %>
+</p>
+
+<p>
+  <strong>Full time:</strong>
+  <%= @student_profile.full_time %>
+</p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @student_profile.contract %>
+</p>
+
+<p>
+  <strong>Public:</strong>
+  <%= @student_profile.public %>
+</p>
+
+<%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
+<%= link_to 'Back', student_profiles_path %>
