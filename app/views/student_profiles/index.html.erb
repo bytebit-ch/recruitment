@@ -53,5 +53,7 @@
 <% else %>
   <%= link_to('Login', new_user_session_path, class: "login") %>
 <% end %>
+
+<%= link_to 'New Invitation', new_invitation_path(:user) %>
  
 <%= link_to 'New Student profile', new_student_profile_path %>
