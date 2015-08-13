@@ -1,2 +1,4 @@
 class BusinessProfile < ActiveRecord::Base
+	belongs_to :user
+	has_many :business_listings
 end
