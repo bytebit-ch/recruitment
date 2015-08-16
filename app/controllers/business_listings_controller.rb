@@ -1,4 +1,5 @@
 class BusinessListingsController < ApplicationController
+  before_action :set_business_profile
   before_action :set_business_listing, only: [:show, :edit, :update, :destroy]
 
   # GET /business_listings

@@ -38,8 +38,11 @@
         <td><%= student_profile.full_time %></td>
         <td><%= student_profile.contract %></td>
         <td><%= student_profile.public %></td>
+        <% if can? :edit, student_profile %>
+            <td><%= link_to 'Edit', edit_student_profile_path(student_profile) %></td>
+        <% end %>
         <td><%= link_to 'Show', student_profile %></td>
-        <td><%= link_to 'Edit', edit_student_profile_path(student_profile) %></td>
+        
         <td><%= link_to 'Destroy', student_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -54,6 +57,8 @@
   <%= link_to('Login', new_user_session_path, class: "login") %>
 <% end %>
 
-<%= link_to 'New Invitation', new_invitation_path(:user) %>
- 
+<% if can? :manage, User %>
+   <%= link_to 'New Invitation', new_invitation_path(:user) %>
+<% end %>
+
 <%= link_to 'New Student profile', new_student_profile_path %>
