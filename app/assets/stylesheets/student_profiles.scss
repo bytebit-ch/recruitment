@@ -1,3 +1,127 @@
-// Place all the styles related to the student_profiles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 8%;
+  padding-left: 10%;
+  padding-right: 10%;
+  
+  
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+  border: 2px solid grey;
+  height: 400px;
+
+  
+  
+}
+
+.bottom-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  font-weight: bold;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.bottom-wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+  border: 1px solid grey;
+  
+}
+
+.footer, .footer-1, .footer-2, .footer-3  {
+  background: #f5fcfa;
+  font-size: 1.5em;
+  
+}
+footer {
+	margin-left: -46px;
+	background-color: lightblue;
+    text-align: center;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #000;
+}
+footer {
+	position: fixed;
+}
+
+.f-font{
+  font-size: 10px;
+}
+
+.main {
+  text-align: center;
+  background: #f5fcfa;
+  width: 400px;
+  height: 250px;
+}
+
+.aside-1 {
+  background: #f5fcfa;
+  width: 75px;
+  height: 250px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.fa {
+  font-size: 2em;
+}
+
+.fa-folder-open, .fa-envelope-o, .fa-github-alt, .fa-question{
+  color: #3c9271;
+  
+}
+
+.green {
+  color: #3c9271;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .footer  { order: 4; }
+  .footer-1 {order: 5; }
+  .footer-2 {order: 6; }
+  .footer-3 {order: 7; }
+}
+
+body {
+  padding: 2em; 
+  color: darkgrey;
+  background-image: url('http://i.imgur.com/7Tqp7YS.png');
+  background-repeat: no-repeat;
+  font-family: 'Dosis', sans-serif;
+   background-size: 100%;
+  font-size: 1.2em;
+}
+
+
