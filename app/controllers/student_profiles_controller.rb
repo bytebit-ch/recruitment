@@ -22,6 +22,8 @@ class StudentProfilesController < ApplicationController
   def edit
   end
 
+
+
   # POST /student_profiles
   # POST /student_profiles.json
   def create

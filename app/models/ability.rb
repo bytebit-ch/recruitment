@@ -9,11 +9,12 @@ class Ability
         can :manage, :all  
      
        elsif user.type_of_user == 'business'
-           can :read, :all
+           can [:read, :index], StudentProfile
+           cannot :edit, :all
 
        elsif user.type_of_user == 'student'
-           can :read, :all
-           cannot :edit, :all
+           can [:read, :index], StudentProfile
+      
        else
             can :read, :all
         end
