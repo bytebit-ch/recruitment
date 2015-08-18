@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  root 'landing#landing'
+  root 'landing#index'
 
   resources :business_listings
   resources :business_profiles
   resources :student_profiles
   devise_for :users
+
+  get '/profiles' => 'landing#short_profile'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
