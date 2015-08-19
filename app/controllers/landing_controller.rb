@@ -1,7 +1,5 @@
 class LandingController < ApplicationController
-
-	def landing
-		
-	end
-
+  skip_authorization_check 
+  def index
+  end
 end

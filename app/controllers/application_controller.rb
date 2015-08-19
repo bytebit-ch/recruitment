@@ -5,6 +5,23 @@ class ApplicationController < ActionController::Base
   check_authorization :unless => :devise_controller?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+def after_sign_in_path_for(resource)
+  if current_user and current_user.type_of_user == "student"
+    business_profiles_path
+  elsif current_user and current_user.type_of_user == 'business'
+    student_profiles_path
+  elsif current_user and current_user.type_of_user == "admin"
+    student_profiles_path 
+  else
+    landing_path
+  end
+
+end
+
+def after_sign_out_path_for(resource_or_scope)
+  landing_path
+end
+
   protected
 
   def configure_permitted_parameters

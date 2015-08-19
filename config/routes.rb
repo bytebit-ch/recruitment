@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root 'landing#landing'
+  
+  get 'landing/index' => 'landing#index', as: :landing
+
+  get 'student_profile' => 'student_profiles#index', as: :student_profiles
+  get 'business_profile' => 'business_profiles#index', as: :business_profiles
+
+  root 'landing#index'
 
   resources :business_listings
   resources :business_profiles
