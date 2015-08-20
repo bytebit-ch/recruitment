@@ -1,7 +1,11 @@
 class LandingController < ApplicationController
 
-	def landing
+	def index
 		
 	end
 
+	def short_profile
+		
+	end
+		
 end
