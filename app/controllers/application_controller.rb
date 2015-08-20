@@ -13,7 +13,7 @@ def after_sign_in_path_for(resource)
   elsif current_user and current_user.type_of_user == 'business'
     student_profiles_path
   elsif current_user and current_user.type_of_user == "admin"
-    student_profiles_path 
+    admin_path 
   else
     landing_path
   end

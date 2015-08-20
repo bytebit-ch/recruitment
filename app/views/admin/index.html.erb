@@ -1,0 +1,16 @@
+<h1>Admin Panel</h1>
+
+<p>hi</p>
+
+<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
+<% else %>
+  <%= link_to('Login', new_user_session_path, class: "login") %>
+<% end %>
+
+<% if can? :manage, User %>
+   <%= link_to 'New Invitation', new_invitation_path(:user) %>
+<% end %>
+
+<%= link_to('[Student Profiles]', student_profiles_path) %>
+<%= link_to('[Business Profiles]', business_profiles_path) %>
