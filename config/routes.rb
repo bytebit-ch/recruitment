@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'student_profile' => 'student_profiles#index', as: :student_profiles
   get 'business_profile' => 'business_profiles#index', as: :business_profiles
+  get 'users/profile'
 
   root 'landing#index'
 
@@ -15,6 +16,8 @@ Rails.application.routes.draw do
     :invitations => 'users/invitations',
     :registrations => "users/registrations"
   }
+
+  resources :users, only: [:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

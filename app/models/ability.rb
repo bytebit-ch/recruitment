@@ -7,21 +7,23 @@ class Ability
       user ||= User.new # guest user (not logged in)
        if user.type_of_user == 'admin'
         can :manage, :all  
+        can :read, User
      
        elsif user.type_of_user == 'business'
            can [:read, :index], StudentProfile
-
-           
-          
-           cannot :edit, :all
+           can :read, User, id: user.id
+           cannot [:edit], :all
+           can :read, :all
 
        elsif user.type_of_user == 'student'
+           can :read, User, id: user.id
            can [:read, :index], BusinessProfile
            
+           can :read, :all
       
        else
             can :read, Landing
-            
+            can :read, User
         end
 
 

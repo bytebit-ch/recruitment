@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   check_authorization :unless => :devise_controller?
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+
+#this is taking care of routing after sign
 def after_sign_in_path_for(resource)
   if current_user and current_user.type_of_user == "student"
     business_profiles_path

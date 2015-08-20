@@ -52,6 +52,8 @@
 
 
 <br>
+
+
  
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
@@ -64,3 +66,5 @@
 <% end %>
 
 <%= link_to 'New Student profile', new_student_profile_path %>
+
+

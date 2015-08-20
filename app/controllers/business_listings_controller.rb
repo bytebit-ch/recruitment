@@ -1,5 +1,5 @@
 class BusinessListingsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource #checking auth
   #before_action :set_business_profile
   #before_action :set_business_listing, only: [:show, :edit, :update, :destroy]
 
