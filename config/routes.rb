@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   get 'student_profile' => 'student_profiles#index', as: :student_profiles
   get 'business_profile' => 'business_profiles#index', as: :business_profiles
   get 'users/profile'
+  get 'admin' => 'admin#index', as: :admin
 
   root 'landing#index'
 
   resources :business_listings
   resources :business_profiles
   resources :student_profiles
+  resources :admin
   
   devise_for :users, :controllers => {
     :invitations => 'users/invitations',
