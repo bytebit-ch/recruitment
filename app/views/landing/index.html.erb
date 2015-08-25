@@ -1,7 +1,47 @@
-<h1>Coding Program </h1>
-<% if user_signed_in? %>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DJ Recruitment Platform</title>
+  
+
+  
+</head>
+<body>
+<header class="group">
+
+<img src="logo copy.png" alt="" width="90" height="70" class="logo">
+	
+		<div class="login">
+		<% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
 <% else %>
   <%= link_to('Login', new_user_session_path, class: "login") %>
 <% end %>
+
+	</div>	
+		
+</header>
+
+<h1>DJ Recruitment Platform </h1>
+<main class="content">
+
+	<%= yield %>
+
+</main>
+
+<footer>
+	<p> Copyright&copy; 2015 DJRecruitmentTeam | All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+
+
 
