@@ -1,3 +1,36 @@
 // Place all the styles related to the business_profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+header {
+	padding: 30px 50px;
+	background-color: lightblue;
+	border-bottom: 1px solid #000;}
+
+
+footer {
+	padding: 13px 445px;
+	background-color: lightblue;
+
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #000;
+}
+
+
+footer {	
+	position: fixed;
+}
