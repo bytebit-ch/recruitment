@@ -1,5 +1,5 @@
 class StudentProfilesController < ApplicationController
-  before_action :set_student_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_student_profile, only: [:show, :edit, :update, :destroy,]
 
   # GET /student_profiles
   # GET /student_profiles.json
@@ -20,6 +20,8 @@ class StudentProfilesController < ApplicationController
   # GET /student_profiles/1/edit
   def edit
   end
+
+
 
   # POST /student_profiles
   # POST /student_profiles.json
