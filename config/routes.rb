@@ -1,10 +1,26 @@
 Rails.application.routes.draw do
-  root 'landing#landing'
+  
+  get 'landing/index' => 'landing#index', as: :landing
+
+  get 'student_profile' => 'student_profiles#index', as: :student_profiles
+  get 'business_profile' => 'business_profiles#index', as: :business_profiles
+  get 'users/profile'
+  get 'admin' => 'admin#index', as: :admin
+
+  root 'landing#index'
 
   resources :business_listings
   resources :business_profiles
   resources :student_profiles
-  devise_for :users
+  resources :admin
+  
+  devise_for :users, :controllers => {
+    :invitations => 'users/invitations',
+    :registrations => "users/registrations"
+  }
+
+  resources :users, only: [:show]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

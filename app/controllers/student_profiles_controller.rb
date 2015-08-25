@@ -1,5 +1,6 @@
 class StudentProfilesController < ApplicationController
-  before_action :set_student_profile, only: [:show, :edit, :update, :destroy,]
+  load_and_authorize_resource
+  #before_action :set_student_profile, only: [:show, :edit, :update, :destroy]
 
   # GET /student_profiles
   # GET /student_profiles.json
