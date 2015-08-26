@@ -1,6 +1,6 @@
 
 
-<<<<<<< HEAD
+
 <h1>Listing Student Profiles</h1>
 
 
@@ -12,48 +12,13 @@
     <% @student_profiles.each do |student_profile| %>
 
 
-    <link rel="stylesheet" type="text/css" href="cardstyle.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+   
 
-<div class="wrapper">
-  
-  <div class="main" id="text-main"><img src="http://i.imgur.com/D9SmIuS.jpg" alt="coding-icon"><p>
-    Web Developer and Programmer</p><p class="green" id="text-main"> studying at Digital Jersey
-    </p>  
-  </div>
-  <aside class="aside aside-1"><img src="http://i.imgur.com/R0dd2Vs.png" alt="me">
-<br>Based in <p class="green"> United Kingdom</p>
-  </aside>
-  
-    
-  </div>
-
-</div>
-<div class="bottom-wrapper">
-  <button onclick="myFunction()" class="footer"><i class="fa fa-folder-open icon-large"></i>
-    
-    
-    
-    <p class="f-font"><%= link_to 'PORTFOLIO', student_profiles_path %></p></footer></button>
-
-  <button onclick="myFun()" class="footer-1"><i class="fa fa-envelope-o"></i><p class="f-font">CONTACT</p></button></footer>
-
-
-  <button onclick="fun01()" class="footer-2"><i class="fa fa-github-alt"></i><p class="f-font">HOME</p></button></footer>
-
-
-  <button onclick="aboutFun()" class="footer-3"><i class="fa fa-question"></i><p class="f-font">ABOUT</p></footer>
-  
-</div>
-=======
 
   <h1>Listing Student Profiles</h1>
 
   <table>
-    <thead>
->>>>>>> origin/developtment
-      <tr>
+    <thead>      <tr>
         <th>Student</th>
         <th>User</th>
         <th>First name</th>
@@ -72,7 +37,7 @@
     </thead>
 
     <tbody>
-      <% @student_profiles.each do |student_profile| %>
+      <#% @student_profiles.each do |student_profile| %>
         <tr>
           <td><%= student_profile.student_id %></td>
           <td><%= student_profile.user_id %></td>
