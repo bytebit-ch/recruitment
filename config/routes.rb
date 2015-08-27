@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   
   get 'landing/index' => 'landing#index', as: :landing
 
-  get 'student_profile' => 'student_profiles#index', as: :student_profiles
+  get 'student_profiles' => 'student_profiles#index', as: :student_profiles
+ 
   get 'business_profile' => 'business_profiles#index', as: :business_profiles
   get 'users/profile'
   get 'admin' => 'admin#index', as: :admin
