@@ -28,10 +28,12 @@ body {
 .demo-card-square.mdl-card {
   width: 320px;
   height: 320px;
+  border-radius: 15%;
   
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
+  background: url('http://i.imgur.com/q0A2u4Q.jpg')
   
 }
 
