@@ -1,21 +1,12 @@
+  <h1>Listing Student Profiles</h1>
 
-
-
-<h1>Listing Student Profiles</h1>
-
-
-
-<table>
-  
-
-  <tbody>
     <% @student_profiles.each do |student_profile| %>
 
 
    
 
 
-  <h1>Listing Student Profiles</h1>
+
 
   <table>
     <thead>      <tr>
@@ -37,7 +28,7 @@
     </thead>
 
     <tbody>
-      <#% @student_profiles.each do |student_profile| %>
+      <% @student_profiles.each do |student_profile| %>
         <tr>
           <td><%= student_profile.student_id %></td>
           <td><%= student_profile.user_id %></td>
@@ -63,7 +54,7 @@
     </tbody>
   </table>
 
-
+<% end %>
 <br>
 
 
