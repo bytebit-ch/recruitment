@@ -4,6 +4,8 @@ img {
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  float: right;
+  
 }
 
 
@@ -26,10 +28,13 @@ body {
 .demo-card-square.mdl-card {
   width: 320px;
   height: 320px;
+  
 }
 .demo-card-square > .mdl-card__title {
   color: #fff;
-  background:
-    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+  
 }
 
+a {
+  text-decoration: none; 
+}
