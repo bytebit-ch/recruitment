@@ -1,6 +1,96 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" type="text/css" href="show_student.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <title>title</title>
+ </head>
+ <body>
+  <header class="student_header">
+   <h1 class="student_name"> <%= @student_profile.first_name %> <%= @student_profile.last_name %> </h1>
+
+<div class="avatar_circle">
+   <img src="<%= @student_profile.profile_img %>">
+</div>
+  </header>
+
+  <div class="education">
+  
+  <div class="circle">
+      <i class="fa fa-graduation-cap fa-5x"></i>
+  </div>
+  <p class="school">
+      Cambridge
+      <br>
+      Bachelor in Computer Sciences
+
+
+       </p>
+    
+  </div>
+
+  <div class="description">
+    <p class="my_info">
+      <%= @student_profile.long_decription %>
+    </p>
+
+  </div>
+
+  <div class="my_skills">
+    
+    <p id="ruby">Ruby
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+
+
+<p id="rails">Rails
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+
+<p id="sql">SQL
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+
+<p id="html">Html
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+<p id="css">CSS
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+</div>
+
+<div class="contact">
+  <p class="contact_me">Email: 
+  <br>
+  Github: <%= @student_profile.github_url %>
+  <br>
+  Blog:
+  <br></p>
+
+</div>
+
+
+  
+
+  
+ </body>
+</html>
+
+
+<!-- <p>
   <strong>Student:</strong>
   <%= @student_profile.student_id %>
 </p>
@@ -63,7 +153,7 @@
 <p>
   <strong>Public:</strong>
   <%= @student_profile.public %>
-</p>
+</p> -->
 
-<%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
+
 <%= link_to 'Back', student_profiles_path %>
