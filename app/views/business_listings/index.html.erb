@@ -36,4 +36,13 @@
 
 <br>
 
-<%= link_to 'New Business listing', new_business_listing_path %>
+<% if current_user and current_user.type_of_user == "admin" %>
+  <%= link_to 'New Business listing', new_business_listing_path %>
+<% else %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
+<% else %>
+  <%= link_to('Login', new_user_session_path, class: "login") %>
+<% end %>
