@@ -1,16 +1,72 @@
-<h1>Admin Panel</h1>
+  <head>
 
-<p>hi</p>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-<% else %>
-  <%= link_to('Login', new_user_session_path, class: "login") %>
-<% end %>
+<header>
 
-<% if can? :manage, User %>
-   <%= link_to 'New Invitation', new_invitation_path(:user) %>
-<% end %>
 
-<%= link_to('[Student Profiles]', student_profiles_path) %>
-<%= link_to('[Business Profiles]', business_profiles_path) %>
+	<div>
+	<%= link_to "[View my profile]", current_user %>
+	</div>
+
+	<h1>Admin Panel</h1>
+
+	<% if user_signed_in? %>
+	  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
+	<% else %>
+	  <%= link_to('Login', new_user_session_path, class: "login") %>
+	<% end %>
+
+
+</header>
+
+<div class="admin-options">
+
+	<div class="admin-contents">
+
+		
+		<div class="admin-container thumb">
+			<div class="admin-card">	  				
+				<div class="admin-icon">				
+					<%= link_to student_profiles_path do %>
+					<%= image_tag "Student_icon.jpg", class: "admin-img" %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="admin-container thumb">
+			<div class="admin-card">
+		    	<div class="admin-icon">	    		
+		    		<%= link_to business_profiles_path do %>
+		    		<%= image_tag "Business_icon.jpg", class: "admin-img" %>
+		    		<% end %>
+		    	</div> 
+		    </div>
+		</div>
+
+
+	<div class="admin-container thumb">
+			<div class="admin-card">
+		    	<div class="admin-icon">
+		    		<% if can? :manage, User %>	    		
+		    		<%= link_to new_invitation_path(:user) do %>
+		    		<%= image_tag "Invitation_icon.jpg", class: "admin-img" %>
+		    		<% end %>
+		    		<% end %>
+		    	</div> 
+		    </div>
+		</div>		    				
+	</div>
+</div>
+
+  
+
+
+
+
