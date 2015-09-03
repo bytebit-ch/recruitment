@@ -1,11 +1,91 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Student:</strong>
-  <%= @student_profile.student_id %>
+<head>
+  <link rel="assets/stylesheet" type="text/css" href="show_student.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <title>title</title>
+ </head>
+ <body>
+  <header class="student_header">
+   <h1 class="student_name"> Christine Harris </h1>
+
+<div class="avatar_circle">
+   <img src="http://i.imgur.com/fqNm5mv.png">
+</div>
+  </header>
+
+  <div class="education">
+  
+  <div class="circle">
+      <i class="fa fa-graduation-cap fa-5x"></i>
+  </div>
+  <p class="school">
+      Cambridge
+      <br>
+      Bachelor in Computer Sciences
+
+
+       </p>
+    
+  </div>
+
+  <div class="description">
+    <p class="my_info">
+      I am an aspiring programmer and web developer. Along with HTML/CSS knowledge I am learning Python, Javascript, SQL, and Ruby on Rails. I believe in the Open Source movement, and hope to become an active member of the community. I am also interested in charity work, especially for non profit organisations. Please contact me if you need help building a web presence.
+    </p>
+
+  </div>
+
+  <div class="my_skills">
+    
+    <p id="ruby">Ruby
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
 </p>
 
-<p>
+
+<p id="rails">Rails
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+
+<p id="sql">SQL
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+
+<p id="html">Html
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+<p id="css">CSS
+  <div class="meter animate">
+  <span style="width: 50%"></span>
+</div>
+</p>
+</div>
+
+<div class="contact">
+  <p class="contact_me">Email: 
+  <br>
+  Github:
+  <br>
+  Blog:
+  <br></p>
+
+</div>
+
+
+  
+
+  
+ </body>
+<!-- <p>
   <strong>User:</strong>
   <%= @student_profile.user_id %>
 </p>
@@ -65,5 +145,6 @@
   <%= @student_profile.public %>
 </p>
 
-<%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
+
+ | -->
 <%= link_to 'Back', student_profiles_path %>
