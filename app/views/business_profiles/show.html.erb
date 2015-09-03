@@ -1,29 +1,44 @@
-<p id="notice"><%= notice %></p>
+<head>
 
-<p>
-  <strong>Business:</strong>
-  <%= @business_profile.business_id %>
-</p>
+   <link rel="assets/stylesheet" type="text/css" href="show_biz.css">
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
-<p>
-  <strong>User:</strong>
-  <%= @business_profile.user_id %>
-</p>
+<body>
+<div class="wrapper">
+<div class="main" id="text-main">
+    <%= @business_profile.description_business%> </p><p class="green" id="text-main"> 
+    </p>  
+  </div>
+  <aside class="aside aside-1"><%= @business_profile.business_name %> <p class="green"> </p>
+  </aside>
+  
+    
+  </div>
 
-<p>
-  <strong>Business name:</strong>
-  <%= @business_profile.business_name %>
-</p>
+</div>
 
-<p>
-  <strong>Url of business:</strong>
-  <%= @business_profile.url_of_business %>
-</p>
+<div class="bottom-wrapper">
+  <button onclick="myFunction()" class="footer"></i>
+    
+    
+    
+    <p class="f-font">PORTFOLIO</p></footer></button>
 
-<p>
-  <strong>Description business:</strong>
-  <%= @business_profile.description_business %>
-</p>
+  <button onclick="myFun()" class="footer-1"><i class="fa fa-envelope-o"></i><p class="f-font">CONTACT</p></button></footer>
 
-<%= link_to 'Edit', edit_business_profile_path(@business_profile) %> |
-<%= link_to 'Back', business_profiles_path %>
+
+  <button onclick="fun01()" class="footer-2"><i class="fa fa-github-alt"></i><p class="f-font">HOME</p></button></footer>
+
+
+  <button onclick="aboutFun()" class="footer-3"><i class="fa fa-question"></i><p class="f-font">ABOUT</p></footer>
+  
+</div>
+
+</body>
+
+
+
+

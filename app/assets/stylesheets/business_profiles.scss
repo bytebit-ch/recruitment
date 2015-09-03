@@ -3,6 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+h1 {
+	font-color: grey;
+}
+
+a {
+  text-decoration: none; 
+}
+
+body {
+ 
+  color: darkgrey;
+   background: url('http://i.imgur.com/r3FGRl4.jpg') no-repeat center center fixed; 
+   
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  font-family: 'Lato', sans-serif;
+   background-size: 100%;
+  font-size: 1.2em;
+  
+  
+}
+
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+  
+}
+.demo-card-square > .mdl-card__title {
+  
+  background: url('http://i.imgur.com/E7JMcAl.jpg') no-repeat center center fixed;
+  }
+
+
 * {
 	margin: 0;
 	padding: 0;

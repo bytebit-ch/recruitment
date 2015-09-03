@@ -17,6 +17,7 @@
 
  body {
  	font-family: 'Lato', sans-serif;
+ 	font-color: grey;
  }
 .demo-card-square.mdl-card {
   width: 320px;
