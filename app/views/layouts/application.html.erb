@@ -10,12 +10,22 @@
 <%= yield %>
 
 <!-- This is linking to current user profile !-->
+<!--
 <% if current_user %>
 <div>
 	<%= link_to "[View my profile]", current_user %>
 </div>
 <% end %>
+!-->
 
+<% if current_user and current_user.type_of_user != "admin" %>
+  <%= link_to 'View my profile', current_user %>
+<% else %>
+<% end %>
 
 </body>
 </html>
+
+
+
+

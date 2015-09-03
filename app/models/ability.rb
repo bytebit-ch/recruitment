@@ -17,8 +17,8 @@ class Ability
            can :read, :all
 
        elsif user.type_of_user == 'student'
-           can [:read, :edit], User, id: user.id
            can [:read, :index], BusinessProfile
+           can [:read, :edit], User, id: user.id
            
            can :read, :all
       

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'student_profiles' => 'student_profiles#index', as: :student_profiles
  
-  get 'business_profile' => 'business_profiles#index', as: :business_profiles
+  get 'business_profiles' => 'business_profiles#index', as: :business_profiles
   get 'users/profile'
   get 'admin' => 'admin#index', as: :admin
 
