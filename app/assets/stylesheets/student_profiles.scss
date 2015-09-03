@@ -6,12 +6,14 @@ img {
   border-radius: 50%;
 }
 
-
+a {
+  text-decoration: none; 
+}
 
 body {
  
   color: darkgrey;
-   background: url('http://i.imgur.com/7Tqp7YS.png') no-repeat center center fixed; 
+   background: url('http://i.imgur.com/r3FGRl4.jpg') no-repeat center center fixed; 
    
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -21,15 +23,16 @@ body {
   font-family: 'Lato', sans-serif;
    background-size: 100%;
   font-size: 1.2em;
+  
 }
 
 .demo-card-square.mdl-card {
   width: 320px;
   height: 320px;
+  
 }
 .demo-card-square > .mdl-card__title {
-  color: #fff;
-  background:
-    url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
-}
+  
+  background: url('http://i.imgur.com/E7JMcAl.jpg') no-repeat center center fixed;
+  }
 
