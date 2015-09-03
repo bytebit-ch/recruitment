@@ -1,3 +1,8 @@
+ body {
+ 	font-family: 'Lato', sans-serif;
+ }
+
+
  .student_header{
 	width: 100%;
 	height: 600px;
@@ -20,6 +25,7 @@
 
 
 img {
+	padding-top: 20px;
 	display: flex;
 	height: 150px;
 	width: 150px;
@@ -60,8 +66,8 @@ img {
 
 
 .circle {
-	width: 110px;
-	height: 90px;
+	width: 130px;
+	height: 100px;
 	background-color: tomato;
 	border-radius: 20%;
 	-webkit-justify-content: center;

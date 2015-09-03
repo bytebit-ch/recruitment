@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body {
+ 	font-family: 'Lato', sans-serif;
+ }
 .demo-card-square.mdl-card {
   width: 320px;
   height: 320px;

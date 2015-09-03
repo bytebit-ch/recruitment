@@ -3,15 +3,18 @@
 <head>
   <link rel="assets/stylesheet" type="text/css" href="show_student.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8">
-  <title>title</title>
+  <title><%= @student_profile.first_name %>
+  <%= @student_profile.last_name %></title>
  </head>
  <body>
   <header class="student_header">
-   <h1 class="student_name"> Christine Harris </h1>
+   <h1 class="student_name"> <%= @student_profile.first_name %>
+  <%= @student_profile.last_name %> </h1>
 
 <div class="avatar_circle">
-   <img src="http://i.imgur.com/fqNm5mv.png">
+   <img src='<%= @student_profile.profile_img %>'>
 </div>
   </header>
 
@@ -21,9 +24,9 @@
       <i class="fa fa-graduation-cap fa-5x"></i>
   </div>
   <p class="school">
-      Cambridge
+      MIT
       <br>
-      Bachelor in Computer Sciences
+      Fake PhD in Computer Science
 
 
        </p>
@@ -32,7 +35,7 @@
 
   <div class="description">
     <p class="my_info">
-      I am an aspiring programmer and web developer. Along with HTML/CSS knowledge I am learning Python, Javascript, SQL, and Ruby on Rails. I believe in the Open Source movement, and hope to become an active member of the community. I am also interested in charity work, especially for non profit organisations. Please contact me if you need help building a web presence.
+      <%= @student_profile.long_decription %>
     </p>
 
   </div>
@@ -73,7 +76,7 @@
 <div class="contact">
   <p class="contact_me">Email: 
   <br>
-  Github:
+  Github:  <%= @student_profile.github_url %>
   <br>
   Blog:
   <br></p>
