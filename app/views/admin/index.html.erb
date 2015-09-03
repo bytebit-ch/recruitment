@@ -12,5 +12,9 @@
    <%= link_to 'New Invitation', new_invitation_path(:user) %>
 <% end %>
 
+<% @business_profiles.each do |business_profile| %>
+     <a href='mailto:<%= business_profile.business_name %>'>Mail</a>
+<% end %>
+
 <%= link_to('[Student Profiles]', student_profiles_path) %>
 <%= link_to('[Business Profiles]', business_profiles_path) %>
