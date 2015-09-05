@@ -27,6 +27,7 @@ class BusinessListingsController < ApplicationController
   # POST /business_listings.json
   def create
     @business_listing = BusinessListing.new(business_listing_params)
+    @business_listing.business_profile_id = current_user.business_profile.id
 
     respond_to do |format|
       if @business_listing.save

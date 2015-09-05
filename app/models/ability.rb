@@ -14,6 +14,7 @@ class Ability
            can :read, :all
            can [:read, :index], StudentProfile
            can [:read, :update, :create], BusinessProfile # needs to be restricted to own profile
+           can [:read, :update, :create], BusinessListing# needs to be restricted to own profile
            can [:read, :edit], User, id: user.id
 
        elsif user.type_of_user == 'student'

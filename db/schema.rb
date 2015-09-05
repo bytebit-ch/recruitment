@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811180859) do
+ActiveRecord::Schema.define(version: 20150905190650) do
 
   create_table "business_listings", force: :cascade do |t|
     t.text     "skills_wanted"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20150811180859) do
     t.boolean  "contract"
     t.text     "job_description"
     t.text     "contact_email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "business_profile_id"
   end
 
   create_table "business_profiles", force: :cascade do |t|
@@ -33,6 +34,11 @@ ActiveRecord::Schema.define(version: 20150811180859) do
     t.text     "description_business"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "resumes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "student_profiles", force: :cascade do |t|
