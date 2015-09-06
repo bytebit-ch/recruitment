@@ -22,9 +22,8 @@ class Ability
 
        elsif user.type_of_user == 'student'
            can [:read, :index], [BusinessProfile, BusinessListing]
-           can [:read, :edit], User, id: user.id
            can [:view_profile, :edit, :create, :show], StudentProfile
-           
+           can [:read, :edit], User, id: user.id
       
        else
             can :read, Landing
