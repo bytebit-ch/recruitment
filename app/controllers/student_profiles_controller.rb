@@ -18,6 +18,13 @@ class StudentProfilesController < ApplicationController
     @student_profile = StudentProfile.new
   end
 
+
+#restriction ability to only view your own profile
+  def view_profile
+    @student_profile = StudentProfile.find(params[:id])
+    @student_profile.user_id = current_user.id
+  end
+
   # GET /student_profiles/1/edit
   def edit
   end

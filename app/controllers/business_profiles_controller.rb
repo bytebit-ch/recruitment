@@ -14,6 +14,11 @@ class BusinessProfilesController < ApplicationController
   def show
   end
 
+  def view_profile
+    @business_profile = BusinessProfile.find(params[:id])
+    @business_profile.user_id = current_user.id
+  end
+
   # GET /business_profiles/new
   def new
     @business_profile = BusinessProfile.new
