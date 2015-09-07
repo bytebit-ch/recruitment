@@ -4,19 +4,23 @@
 
 
 .admin-options {
-	max-width: 1106px;
+	display: inline-block;
+	max-width: 1300px;
 	max-height: 500px;
 	margin: 0 100px;
 	padding: 50px 50px;
+
 }
 
 .admin-contents {
-	margin: 50px 0px;
+	margin: 50px 20px;
+	display: inline-block;
 }
 
 .admin-card {
 	height: 100px;
 	width: 300px;
+	display: inline-block;
 }
 
 .admin-icon {
@@ -80,7 +84,7 @@ background-color: #86F5EB;}
 	background-position: bottom;
 	/*rotate the surface 90deg on the bottom axis*/
 	transform: rotateX(90deg); transform-origin: bottom;
-	background-color: #50ADA4;
+	background-color: #5390AD;
 
 }
 /*label style*/
@@ -118,10 +122,9 @@ background-color: #86F5EB;}
 .admin-container {
 	display: inline-block;
 	width: 300px;
-	background-size: cover;
-	background-color: #46B6AC; 
+	background-color: #6FB3D2; 
 	height: 300px;
-	margin: 0px 30px;
+	margin: 10px 30px;
 	border-radius: 10%;
 }
 

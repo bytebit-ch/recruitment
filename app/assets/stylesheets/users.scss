@@ -1,3 +1,50 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.forgot-password {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 6px #999;
+	position: relative;
+	border: 1px solid #e8e8e8;
+	margin: 130px auto 20px auto;
+	max-width: 600px;
+	border: 2px solid #6FB3D2;
+}
+
+.password-content {
+	max-width: 600px;
+}
+
+.password-content p {
+	font-size: 18px;
+	text-align: center;
+	margin: 15px 0;
+}
+
+.password-input {
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 2px inset;
+	width: 300px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	height: 30px;
+}
+
+.password-link {
+	text-align: center;
+	border-top: 2px solid #6FB3D2;
+	margin: 20px 40px;
+}
+
+.password-login {
+	text-align: center;
+}
+
+.password-length {
+	text-align: center;
+	margin-top: 20px;
+}
