@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 #this is taking care of routing after sign
 def after_sign_in_path_for(resource)
   if current_user and current_user.type_of_user == "student"
-    business_profiles_path
+    business_listings_path
   elsif current_user and current_user.type_of_user == 'business'
     student_profiles_path
   elsif current_user and current_user.type_of_user == "admin"

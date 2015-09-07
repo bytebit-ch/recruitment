@@ -11,8 +11,8 @@ class Ability
      
        elsif user.type_of_user == 'business'
            can [:read, :index], StudentProfile
-           can [:view_profile, :edit, :create, :show], BusinessProfile
-           can [:view_profile, :edit, :create, :show], BusinessListing
+           can [:view_profile, :update, :create, :show], BusinessProfile
+           can [:view_profile, :update, :create, :show, :index], BusinessListing
            
            # can [:read, :update, :create], BusinessProfile # needs to be restricted to own profile
            # can [:read, :update, :create], BusinessListing# needs to be restricted to own profile
@@ -22,7 +22,7 @@ class Ability
 
        elsif user.type_of_user == 'student'
            can [:read, :index], [BusinessProfile, BusinessListing]
-           can [:view_profile, :edit, :create, :show], StudentProfile
+           can [:view_profile, :update, :create, :show], StudentProfile
            can [:read, :edit], User, id: user.id
       
        else
