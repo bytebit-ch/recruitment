@@ -73,14 +73,19 @@
 	</div>
 </div>
 
-  
+  <% mailer_all = [] %>
+
+<% @business_profiles.each do |business_profile| %>
+   <% mailer_all.append(business_profile.business_name) %>
+     
+<% end %>
+
+<a href='mailto:<%= mailer_all.join(",") %>'>[Mail All]</a>
 
 
 
 
-<<<<<<< Updated upstream
+
 <%= link_to('[Student Profiles]', student_profiles_path) %>
 <%= link_to('[Business Profiles]', business_profiles_path) %>
-<%= link_to('[Business Listings]', business_listings_path) %>
-=======
->>>>>>> Stashed changes
+
