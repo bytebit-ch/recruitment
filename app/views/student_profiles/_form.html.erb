@@ -1,4 +1,5 @@
-<%= form_for(@student_profile) do |f| %>
+
+<%= simple_form_for(@student_profile) do |f| %>
   <% if @student_profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student_profile.errors.count, "error") %> prohibited this student_profile from being saved:</h2>
@@ -11,21 +12,17 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= f.label :student_id %><br>
-    <%= f.number_field :student_id %>
+    <span class="hover_hints">no special characters>
+      <%= f.input :first_name %>
+      </span>
+
   </div>
+  <br>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :first_name %><br>
-    <%= f.text_area :first_name %>
-  </div>
-  <div class="field">
-    <%= f.label :last_name %><br>
-    <%= f.text_area :last_name %>
+    <%= f.input :last_name %><br>
+
   </div>
   <div class="field">
     <%= f.label :github_url %><br>

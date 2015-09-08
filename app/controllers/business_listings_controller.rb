@@ -23,10 +23,16 @@ class BusinessListingsController < ApplicationController
   def edit
   end
 
+  def view_profile
+    @business_listing = BusinessListing.find(params[:id])
+    @business_listing.business_profile_id = current_business_profile.id
+  end
+
   # POST /business_listings
   # POST /business_listings.json
   def create
     @business_listing = BusinessListing.new(business_listing_params)
+    @business_listing.business_profile_id = current_user.business_profile.id
 
     respond_to do |format|
       if @business_listing.save

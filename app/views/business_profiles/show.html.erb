@@ -1,14 +1,4 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Business:</strong>
-  <%= @business_profile.business_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @business_profile.user_id %>
-</p>
 
 <p>
   <strong>Business name:</strong>
@@ -25,5 +15,41 @@
   <%= @business_profile.description_business %>
 </p>
 
+<br>
+<br>
+
+  <% @business_profile.business_listings.each do |business_listing| %>
+       <div>
+       	<p>
+       	<strong>Skills Wanted</strong>
+        <%= business_listing.skills_wanted %>
+    </p>
+    <p>
+        <strong>Title</strong>
+        <%= business_listing.title %>
+    </p>
+    <p>	<strong>Part-Time</strong>
+        <%= business_listing.part_time %>
+    </p>
+    <p>
+    		<strong>Full `time</strong>
+        <%= business_listing.full_time %>
+    </p>
+    <p>
+    		<strong>Contract?</strong>
+        <%= business_listing.contract %>
+    </p>
+    	<strong>Job Description</strong>
+        <%= business_listing.job_description %>
+    </p>
+    	<strong>Contact Email</strong>
+        <%= business_listing.contact_email %>
+    </p>
+       </div>
+       <br>
+       <br>
+  <% end %>
+
+<%= link_to 'Add a Job', new_business_listing_path %>
 <%= link_to 'Edit', edit_business_profile_path(@business_profile) %> |
-<%= link_to 'Back', business_profiles_path %>
+<%= link_to 'Back', student_profiles_path %>
