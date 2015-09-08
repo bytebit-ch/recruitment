@@ -4,4 +4,8 @@ class AdminController < ApplicationController
 	def index
 		@business_profiles = BusinessProfile.all
 	end
+
+	
+
+
 end

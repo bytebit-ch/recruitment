@@ -12,7 +12,7 @@
 	<%= link_to "[View my profile]", current_user %>
 	</div>
 
-	<h1>Admin Panel</h1>
+	<h3>Admin Panel</h3>
 
 	<% if user_signed_in? %>
 	  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
@@ -65,17 +65,18 @@
 	</div>
 </div>
 
-  
+ <!--logic to mail all businesses !-->
 
+<% mailer_all = [] %>
 
-
-
-<<<<<<< HEAD
 <% @business_profiles.each do |business_profile| %>
-     <a href='mailto:<%= business_profile.business_name %>'>Mail</a>
+	 <% mailer_all.append(business_profile.business_name) %>
+     <%= mailer_all %>
 <% end %>
+
+<a href='mailto:<%= mailer_all.join(",") %>'>Mail All</a>
+
 
 <%= link_to('[Student Profiles]', student_profiles_path) %>
 <%= link_to('[Business Profiles]', business_profiles_path) %>
-=======
->>>>>>> adminview
+
