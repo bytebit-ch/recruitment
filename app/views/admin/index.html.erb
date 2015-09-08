@@ -5,10 +5,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
+<header>
 
+	<div>
+	<%= link_to "[View my profile]", current_user %>
+</div>
 <h1>Admin Panel</h1>
 
-<p>hi</p>
+
 
 <% if user_signed_in? %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
@@ -16,10 +20,67 @@
   <%= link_to('Login', new_user_session_path, class: "login") %>
 <% end %>
 
-<% if can? :manage, User %>
-   <%= link_to 'New Invitation', new_invitation_path(:user) %>
-<% end %>
+</header>
 
+<div class="admin-options">
+
+	<div class="admin-contents">
+
+		
+		<div class="admin-container thumb">
+			<div class="admin-card">	  				
+				<div class="admin-icon">
+					
+					<%= link_to student_profiles_path do %>
+					<%= image_tag "Student_icon.jpg", class: "admin-img" %>
+					<% end %>
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<div class="admin-container thumb">
+			<div class="admin-card">
+		    	<div class="admin-icon">	    		
+		    		<%= link_to business_profiles_path do %>
+		    		<%= image_tag "Business_icon.jpg", class: "admin-img" %>
+		    		<% end %>
+		    	</div> 
+		    </div>
+		</div>
+
+
+	<div class="admin-container thumb">
+			<div class="admin-card">
+		    	<div class="admin-icon">
+		    		<% if can? :manage, User %>	    		
+		    		<%= link_to new_invitation_path(:user) do %>
+		    		<%= image_tag "Invitation_icon.jpg", class: "admin-img" %>
+		    		<% end %>
+		    		<% end %>
+		    	</div> 
+		    </div>
+		</div>
+
+				
+		    		    	
+		    		
+		
+
+	</div>
+</div>
+
+  
+
+
+
+
+<<<<<<< Updated upstream
 <%= link_to('[Student Profiles]', student_profiles_path) %>
 <%= link_to('[Business Profiles]', business_profiles_path) %>
 <%= link_to('[Business Listings]', business_listings_path) %>
+=======
+>>>>>>> Stashed changes
