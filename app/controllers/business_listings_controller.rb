@@ -6,7 +6,14 @@ class BusinessListingsController < ApplicationController
   # GET /business_listings
   # GET /business_listings.json
   def index
-    @business_listings = BusinessListing.all
+    if current_user and current_user.type_of_user == "admin"
+      @business_listings = BusinessListing.all
+    elsif current_user and current_user.type_of_user == "student"
+      @business_listings = BusinessListing.all
+    else
+      @business_profile = BusinessProfile.where(user_id: current_user.id)
+      @business_listings = BusinessListing.where(business_profile_id: @business_profile.first.id)
+    end
   end
 
   # GET /business_listings/1
