@@ -12,5 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+//= require bootstrap
+//= require jquery.easing.min
+//= require jquery.scrollTo
+//= require wow.min
+
+//= require form
+//= require student_profiles
+
+//= require custom
+
 //= require turbolinks
-//= require_tree .
+// require_tree .

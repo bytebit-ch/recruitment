@@ -12,6 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'coffee-script-source', '~> 1.8.0'
+gem 'high_voltage', '~> 2.4.0'
 
 gem 'compass-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
