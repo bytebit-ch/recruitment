@@ -16,6 +16,10 @@
 
 
 /* sing up page styling the h1 */
+body {
+  margin: 0;
+  padding: 0;
+}
  .sign_up_login {
    color: darkgrey;
    font-family: 'Arial';

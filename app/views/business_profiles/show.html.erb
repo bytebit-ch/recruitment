@@ -1,55 +1,101 @@
+  <head>
 
-
-<p>
-  <strong>Business name:</strong>
-  <%= @business_profile.business_name %>
-</p>
-
-<p>
-  <strong>Url of business:</strong>
-  <%= @business_profile.url_of_business %>
-</p>
-
-<p>
-  <strong>Description business:</strong>
-  <%= @business_profile.description_business %>
-</p>
+ 
+<link rel="stylesheet" type="text/css" href="buisness_profiles_show.css">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.cyan-pink.min.css" /> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+  <header class="mdl-layout__header mdl-layout__header--waterfall">
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <p class='biz_title'
+      <span class="mdl-layout-title"><%= @business_profile.business_name %></span>
+    </[>
+      <br>
+     
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="waterfall-exp" />
+        </div>
+        
+      </div>
+    </div>
+    <p class="url"> <%= link_to 'Website', @business_profile.url_of_business %> </p>
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="waterfall-demo-header-nav mdl-navigation">
+        <p class='links_show'>
+        <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
+        </p>
+        <p class='links_show'>
+          <% if current_user and current_user.type_of_user != "admin" %>
+        <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
+      </p>
+        <% end %>
+        
+      </nav>
+    </div>
+  </header>
 
 <br>
 <br>
 
   <% @business_profile.business_listings.each do |business_listing| %>
-       <div>
-       	<p>
-       	<strong>Skills Wanted</strong>
+  <div class='biz_flex'>
+        
+        <div class='bottom_card'>
+       
+    <p>
+   
+    
+        
+       <h4> <%= business_listing.title %></h4>
+    </p>
+    <br>
+    
+<p>
+      <% if business_listing.full_time == true %>
+       <strong> <%= 'Full Time' %></strong>
+      <% end %>
+      <% if business_listing.part_time == true %>
+       <strong> <%= 'Part Time' %> </strong>
+      <% end %>
+      <% if business_listing.contract == true %>
+       <strong> <%= 'Contract' %> </strong>
+      <% end %>
+        </p>
+        <br>
+    <p>
+        <strong>Skills:</strong>
         <%= business_listing.skills_wanted %>
     </p>
-    <p>
-        <strong>Title</strong>
-        <%= business_listing.title %>
-    </p>
-    <p>	<strong>Part-Time</strong>
-        <%= business_listing.part_time %>
-    </p>
-    <p>
-    		<strong>Full `time</strong>
-        <%= business_listing.full_time %>
-    </p>
-    <p>
-    		<strong>Contract?</strong>
-        <%= business_listing.contract %>
-    </p>
-    	<strong>Job Description</strong>
+    <br>
+    
+
+    
+  
+    
+    	<p>
         <%= business_listing.job_description %>
     </p>
-    	<strong>Contact Email</strong>
-        <%= business_listing.contact_email %>
+    <br>
+    <p>
+    	<strong>Contact:</strong> <%= business_listing.contact_email %>
     </p>
        </div>
+     </div>
+   
        <br>
-       <br>
+       </div>
   <% end %>
 
-<%= link_to 'Add a Job', new_business_listing_path %>
-<%= link_to 'Edit', edit_business_profile_path(@business_profile) %> |
-<%= link_to 'Back', student_profiles_path %>

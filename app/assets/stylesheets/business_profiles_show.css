@@ -1,0 +1,59 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+
+
+/* this is getting the cards to line up next to eachother */
+.biz_flex {
+	display: -webkit-flex;
+  -webkit-flex-direction: row;
+	padding-left: 5%;
+
+	
+}
+
+.business_profiles_show_header {
+	height: 200px;
+	width: 98%;
+	background: grey;
+}
+
+.business_show_h1 { 
+	color: darkgrey;
+	
+	}
+ .biz_title {
+ 	color: white;
+ 	font-size: 30px;
+ 	-webkit-justify-content: center;
+ 	        justify-content: center;
+ }
+
+.mdl-layout__header-row>* {
+	padding-top: 5%;
+}
+
+.url {
+	color: white;
+	padding-left: 100px;
+	padding-top: 3px;
+}
+
+.bottom_card {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  height: 500px;
+  width: 400px;
+  background: white;
+  border-color: #00BCD4;
+  border-style: solid;
+  padding: 20px;
+  
+  
+}
+
+.links_show {
+	color: white;
+}
