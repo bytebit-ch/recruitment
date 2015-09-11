@@ -1,5 +1,5 @@
 <div class="border-form-div">
-<h1 class='sign_up_login'>Log In </h1>
+<h1 class='sign_in_login'>Log In </h1>
 
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -13,11 +13,17 @@
     <%= f.password_field :password, autocomplete: "off", :placeholder => 'Password'  %>
   </div>
 
- 
 
   <div class="actions">
     <%= f.submit "Submit" %>
   </div>
+
+  <div class="sign_up_button">
+    <button type="submit">  
+    <%= link_to 'Sign Up', new_user_registration_path %>
+  </div>
+
+
 <% end %>
 
 
