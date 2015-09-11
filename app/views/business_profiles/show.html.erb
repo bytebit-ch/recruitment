@@ -46,7 +46,7 @@
       </nav>
     </div>
   </header>
-
+<body>
 <br>
 <br>
 
@@ -60,8 +60,8 @@
     
         
        <h4> <%= business_listing.title %></h4>
+       <p class='created'> Job created: <%= business_listing.created_at %></p>
     </p>
-    <br>
     
 <p>
       <% if business_listing.full_time == true %>
@@ -74,28 +74,38 @@
        <strong> <%= 'Contract' %> </strong>
       <% end %>
         </p>
-        <br>
+
     <p>
         <strong>Skills:</strong>
         <%= business_listing.skills_wanted %>
     </p>
-    <br>
-    
-
-    
   
-    
     	<p>
         <%= business_listing.job_description %>
     </p>
-    <br>
+
     <p>
     	<strong>Contact:</strong> <%= business_listing.contact_email %>
     </p>
        </div>
      </div>
    
-       <br>
+
        </div>
   <% end %>
+</body>
+
+<footer class="mdl-mini-footer">
+      <div class="mdl-mini-footer--left-section">
+        
+        <ul class="mdl-mini-footer--link-list">
+          <li><a href="#"></a></li>
+          <li><a href="#">Digital Jersey 2015</a></li>
+          <li>Christine Harris</li>
+          <li> Morti Alexandru</li>
+          <li> Dan Le Cornu</li>
+          <li> Ben Whitely</li>
+        </ul>
+      </div>
+    </footer>
 

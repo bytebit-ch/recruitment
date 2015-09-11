@@ -1,6 +1,7 @@
 body {
 	padding: 0;
 	margin: 0;
+	background-color: red;
 }
 
 
@@ -10,20 +11,41 @@ body {
 	display: -webkit-flex;
   -webkit-flex-direction: row;
 	padding-left: 5%;
+	padding-bottom: 5%;
+	transition: background-color 2s ease-out;
+	height: 500px;
+    width: 400px;
 
 	
+}
+
+.biz_flex:hover {
+	
+}
+
+.mdl-layout__header--waterfall {
+	background-color: #00BCD4;
 }
 
 .business_profiles_show_header {
 	height: 200px;
 	width: 98%;
-	background: grey;
+	
 }
 
 .business_show_h1 { 
 	color: darkgrey;
 	
 	}
+
+a {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
  .biz_title {
  	color: white;
  	font-size: 30px;
@@ -50,10 +72,23 @@ body {
   border-color: #00BCD4;
   border-style: solid;
   padding: 20px;
+  transition: background-color 2s ease-out;
+  
   
   
 }
 
+.bottom_card:hover{
+	background-color: #FFEFDB;
+	
+}
+
+
+
 .links_show {
 	color: white;
+}
+
+.created {
+	font-size: 10px;
 }
