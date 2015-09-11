@@ -1,27 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Recruitment</title>
+  <title>DJ Recruitment Platform</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Preloader -->
+	<div id="preloader">
+	  <div id="load"></div>
+	</div>
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+        <div class="container">
+
+            <div class="navbar-header page-scroll">
+              <%= image_tag 'logo.png', width: "90", height: "70", class: "logo" %>
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                
+               </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#intro">Home</a></li>
+        <li><a href="#about">About our Students</a></li>
+		<li><a href="#service">Who is Hiring</a></li>
+		<!-- <li><a href="#contact">Contact</a></li> -->
+        <li class="dropdown">
+          <% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+<% else %>
+  <%= link_to('Login', new_user_session_path, class: "login") %>
+<% end %></a>
+          
+            
+        
+        
+      </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+	<%= yield %>
 
 
-<%= yield %>
 
 <!-- This is linking to current user profile !-->
 <!--
-<% if current_user %>
+<%# if current_user %>
 <div>
-	<%= link_to "[View my profile]", current_user %>
+	<%#= link_to "[View my profile]", current_user %>
 </div>
-<% end %>
+<%# end %>
 !-->
 
-<% if current_user and current_user.type_of_user != "admin" %>
-  <%= link_to 'View my profile', current_user %>
-<% else %>
-<% end %>
+<%# if current_user and current_user.type_of_user != "admin" %>
+  <%#= link_to 'View my profile', current_user %>
+<%# else %>
+<%# end %>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="wow shake" data-wow-delay="0.4s">
+					<div class="page-scroll marginbot-30">
+						<a href="#intro" id="totop" class="btn btn-circle">
+							<i class="fa fa-angle-double-up animated"></i>
+						</a>
+					</div>
+					</div>
+					<p>&copy;Copyright 2015 - DJRP. All rights reserved.</p>
+				</div>
+			</div>	
+		</div>
+	</footer>
+
 
 </body>
 </html>
