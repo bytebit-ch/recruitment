@@ -33,19 +33,28 @@
                </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#intro">Home</a></li>
-        <li><a href="#about">About our Students</a></li>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="#intro">Home</a></li>
+    <li><a href="#about">About our Students</a></li>
 		<li><a href="#service">Who is Hiring</a></li>
-		<!-- <li><a href="#contact">Contact</a></li> -->
-        <li class="dropdown">
-          <% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-<% else %>
-  <%= link_to('Login', new_user_session_path, class: "login") %>
-<% end %></a>
+<!-- <li><a href="#contact">Contact</a></li> -->
+    <li class="my-profile-button">
+
+      <% if user_signed_in? and current_user and current_user.type_of_user == "student" %>
+        <%= link_to('My Profile', current_user, class: 'student-profile-button') %>
+      <% elsif user_signed_in? and current_user and current_user.type_of_user == "business" %>
+        <%= link_to('My Profile', current_user, class: 'business-profile-button') %>
+      <% else %>
+      <% end %>
+
+    <li class="dropdown">
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      <% else %>
+        <%= link_to('Login', new_user_session_path, class: "login") %>
+    <% end %></a>
           
             
         
