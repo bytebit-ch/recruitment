@@ -100,3 +100,6 @@ i {
   font-family: 'Arial';
   padding-left: 50%;
 }
+.mdl-navigation__link {
+  color: red;
+}

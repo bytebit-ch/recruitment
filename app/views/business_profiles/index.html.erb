@@ -25,9 +25,9 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation -->
       <nav class="waterfall-demo-header-nav mdl-navigation">
-        <p class='links_show'>
+        <!-- <p class='links_show'>
           <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
-          </p>
+          </p> -->
           <p class='links_show'>
             <% if current_user and current_user.type_of_user != "admin" %>
             <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
