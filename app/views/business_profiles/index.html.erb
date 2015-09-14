@@ -1,22 +1,58 @@
-  <head>
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <p class='biz_title'
+        <span class="mdl-layout-title">Business Profiles</span>
 
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
+        <br>
 
-<p id="notice"><%= notice %></p>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+        mdl-textfield--floating-label mdl-textfield--align-right">
+        
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+          id="waterfall-exp" />
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="waterfall-demo-header-nav mdl-navigation">
+        <p class='links_show'>
+          <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
+          </p>
+          <p class='links_show'>
+            <% if current_user and current_user.type_of_user != "admin" %>
+            <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
+          </p>
+          <% end %>
 
-
-<h1>Business Profiles</h1>
-<br>
-<br>
-<br>
+        </nav>
+      </div>
+    </header>
 
     
-      
+<div class='biz_flex'>
  <% @business_profiles.each do |business_profile| %>
-<div class="mdl-grid">
+<div class='bottom_card'>
+
+        <p>
+
+         <h4> <%= business_profile.url_of_business %></h4>
+       </p>
+         <p>
+       <strong>Contact:</strong> <%= business_profile.business_name %>
+     </p>
+
+      <p><%= link_to 'VIEW PROFILE', business_profile %></p>
+<!-- <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--4-col"></div>
 
 <div class="demo-card-square mdl-card mdl-shadow--2dp">
@@ -34,16 +70,24 @@
     </a>
   </div>
 </div>
+</div> -->
 </div>
 <% end %>
-
+</div>
 
 <br>
 
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-<% else %>
-  <%= link_to('Login', new_user_session_path, class: "login") %>
-<% end %>
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer--left-section">
 
+    <ul class="mdl-mini-footer--link-list">
+      <li><a href="#"></a></li>
+      <li><a href="#">Digital Jersey 2015</a></li>
+      <li>Christine Harris</li>
+      <li> Morti Alexandru</li>
+      <li> Dan Le Cornu</li>
+      <li> Ben Whitley</li>
+    </ul>
+  </div>
+</footer>
 

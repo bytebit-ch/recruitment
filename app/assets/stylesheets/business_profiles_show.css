@@ -9,19 +9,16 @@ body {
 /* this is getting the cards to line up next to eachother */
 .biz_flex {
 	display: -webkit-flex;
-  -webkit-flex-direction: row;
-	padding-left: 5%;
-	padding-bottom: 5%;
-	
-	height: 500px;
-    width: 400px;
-
+	-webkit-flex-direction: row;
+	padding: 20px;
+	flex-wrap: wrap;
+justify-content:         space-between;
 	
 }
 
 .mdl-layout {
 	
-    background-color: #F5F5F5;
+	background-color: #F5F5F5;
 }
 
 .mdl-layout__header--waterfall {
@@ -37,7 +34,7 @@ body {
 .business_show_h1 { 
 	color: darkgrey;
 	
-	}
+}
 
 a {
 	color: white;
@@ -47,12 +44,12 @@ a:visited {
 	color: white;
 }
 
- .biz_title {
- 	color: white;
- 	font-size: 30px;
- 	-webkit-justify-content: center;
- 	        justify-content: center;
- }
+.biz_title {
+	color: white;
+	font-size: 30px;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
 
 .mdl-layout__header-row>* {
 	padding-top: 5%;
@@ -65,18 +62,16 @@ a:visited {
 }
 
 .bottom_card {
-  display: -webkit-flex;
-  -webkit-flex-direction: column;
-  height: 500px;
-  width: 400px;
-  background: white;
-  border-color: #00BCD4;
-  border-style: solid;
-  padding: 20px;
-  transition: background-color 2s ease-out;
-  display: inline;
-  
-  
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	background: white;
+	border-color: #00BCD4;
+	border-style: solid;
+	padding: 20px;
+	transition: background-color 2s ease-out;
+	width: 44%;
+	margin-bottom: 10px;
+
 }
 
 .bottom_card:hover{
