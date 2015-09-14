@@ -5,7 +5,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
+<div class="student-profile-body">
 
+  <h1>Student Profiles</h1>
   <br>
   <br>
   <br>
@@ -41,18 +43,7 @@
 
 <br>
 
-
-
- 
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-<% else %>
-  <%= link_to('Login', new_user_session_path, class: "login") %>
-<% end %>
-
-<% if can? :manage, User %>
-   <%= link_to 'New Invitation', new_invitation_path(:user) %>
-<% end %>
+</div>
 
 
 

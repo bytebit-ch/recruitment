@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
+<div class="business-profile-body">
+
 <p id="notice"><%= notice %></p>
 
 
@@ -38,10 +40,6 @@
 
 <br>
 
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-<% else %>
-  <%= link_to('Login', new_user_session_path, class: "login") %>
-<% end %>
+<div>
 
 
