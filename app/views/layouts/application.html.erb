@@ -43,10 +43,10 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
   <ul class="nav navbar-nav">
-    <li class="active"><a href="#intro">Home</a></li>
+    <li class="active"><a href="#">Home</a></li>
     <li><a href="#about">Our Students</a></li>
 		<li><a href="#service">Why Join?</a></li>
-<!-- <li><a href="#contact">Contact</a></li> -->
+
     <li class="my-profile-button">
 
       <% if user_signed_in? and current_user and current_user.type_of_user == "student" %>
@@ -68,9 +68,9 @@
         
       </ul>
             </div>
-            <!-- /.navbar-collapse -->
+           
         </div>
-        <!-- /.container -->
+       
     </nav>
 	
 	<%= yield %>
