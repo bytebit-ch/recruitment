@@ -3,13 +3,13 @@
 img {
   height: 100px;
   width: 100px;
-  border-radius: 50%;
+  
   float: right;
   
 }
 
 
-
+/*body */
 body {
   padding: 2em; 
   color: darkgrey;
@@ -25,18 +25,90 @@ body {
   font-size: 1.2em;
 }
 
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
-  border-radius: 15%;
+
+/* outside of card style  business profile*/
+.biz_flex_index {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
   
 }
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  background: url('http://i.imgur.com/q0A2u4Q.jpg')
+/* inside of card style for biz */
+.card_index {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: white;
+  border-color: #00BCD4;
+  border-style: solid;
+  padding: 20px;
+  transition: background-color 2s ease-out;
+  width: 14%;
+  margin-bottom: 10px;
+   border-radius: 15%;
+
+}
+
+.student_flex_index {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  padding: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
   
 }
+/* inside of card style for student */
+.card_index_student {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: white;
+  border-color: #00BCD4;
+  border-style: solid;
+  padding: 20px;
+  transition: background-color 2s ease-out;
+  width: 29%;
+  margin-bottom: 10px;
+  padding: 10px;
+
+
+}
+/* card hover color */
+.card_index:hover{
+  background-color: #e8f3f7;
+  
+}
+/* website link style */
+.website_b {
+  float: left;
+  color: #00BCD4;
+}
+
 
 a {
   text-decoration: none; 
+  float: right;
+   color: #a45f99;
+  
+}
+
+a:hover {
+  color: grey;
+
+}
+/* header logo style on biz index */
+.logo_b {
+  float: left;
+  padding-right: 5%;
+  border-radius: 39%;
+}
+
+.links_show {
+  padding: 10px;
+}
+
+#index_student_name {
+  float: center;
 }

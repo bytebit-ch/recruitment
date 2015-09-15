@@ -79,4 +79,5 @@ class BusinessProfilesController < ApplicationController
     def business_profile_params
       params.require(:business_profile).permit(:business_id, :user_id, :business_name, :url_of_business, :description_business)
     end
+  
 end

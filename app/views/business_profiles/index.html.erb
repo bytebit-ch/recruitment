@@ -1,44 +1,79 @@
-  <head>
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+         <img src="http://i.imgur.com/DSbQ80V.png" class="logo_b">
+        <span class="mdl-layout-title">Business Profiles</span>
+          
+        <br>
 
-  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+        mdl-textfield--floating-label mdl-textfield--align-right">
+        
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+          id="waterfall-exp" />
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="waterfall-demo-header-nav mdl-navigation">
+        <!-- <p class='links_show'>
+          <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
+          </p> -->
+          <p class='links_show'>
+            <% if current_user and current_user.type_of_user != "admin" %>
+            <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
+          </p>
+          <% end %>
 
+<<<<<<< HEAD
 <div class="business-profile-body">
 
 <p id="notice"><%= notice %></p>
+=======
+     <p class='links_show'>
+          <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
+          <% else %>
+                <%= link_to('Login', new_user_session_path, class: "login") %>
+            <% end %>
+      </p>
+        </nav>
+      </div>
+    </header>
+>>>>>>> business_profile_view
 
+    
+<div class='biz_flex_index'>
+ <% @business_profiles.each do |business_profile| %>
+<div class='card_index'>
 
-<h1>Business Profiles</h1>
-<br>
-<br>
-<br>
-
-    <% @business_profiles.each do |business_profile| %>
       
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col"></div>
+         <h4 id="index_business_name"> <%= business_profile.business_name %></h4>
+            <%= business_profile.description_business %>
+            <br>
+            <br>
+         <p>
+       <a href="<%= business_profile.url_of_business %>" class="website_b">Website</a>
+     </p>
 
-<div class="demo-card-square mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text"> <%= business_profile.business_name %>  </h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    <%= business_profile.url_of_business %>
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"><%= link_to 'VIEW PROFILE', business_profile %>
-      
-    </a>
-  </div>
-</div>
+      <p><%= link_to 'VIEW PROFILE', business_profile %></p>
+
 </div>
 <% end %>
-
+</div>
 
 <br>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <%= link_to 'View my profile', current_user %>
 <% if user_signed_in? %>
@@ -50,5 +85,20 @@
 
 <div>
 >>>>>>> origin/developtment
+=======
 
+<footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer--left-section">
+>>>>>>> business_profile_view
+
+    <ul class="mdl-mini-footer--link-list">
+      <li><a href="#"></a></li>
+      <li><a href="#">Digital Jersey 2015</a></li>
+      <li>Christine Harris</li>
+      <li> Morti Alexandru</li>
+      <li> Dan Le Cornu</li>
+      <li> Ben Whitley</li>
+    </ul>
+  </div>
+</footer>
 
