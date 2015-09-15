@@ -35,15 +35,7 @@ body {
  /* end */
  
 
-.demo-card-square.mdl-card {
-  width: 320px;
-  height: 320px;
-  
-}
-.demo-card-square > .mdl-card__title {
-  color: #fff;
-  
-}
+
 
 /* hints for filling out forms */
 .simple_form label {
