@@ -12,6 +12,8 @@ class StudentProfilesController < ApplicationController
   # GET /student_profiles/1
   # GET /student_profiles/1.json
   def show
+    
+    @business_profiles = BusinessProfile.all
   end
 
   # GET /student_profiles/new
