@@ -301,14 +301,18 @@ hr {
 
 .logo {
   border-radius: 30%;
-  width: 50%;
-  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  margin: 5px 0px;
 }
 
+/*===========================
+--- Hero Image
+============================ */
 
-
-
-
+body#page-top {
+  padding: 0;
+}
 
 
 
@@ -539,8 +543,8 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 
 footer {
   text-align: center;
-  padding: 50px 0 ;
-  
+  position: relative;
+  bottom: 0px;
 }
 
 footer p {
@@ -748,7 +752,7 @@ Parallax
 
     .top-nav-collapse {
         padding: 0;
-        background-color: #000;
+        background-color: #67B0D1;
     }
 
     .navbar-custom.top-nav-collapse {
@@ -808,4 +812,18 @@ Parallax
     font-size: 20px;
   }
   
+}
+
+.business-profile-body {
+  position: relative;
+  margin-top: 100px;
+}
+
+.student-profile-body {
+  position: relative;
+  margin-top: 100px;
+}
+
+.heading-about h2 {
+  margin-top: 20px;
 }

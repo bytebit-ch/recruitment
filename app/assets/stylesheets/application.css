@@ -15,8 +15,8 @@
  */
 
 
-/* sing up page styling the h1 */
- .sign_up_login {
+/* sign in page styling the h1 */
+ .sign_in_login {
    color: darkgrey;
    font-family: 'Arial';
    font-size: 20px;
@@ -85,6 +85,17 @@
   padding: 7px 9px;
   color: darkgey;
 }
+
+/* sign up button */
+
+.sign_up_button a {
+  color: buttontext;
+  background-color: #FFF;
+  padding: 0px 2px;
+  font-size: 11px;
+}
+
+
  /* sign up page styles */
 i {
   color: red;

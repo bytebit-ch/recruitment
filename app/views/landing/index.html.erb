@@ -6,7 +6,7 @@
 		<h4></h4>
 	</div>
 	<div class="page-scroll">
-		<a href="#service" class="btn btn-circle">
+		<a href="#about" class="btn btn-circle">
 			<i class="fa fa-angle-double-down animated"></i>
 		</a>
 	</div>
@@ -23,68 +23,37 @@
 				<div class="section-heading">
 				<h2>About our students</h2>
 				<i class="fa fa-2x fa-angle-down"></i>
-
 				</div>
 				</div>
 			</div>
 		</div>
 		</div>
 	</div>
-	<div class="container">
 
+	<div class="container">
 	<div class="row">
 		<div class="col-lg-2 col-lg-offset-5">
 			<hr class="marginbot-50">
 		</div>
 	</div>
     <div class="row">
+
+<% @student_profiles.each do |student_profile| %>
+
         <div class="col-xs-6 col-sm-3 col-md-3">
 			<div class="wow bounceInUp" data-wow-delay="0.2s">
             <div class="team boxed-grey">
                 <div class="inner">
-					<h5>Anna Hanaceck</h5>
+					<h5><%= student_profile.first_name %></h5>
                     <p class="subtitle">2015 group</p>
-                    <div class="avatar"><%= image_tag 'team/1.jpg', class: "img-responsive img-circle" %></div>
+                    <div class="avatar"><%= image_tag avatar_url(student_profile) %></div>
                 </div>
             </div>
 			</div>
         </div>
-		<div class="col-xs-6 col-sm-3 col-md-3">
-			<div class="wow bounceInUp" data-wow-delay="0.5s">
-            <div class="team boxed-grey">
-                <div class="inner">
-					<h5>Mona Lisa</h5>
-                    <p class="subtitle">2015 group</p>
-                    <div class="avatar"><%= image_tag 'team/1.jpg', class: "img-responsive img-circle" %></div>
 
-                </div>
-            </div>
-			</div>
-        </div>
-		<div class="col-xs-6 col-sm-3 col-md-3">
-			<div class="wow bounceInUp" data-wow-delay="0.8s">
-            <div class="team boxed-grey">
-                <div class="inner">
-					<h5>Jack Briane</h5>
-                    <p class="subtitle">2015 group</p>
-                    <div class="avatar"><%= image_tag 'team/1.jpg', class: "img-responsive img-circle" %></div>
+<% end %>
 
-                </div>
-            </div>
-			</div>
-        </div>
-		<div class="col-xs-6 col-sm-3 col-md-3">
-			<div class="wow bounceInUp" data-wow-delay="1s">
-            <div class="team boxed-grey">
-                <div class="inner">
-					<h5>Alexandru Morti</h5>
-                    <p class="subtitle">2015 group</p>
-                    <div class="avatar"><%= image_tag 'team/1.jpg', class: "img-responsive img-circle" %></div>
-
-                </div>
-            </div>
-			</div>
-        </div>
     </div>		
 	</div>
 </section>
@@ -109,68 +78,54 @@
 		</div>
 		</div>
 	</div>
+
 	<div class="container">
 	<div class="row">
 		<div class="col-lg-2 col-lg-offset-5">
 			<hr class="marginbot-50">
 		</div>
 	</div>
+
     <div class="row">
+
+<% @business_profiles.each do |business_profile| %>
+
         <div class="col-sm-3 col-md-3">
 			<div class="wow fadeInLeft" data-wow-delay="0.2s">
-            <div class="service-box">
-				<div class="service-icon">
-					<%= image_tag 'icons/service-icon-1.png' %>
-				</div>
-				<div class="service-desc">
-					<h5>Digital Jersey</h5>
-					<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-				</div>
-            </div>
-			</div>
-        </div>
-		<div class="col-sm-3 col-md-3">
-			<div class="wow fadeInUp" data-wow-delay="0.2s">
-            <div class="service-box">
-				<div class="service-icon">
-					<%= image_tag 'icons/service-icon-2.png' %>
-				</div>
-				<div class="service-desc">
-					<h5>States of Jersey</h5>
-					<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-				</div>
-            </div>
-			</div>
-        </div>
-		<div class="col-sm-3 col-md-3">
-			<div class="wow fadeInUp" data-wow-delay="0.2s">
             <div class="service-box">
 				<div class="service-icon">
 					<%= image_tag 'icons/service-icon-3.png' %>
 				</div>
 				<div class="service-desc">
-					<h5>Web Reality</h5>
-					<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
+					<h5><%= business_profile.business_name %></h5>
+					<p><%= business_profile.description_business %></p>
+					<%= link_to "Click here to visit company website", business_profile.url_of_business, :target => "_blank" %>
 				</div>
             </div>
 			</div>
         </div>
-		<div class="col-sm-3 col-md-3">
-			<div class="wow fadeInRight" data-wow-delay="0.2s">
-            <div class="service-box">
-				<div class="service-icon">
-					<%= image_tag 'icons/service-icon-4.png' %>
-				</div>
-				<div class="service-desc">
-					<h5>Calligo</h5>
-					<p>Vestibulum tincidunt enim in pharetra malesuada. Duis semper magna metus electram accommodare.</p>
-				</div>
-            </div>
-			</div>
-        </div>
+
+<% end %>
+
     </div>		
 	</div>
 </section>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-lg-12">
+				<div class="wow shake" data-wow-delay="0.4s">
+				<div class="page-scroll marginbot-30">
+					<a href="#intro" id="totop" class="btn btn-circle">
+						<i class="fa fa-angle-double-up animated"></i>
+					</a>
+				</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</footer>
 	<!-- /Section: services -->
 	
 
