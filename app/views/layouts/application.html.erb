@@ -61,13 +61,14 @@
       <% end %>
     </li>
 
-
+    <li>
       <% if user_signed_in? and current_user and current_user.type_of_user == "student" %>
         <%= link_to('My Profile', current_user, class: 'student-profile-button') %>
       <% elsif user_signed_in? and current_user and current_user.type_of_user == "business" %>
         <%= link_to('My Profile', current_user, class: 'business-profile-button') %>
       <% else %>
       <% end %>
+    </li>
 
     <li class="dropdown">
       <% if user_signed_in? %>
