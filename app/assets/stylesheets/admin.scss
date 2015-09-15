@@ -4,6 +4,7 @@
 
 
 .admin-options {
+<<<<<<< HEAD
 	max-width: 1106px;
 	max-height: 500px;
 	margin: 0 100px;
@@ -24,11 +25,33 @@
 	
 
 }
+=======
+	display: inline-block;
+	max-width: 1300px;
+	max-height: 500px;
+	margin: 0 100px;
+	padding: 50px 50px;
+
+}
+
+.admin-contents {
+	margin: 50px 20px;
+	display: inline-block;
+}
+
+.admin-card {
+	height: 100px;
+	width: 300px;
+	display: inline-block;
+}
+
+>>>>>>> login/signup
 .admin-icon {
 	height: 200px;
 	width: 200px;
 	margin-left: 50px;
 	margin-top: 30px;
+<<<<<<< HEAD
 
 }
 
@@ -37,6 +60,13 @@
 	width: 95%;
 	margin-left: 5px;
 	margin-right: 5px;
+=======
+}
+
+.admin-img {
+	height: 100%;
+	width: 100%;	
+>>>>>>> login/signup
 }
 
 
@@ -50,7 +80,12 @@
 html, body {min-height: 100%;}
 /*a nice BG*/
 body {
+<<<<<<< HEAD
 	background: #FFF; /*fallback*/
+=======
+	background: #544; /*fallback*/
+	background: linear-gradient(#544, #565);
+>>>>>>> login/signup
 }
 
 /*Thumbnail Background*/
@@ -87,7 +122,11 @@ background-color: #86F5EB;}
 	background-position: bottom;
 	/*rotate the surface 90deg on the bottom axis*/
 	transform: rotateX(90deg); transform-origin: bottom;
+<<<<<<< HEAD
 	background-color: #50ADA4;
+=======
+	background-color: #5390AD;
+>>>>>>> login/signup
 
 }
 /*label style*/
@@ -125,10 +164,16 @@ background-color: #86F5EB;}
 .admin-container {
 	display: inline-block;
 	width: 300px;
+<<<<<<< HEAD
 	background-size: cover;
 	background-color: #46B6AC; 
 	height: 300px;
 	margin: 0px 30px;
+=======
+	background-color: #6FB3D2; 
+	height: 300px;
+	margin: 10px 30px;
+>>>>>>> login/signup
 	border-radius: 10%;
 }
 
