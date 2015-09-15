@@ -325,8 +325,9 @@ body#page-top {
 .intro {
   width:100%;
   position:relative;
-  
   background: url("students.JPG") no-repeat top center;
+  background-size: 100%;
+  
 }
 
 #intro.intro {
@@ -609,6 +610,7 @@ Parallax
     width: 70px;
     height: 70px;
     margin-top: 15px;
+    margin-right: 50%;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 50%;
