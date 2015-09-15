@@ -41,8 +41,9 @@
 		    		<% end %>
 		    	</div> 
 		    </div>
-		</div>
+		</div> 
 	</div>
+
 </div>
 
   <% mailer_all = [] %>
@@ -51,6 +52,7 @@
    <% mailer_all.append(business_profile.business_name) %>
      
 <% end %>
+<div class="mailer">
 
 <a href='mailto:<%= mailer_all.join(",") %>'>[Mail All]</a>
 
@@ -66,7 +68,7 @@
 	  <%= link_to('Login', new_user_session_path, class: "login") %>
 	<% end %>
 
-
+</div>
 
 <!-- <div class="admin-options">
 
