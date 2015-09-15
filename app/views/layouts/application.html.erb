@@ -30,7 +30,7 @@
         <div class="container">
 
             <div class="navbar-header page-scroll">
-             <!--  <%#= image_tag 'logo.png', class: "logo" %> -->
+               <%= image_tag 'logo.png', class: "logo" %> 
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
@@ -46,7 +46,6 @@
     <li class="active"><a href="#">Home</a></li>
     <li><a href="#about">Our Students</a></li>
 		<li><a href="#service">Why Join?</a></li>
-
     <li class="my-profile-button">
 
       <% if user_signed_in? and current_user and current_user.type_of_user == "student" %>
