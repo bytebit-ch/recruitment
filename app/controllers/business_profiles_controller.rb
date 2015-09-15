@@ -7,11 +7,13 @@ class BusinessProfilesController < ApplicationController
   # GET /business_profiles.json
   def index
     @business_profiles = BusinessProfile.all
+    @business_listings = BusinessListing.all
   end
 
   # GET /business_profiles/1
   # GET /business_profiles/1.json
   def show
+    @business_profiles = BusinessProfile.all
   end
 
   def view_profile

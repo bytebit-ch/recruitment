@@ -7,6 +7,7 @@ class BusinessListingsController < ApplicationController
   # GET /business_listings.json
   def index
     @business_listings = BusinessListing.all
+    @business_profiles = BusinessProfile.all
   end
   
 
