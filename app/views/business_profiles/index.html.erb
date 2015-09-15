@@ -3,9 +3,9 @@
       <!-- Top row, always visible -->
       <div class="mdl-layout__header-row">
         <!-- Title -->
-        <p class='biz_title'
+         <img src="http://i.imgur.com/DSbQ80V.png" class="logo_b">
         <span class="mdl-layout-title">Business Profiles</span>
-
+          
         <br>
 
         <div class="mdl-layout-spacer"></div>
@@ -34,21 +34,30 @@
           </p>
           <% end %>
 
+     <p class='links_show'>
+          <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
+          <% else %>
+                <%= link_to('Login', new_user_session_path, class: "login") %>
+            <% end %>
+      </p>
         </nav>
       </div>
     </header>
 
     
-<div class='biz_flex'>
+<div class='biz_flex_index'>
  <% @business_profiles.each do |business_profile| %>
-<div class='bottom_card'>
+<div class='card_index'>
 
-        <p>
+      
 
-         <h4> <%= business_profile.url_of_business %></h4>
-       </p>
+         <h4 id="index_business_name"> <%= business_profile.business_name %></h4>
+            <%= business_profile.description_business %>
+            <br>
+            <br>
          <p>
-       <strong>Contact:</strong> <%= business_profile.business_name %>
+       <a href="<%= business_profile.url_of_business %>" class="website_b">Website</a>
      </p>
 
       <p><%= link_to 'VIEW PROFILE', business_profile %></p>
