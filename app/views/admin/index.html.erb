@@ -46,29 +46,7 @@
 
 </div>
 
-  <% mailer_all = [] %>
-
-<% @business_profiles.each do |business_profile| %>
-   <% mailer_all.append(business_profile.business_name) %>
-     
-<% end %>
-<div class="mailer">
-
-<a href='mailto:<%= mailer_all.join(",") %>'>[Mail All]</a>
-
-<%= link_to('[Student Profiles]', student_profiles_path) %>
-<%= link_to('[Business Profiles]', business_profiles_path) %>
-	<div>
-		<%= link_to "[View my profile]", current_user %>
-	</div>
-
-	<% if user_signed_in? %>
-	  <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-	<% else %>
-	  <%= link_to('Login', new_user_session_path, class: "login") %>
-	<% end %>
-
-</div>
+  
 
 <!-- <div class="admin-options">
 

@@ -6,6 +6,7 @@ class StudentProfilesController < ApplicationController
   # GET /student_profiles.json
   def index
     @student_profiles = StudentProfile.all
+    @business_profiles = BusinessProfile.all
   end
 
   # GET /student_profiles/1

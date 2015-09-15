@@ -47,6 +47,20 @@
     <li><a href="#about">Our Students</a></li>
 		<li><a href="#service">Why Join?</a></li>
     <li class="my-profile-button">
+      <li>   <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+
+            <% mailer_all = [] %>
+
+            <% @business_profiles.each do |business_profile| %>
+                  <% mailer_all.append(business_profile.business_name) %>
+     
+            <% end %>
+      
+
+          <a href='mailto:<%= mailer_all.join(",") %>'>Mail All</a>
+      <% end %>
+    </li>
+
 
       <% if user_signed_in? and current_user and current_user.type_of_user == "student" %>
         <%= link_to('My Profile', current_user, class: 'student-profile-button') %>
