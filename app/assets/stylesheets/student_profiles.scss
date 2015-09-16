@@ -147,3 +147,23 @@ a:hover {
 #index_student_name {
   float: center;
 }
+
+/* footer for users/invitation/new */
+.invite_footer {
+  width: 100%;
+  height: 100px;
+  background-color: #4c4c4c;
+  color: white;
+  padding: 10%;
+
+}
+
+/* invitations body style */
+.invite_page {
+  width: 100%;
+  height: 600px;
+  padding-left: 35%;
+  -webkit-justify-content: center; 
+  justify-content: center; 
+  padding-top: 10%;
+}
