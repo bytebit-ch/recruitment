@@ -1,95 +1,80 @@
 
-<header>
-<h1>Admin Panel</h1>
-</header>
+<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+    <header class="mdl-layout__header mdl-layout__header--waterfall">
+      <!-- Top row, always visible -->
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+         
+        <span class="mdl-layout-title">Admin Panel</span>
+          
+        <br>
 
-<div class="admin-options">
+        <div class="mdl-layout-spacer"></div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+        mdl-textfield--floating-label mdl-textfield--align-right">
+        
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+          id="waterfall-exp" />
+        </div>
+        
+      </div>
+    </div>
+    
+    <!-- Bottom row, not visible on scroll -->
+    <div class="mdl-layout__header-row">
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="waterfall-demo-header-nav mdl-navigation">
+        <!-- <p class='links_show'>
+          <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
+          </p> -->
+          <p class='links_show'>
+            <% if current_user and current_user.type_of_user != "admin" %>
+            <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
+          </p>
+          <% end %>
 
-	<div class="admin-contents">
+        <p class='links_show'>
+          <% if user_signed_in? %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
+          <% else %>
+                <%= link_to('Login', new_user_session_path, class: "login") %>
+          <% end %>
+        </p>
+        
+        </nav>
+      </div>
+    </header>
 
-		
-		<div class="admin-container thumb">
-			<div class="admin-card">	  				
-				<div class="admin-icon">
-					
-					<%= link_to student_profiles_path do %>
-					<%= image_tag "Student_icon.jpg", class: "admin-img" %>
-					<% end %>
+    <br>
+    <br>
 
-				</div>
-
-			</div>
-		</div>
-		<div class="admin-container thumb">
-			<div class="admin-card">
-		    	<div class="admin-icon">	    		
-		    		<%= link_to business_profiles_path do %>
-		    		<%= image_tag "Business_icon.jpg", class: "admin-img" %>
-		    		<% end %>
-		    	</div> 
-		    </div>
-		</div> 
-
-
-	<div class="admin-container thumb">
-			<div class="admin-card">
-		    	<div class="admin-icon">
-		    		<% if can? :manage, User %>	    		
-		    		<%= link_to new_invitation_path(:user) do %>
-		    		<%= image_tag "Invitation_icon.jpg", class: "admin-img" %>
-		    		<% end %>
-		    		<% end %>
-		    	</div> 
-		    </div>
-		</div> 
-	</div>
-
+<div class='admin_flex_index'>
+<div class='admin_card_index'>
+				<p>Edit, View, and Delete any students profile </p>
+				<br>
+				<p>	<%= link_to "[Student Profiles]", student_profiles_path  %></p>
+		    		
+</div>
+</div>
+  
+  <div class='admin_flex_index'>
+<div class='admin_card_index'>
+				<p>Edit, View, and Delete any students profile </p>
+				<br>
+		    		<p><%= link_to "[Business Profiles]", business_profiles_path  %></p>
+		    		
+</div>
 </div>
 
-  
-
-<!-- <div class="admin-options">
-
-	<div class="admin-contents">
-
-		
-		<div class="admin-container thumb">
-			<div class="admin-card">	  				
-				<div class="admin-icon">				
-					<%= link_to student_profiles_path do %>
-					<%= image_tag "Student_icon.jpg", class: "admin-img" %>
-					<% end %>
-				</div>
-			</div>
-		</div>
-
-
-
-		<div class="admin-container thumb">
-			<div class="admin-card">
-		    	<div class="admin-icon">	    		
-		    		<%= link_to business_profiles_path do %>
-		    		<%= image_tag "Business_icon.jpg", class: "admin-img" %>
-		    		<% end %>
-		    	</div> 
-		    </div>
-		</div>
-
-
-
-		<div class="admin-container thumb">
-			<div class="admin-card">
-		    	<div class="admin-icon">		
-		    		<%= link_to new_invitation_path(:user) do %>
-		    		<%= image_tag "Invitation_icon.jpg", class: "admin-img" %>		 
-		    		<% end %>
-		    	</div> 
-		    </div>
-		</div>		    				
-	</div> -->
+<div class='admin_flex_index'>
+<div class='admin_card_index'>
+					<p>Edit, View, and Delete any students profile </p>
+					<br>
+		    		<p><%= link_to "[Send Invitation]", new_invitation_path(:user) %></p>
 </div>
-
-
-  
-
+</div>
+<br>
+<br>
 

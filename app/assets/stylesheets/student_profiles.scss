@@ -49,6 +49,36 @@ body {
    
 
 }
+/* inside of card style for admin */
+.admin_flex_index {
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ 
+  
+}
+/* inside of card style for admin */
+.admin_card_index {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: white;
+  border-color: #00BCD4;
+  border-style: dotted;
+  border-width: 2px;
+  padding: 20px;
+  transition: background-color 2s ease-out;
+  width: 29%;
+  margin-bottom: 10px;
+   
+
+}
+
+.admin_card_index:hover {
+    background-color: #e8f3f7;
+}
+
 /* outside of card style  student profile*/
 .student_flex_index {
   display: -webkit-flex;
