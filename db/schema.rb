@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150917131504) do
+ActiveRecord::Schema.define(version: 20150917150419) do
 
   create_table "business_listings", force: :cascade do |t|
     t.text     "skills_wanted"
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20150917131504) do
     t.text     "three_descriptive_words"
     t.text     "website"
     t.boolean  "sponsor"
+    t.text     "year"
   end
 
   create_table "users", force: :cascade do |t|

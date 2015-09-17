@@ -172,7 +172,7 @@ a:hover {
   justify-content: center; 
   padding-top: 10%;
 }
-
+/* edit profile link for admins and users */
 .edit_profiles {
   height: 40px;
   width: 40px;
@@ -182,7 +182,7 @@ a:hover {
   
   
 }
-
+/* destroy link for admins */
 .destroy_profiles {
   height: 40px;
   width: 40px;
@@ -191,7 +191,11 @@ a:hover {
   font-size: 40px;
   
 }
+/* form div for new student profile */
+.form {
+  margin: 5%;
 
+}
 
 
 /*!
