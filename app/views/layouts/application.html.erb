@@ -60,7 +60,7 @@
           <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
             <% mailer_all = [] %>
             <% @business_profiles.each do |business_profile| %>
-            <% mailer_all.append(business_profile.business_name) %>
+                 <% mailer_all.append(business_profile.user.email) %>
             <% end %>
             <a href='mailto:<%= mailer_all.join(",") %>'>Mail All</a>
           <% end %>
