@@ -99,69 +99,12 @@
             </div>
         </div>
     </section>
-
+<div class="edit_profiles">
 <%  if can? :edit, StudentProfile %>
   <%= link_to 'Edit', edit_student_profile_path(@student_profile) %>
 <% end %>
 
 <%  if can? :manage, :all %>
-  <%= link_to 'Delete', edit_student_profile_path(@student_profile) %>
+  <%= link_to 'Destroy', @student_profile,  :method => :delete  %>
 <% end %>
-<!-- <p>
-  <strong>First name:</strong>
-  <%= @student_profile.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @student_profile.last_name %>
-</p>
-
-<p>
-  <strong>Github url:</strong>
-  <%= @student_profile.github_url %>
-</p>
-
-<p>
-  <strong>Profile img:</strong>
-  <%= @student_profile.profile_img %>
-</p>
-
-<p>
-  <strong>Short description:</strong>
-  <%= @student_profile.short_description %>
-</p>
-
-<p>
-  <strong>Long decription:</strong>
-  <%= @student_profile.long_decription %>
-</p>
-
-<p>
-  <strong>Skills:</strong>
-  <%= @student_profile.skills %>
-</p>
-
-<p>
-  <strong>Part time:</strong>
-  <%= @student_profile.part_time %>
-</p>
-
-<p>
-  <strong>Full time:</strong>
-  <%= @student_profile.full_time %>
-</p>
-
-<p>
-  <strong>Contract:</strong>
-  <%= @student_profile.contract %>
-</p>
-
-<p>
-  <strong>Public:</strong>
-  <%= @student_profile.public %>
-</p>
-
-<%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
-<%= link_to 'Back', business_profiles_path %>
- -->
+</div>

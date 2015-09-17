@@ -8,6 +8,7 @@ class Ability
        if user.type_of_user == 'admin'
         can :manage, :all  
         can :read, User
+        can :read, :all
      
        elsif user.type_of_user == 'business'
            can [:read, :index], StudentProfile
