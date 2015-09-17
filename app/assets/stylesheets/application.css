@@ -29,7 +29,7 @@
  }
 
  /* end */
- 
+
 
 
 
@@ -53,13 +53,13 @@
      background: grey;
     font-size: 12px;
     color: red;
-  
+
 }
 
 /* User sign in and sign forms. */
 .border-form-div {
-  
-  
+
+
   margin: 0 auto 20px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
@@ -104,15 +104,6 @@ i {
   font-size: 20px;
   color: grey;
   font-family: 'Arial';
-<<<<<<< HEAD
-  padding-left: 12%;
-}
-
-
-
-
-
-=======
   padding-left: 50%;
 }
 
@@ -157,4 +148,3 @@ footer li {
 span {
   padding-bottom: 50px;
 }
->>>>>>> 9f9515b9231ba266577cbde13fc23250d1c01360
