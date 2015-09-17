@@ -31,6 +31,8 @@ body {
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 8%;
+  margin-top: 8%;
  
   
 }
@@ -83,9 +85,11 @@ body {
 .student_flex_index {
   display: -webkit-flex;
   -webkit-flex-direction: row;
-  padding: 100px 40px 40px 40px;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 8%;
+ 
+  margin-bottom: 8%;
  
   
 }
