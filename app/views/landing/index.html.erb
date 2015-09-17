@@ -69,7 +69,7 @@
 			<div class="col-lg-8 col-lg-offset-2">
 				<div class="wow bounceInDown" data-wow-delay="0.4s">
 				<div class="section-heading">
-				<h2>About Who is Hiring</h2>
+				<h2>Why Join?</h2>
 				<i class="fa fa-2x fa-angle-down"></i>
 
 				</div>
@@ -88,44 +88,48 @@
 
     <div class="row">
 
-<% @business_profiles.each do |business_profile| %>
+<!-- <#% @business_profiles.each do |business_profile| %>
 
         <div class="col-sm-3 col-md-3">
 			<div class="wow fadeInLeft" data-wow-delay="0.2s">
             <div class="service-box">
 				<div class="service-icon">
-					<%= image_tag 'icons/service-icon-3.png' %>
+					<%#= image_tag 'icons/service-icon-3.png' %>
 				</div>
 				<div class="service-desc">
-					<h5><%= business_profile.business_name %></h5>
-					<p><%= business_profile.description_business %></p>
-					<%= link_to "Click here to visit company website", business_profile.url_of_business, :target => "_blank" %>
+					<h5><%#= business_profile.business_name %></h5>
+					<p><%#= business_profile.description_business %></p>
+					<%#= link_to "Click here to visit company website", business_profile.url_of_business, :target => "_blank" %>
 				</div>
             </div>
 			</div>
         </div>
 
-<% end %>
+<#% end %> -->
+<div class="col-sm-3 col-md-3">
+	<div class="wow fadeInLeft" data-wow-delay="0.2s">
+            <div class="service-box">
+				<div class="service-icon"><p>When your business signs up to the Digital Jersey Recruitment Platform, you get access to new programmers ready to enter into the IT industry.</p>
 
+</div>
+
+</div>
     </div>		
 	</div>
+
+<div class="col-md-12 col-lg-12">
+	<div class="wow shake" data-wow-delay="0.4s">
+		<div class="page-scroll marginbot-30">
+			<a href="#intro" id="totop" class="btn btn-circle">
+				<i class="fa fa-angle-double-up animated"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
 </section>
 
-<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12 col-lg-12">
-				<div class="wow shake" data-wow-delay="0.4s">
-				<div class="page-scroll marginbot-30">
-					<a href="#intro" id="totop" class="btn btn-circle">
-						<i class="fa fa-angle-double-up animated"></i>
-					</a>
-				</div>
-				</div>
-			</div>
-		</div>	
-	</div>
-</footer>
+
 	<!-- /Section: services -->
 	
 

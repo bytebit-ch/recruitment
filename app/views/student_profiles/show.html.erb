@@ -1,69 +1,126 @@
-<p id="notice"><%= notice %></p>
+ <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- <img class="img-responsive" src='<%= image_tag avatar_url(@student_profile) %>'> -->
+                    <div class="intro-text">
+                        <p class="name">  <%= @student_profile.first_name %><br> <%= @student_profile.last_name %></p>
+                        <% if @student_profile.sponsor == true %>
+                            <p>Student already has a sponsor</p>
+                        <% end %>
 
-<p>
-  <strong>Student:</strong>
-  <%= @student_profile.student_id %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @student_profile.user_id %>
-</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p><hr class="star-light"></p>
+                        <span class="skills"><%= @student_profile.three_descriptive_words %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<p>
-  <strong>First name:</strong>
-  <%= @student_profile.first_name %>
-</p>
+<section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Skills</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+             <h1> <%= @student_profile.skills %></h1>
+    </section>
+<section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>  <%= @student_profile.long_decription %></p>
+                </div>
+                <div class="col-lg-4">
+                    
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+ <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contact Me</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <p>GitHub: <%= @student_profile.github_url %></p>
+                                
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <p>Email: <%= @student_profile.user.email %></p>
+                               
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <p>Blog: <%= @student_profile.website %></p>
+                                
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <p>Availability:  <% if @student_profile.full_time == true %>
+                                                        <strong> <%= 'Full Time' %></strong>
+                                                <% end %>
+                                                <% if @student_profile.part_time == true %>
+                                                        <strong> <%= 'Part Time' %> </strong>
+                                                <% end %>
+                                                <% if @student_profile.contract == true %>
+                                                        <strong> <%= 'Contract' %> </strong>
+                                                <% end %>
+                                                                                       
 
-<p>
-  <strong>Last name:</strong>
-  <%= @student_profile.last_name %>
-</p>
+                                                    </p>
+                                
+                            </div>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="edit_profiles">
+<%  if can? :edit, StudentProfile %>
+  <%= link_to 'Edit', edit_student_profile_path(@student_profile) %>
+<% end %>
 
-<p>
-  <strong>Github url:</strong>
-  <%= @student_profile.github_url %>
-</p>
-
-<p>
-  <strong>Profile img:</strong>
-  <%= @student_profile.profile_img %>
-</p>
-
-<p>
-  <strong>Short description:</strong>
-  <%= @student_profile.short_description %>
-</p>
-
-<p>
-  <strong>Long decription:</strong>
-  <%= @student_profile.long_decription %>
-</p>
-
-<p>
-  <strong>Skills:</strong>
-  <%= @student_profile.skills %>
-</p>
-
-<p>
-  <strong>Part time:</strong>
-  <%= @student_profile.part_time %>
-</p>
-
-<p>
-  <strong>Full time:</strong>
-  <%= @student_profile.full_time %>
-</p>
-
-<p>
-  <strong>Contract:</strong>
-  <%= @student_profile.contract %>
-</p>
-
-<p>
-  <strong>Public:</strong>
-  <%= @student_profile.public %>
-</p>
-
-<%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
-<%= link_to 'Back', business_profiles_path %>
+<%  if can? :manage, :all %>
+  <%= link_to 'Destroy', @student_profile,  :method => :delete  %>
+<% end %>
+</div>

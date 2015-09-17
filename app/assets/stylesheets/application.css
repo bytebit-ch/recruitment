@@ -104,6 +104,7 @@ i {
   font-size: 20px;
   color: grey;
   font-family: 'Arial';
+<<<<<<< HEAD
   padding-left: 12%;
 }
 
@@ -111,3 +112,49 @@ i {
 
 
 
+=======
+  padding-left: 50%;
+}
+
+/* -------------------------------- FOOTER ------------------------------ */
+
+footer {
+  padding: 0 16px;
+  background-color: #424242;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  z-index: 1000;
+  min-height: 30px;
+}
+
+footer ul {
+  margin: 0;
+}
+
+footer li {
+  list-style: none;
+  display: inline-block;
+
+}
+
+.copyright {
+  float: left;
+  display: inline-block;
+  padding-top: 15px;
+}
+
+.creators li {
+  display: inline-block;
+  margin: 0px 10px;
+  padding-top: 15px;
+  float: right;
+}
+
+/* -------------------------------- PAGE TITLE ------------------------------ */
+
+span {
+  padding-bottom: 50px;
+}
+>>>>>>> 9f9515b9231ba266577cbde13fc23250d1c01360

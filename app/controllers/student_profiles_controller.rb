@@ -30,6 +30,7 @@ class StudentProfilesController < ApplicationController
 
   # GET /student_profiles/1/edit
   def edit
+    @business_profiles = BusinessProfile.all
   end
 
 
@@ -73,6 +74,7 @@ class StudentProfilesController < ApplicationController
       format.html { redirect_to student_profiles_url, notice: 'Student profile was successfully destroyed.' }
       format.json { head :no_content }
     end
+    @business_profiles = BusinessProfile.all
   end
 
   private

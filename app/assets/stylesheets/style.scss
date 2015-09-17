@@ -263,7 +263,7 @@ hr {
 
 .home-section {
     padding-top: 110px;
-    padding-bottom: 110px;
+    padding-bottom: 0;
   display:block;
     position:relative;
     z-index:120;
@@ -541,6 +541,7 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 .company-social .social-vimeo a:hover{background: #71c6f3;}
 
 
+<<<<<<< HEAD
 
 /* ===========================
 --- Footer
@@ -557,6 +558,8 @@ footer p {
   color: #f8f8f8;
 }
 
+=======
+>>>>>>> 9f9515b9231ba266577cbde13fc23250d1c01360
 /* ==========================
 Parallax
 ============================= */
@@ -615,7 +618,7 @@ Parallax
     width: 70px;
     height: 70px;
     margin-top: 15px;
-    margin-right: 50%;
+    margin-right: 47.4%;
     margin-bottom: 45px;
     padding: 7px 16px;
     border: 2px solid #fff;

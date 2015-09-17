@@ -79,9 +79,25 @@
        <strong>Contact:</strong> <%= business_listing.contact_email %>
      </p>
    </div>
-
-
+<%#  if can? :manage, :all %>
+  <%#= link_to '[Destroy Business Listing]', @business_listing,  :method => :delete  %>
+<%# end %>
+<%#  if can? :edit, BusinessListing %>
+  <%#= link_to 'Edit', edit_business_listing_path(@business_listing) %>
+<%# end %>
 <% end %>
 </div>
 
+
+<div class="edit_profiles">
+<%  if can? :edit, BusinessProfile %>
+  <%= link_to 'Edit', edit_business_profile_path(@business_profile) %>
+<% end %>
+</div>
+<div class="destroy_profiles">
+<%  if can? :manage, :all %>
+  <%= link_to 'Destroy', @business_profile,  :method => :delete  %>
+<% end %>
+
+</div>
 
