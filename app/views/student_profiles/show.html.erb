@@ -100,7 +100,13 @@
         </div>
     </section>
 
+<%  if can? :edit, StudentProfile %>
+  <%= link_to 'Edit', edit_student_profile_path(@student_profile) %>
+<% end %>
 
+<%  if can? :manage, :all %>
+  <%= link_to 'Delete', edit_student_profile_path(@student_profile) %>
+<% end %>
 <!-- <p>
   <strong>First name:</strong>
   <%= @student_profile.first_name %>
