@@ -224,6 +224,54 @@ a:hover {
  this is student profile show below
  */
 
+/* proficiencie sliders start*/
+
+#Proficiencies {
+  float: left;
+  clear: right;
+  width: 500px;
+  margin: 20px 0px 30px 30px;
+}
+
+#ProficienciesTop {
+  float: left;
+  clear: right;
+  width: 100%;
+  margin: -5px 0px 0px 0px;
+  text-align: left;
+  font-weight: 600;
+}
+
+#ProficienciesBottom {
+  float: left;
+  clear: right;
+  width: 80%;
+  margin: 2px 0px 0px 0px;
+}
+
+.progress {
+  background:#e9e5e2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#e9e5e2));
+  background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: linear-gradient(top, #dddddd, #e9e5e2);  
+  height:20px; 
+  border-radius: 0px;
+  -moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;   
+  -webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;  
+  box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;   
+}
+
+.jquery, .javascript {
+
+ -webkit-transition: width 4.50s ease !important;
+ -moz-transition: width 4.50s ease !important;
+   -o-transition: width 4.50s ease !important;
+      transition: width 4.50s ease !important;
+ }
+/* proficiencie sliders end*/
 body {
     overflow-x: hidden;
 }
@@ -260,7 +308,7 @@ hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
     padding: 0;
-    max-width: 250px;
+    max-width: 350px;
     border: 0;
     border-top: solid 5px;
     text-align: center;
@@ -268,13 +316,13 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f121";
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 hr.star-light {
@@ -295,9 +343,7 @@ hr.star-primary:after {
     background-color: #fff;
 }
 
-.img-centered {
-    margin: 0 auto;
-}
+
 
 header {
     text-align: center;
@@ -306,13 +352,20 @@ header {
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 header img {
     display: block;
     margin: 0 auto 20px;
+    border-radius: 50%;
+    -webkit-justify-content: center; 
+    justify-content: center; 
+}
+
+.s_img {
+  float: none;
 }
 
 header .intro-text .name {
@@ -330,12 +383,12 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 1.75em;
     }
 
     header .intro-text .skills {
@@ -388,6 +441,10 @@ header .intro-text .skills {
 .navbar-default,
 .navbar-inverse {
     border: 0;
+}
+
+.s_skills {
+  font-size: 2em;
 }
 
 section {
