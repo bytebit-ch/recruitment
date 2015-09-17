@@ -5,6 +5,11 @@
                     <!-- <img class="img-responsive" src='<%= image_tag avatar_url(@student_profile) %>'> -->
                     <div class="intro-text">
                         <p class="name">  <%= @student_profile.first_name %><br> <%= @student_profile.last_name %></p>
+                        <% if @student_profile.sponsor == true %>
+                            <p>Student already has a sponsor</p>
+                        <% end %>
+
+
                         <br>
                         <br>
                         <br>
@@ -71,19 +76,30 @@
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>Email Address: </p>
+                                <p>Email: <%= @student_profile.user.email %></p>
                                
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>Blog: </p>
+                                <p>Blog: <%= @student_profile.website %></p>
                                 
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>Whatever</p>
+                                <p>Availability:  <% if @student_profile.full_time == true %>
+                                                        <strong> <%= 'Full Time' %></strong>
+                                                <% end %>
+                                                <% if @student_profile.part_time == true %>
+                                                        <strong> <%= 'Part Time' %> </strong>
+                                                <% end %>
+                                                <% if @student_profile.contract == true %>
+                                                        <strong> <%= 'Contract' %> </strong>
+                                                <% end %>
+                                                                                       
+
+                                                    </p>
                                 
                             </div>
                         </div>
