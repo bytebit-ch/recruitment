@@ -15,12 +15,12 @@ ActiveRecord::Schema.define(version: 20150917150419) do
 
   create_table "business_listings", force: :cascade do |t|
     t.text     "skills_wanted"
-    t.text     "title"
+    t.string     "title"
     t.boolean  "part_time"
     t.boolean  "full_time"
     t.boolean  "contract"
     t.text     "job_description"
-    t.text     "contact_email"
+    t.string     "contact_email"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.integer  "business_profile_id"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20150917150419) do
   create_table "business_profiles", force: :cascade do |t|
     t.integer  "business_id"
     t.integer  "user_id"
-    t.text     "business_name"
-    t.text     "url_of_business"
+    t.string     "business_name"
+    t.string     "url_of_business"
     t.text     "description_business"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
@@ -44,10 +44,10 @@ ActiveRecord::Schema.define(version: 20150917150419) do
   create_table "student_profiles", force: :cascade do |t|
     t.integer  "student_id"
     t.integer  "user_id"
-    t.text     "first_name"
-    t.text     "last_name"
-    t.text     "github_url"
-    t.text     "profile_img"
+    t.string     "first_name"
+    t.string     "last_name"
+    t.string     "github_url"
+    t.string     "profile_img"
     t.text     "short_description"
     t.text     "long_decription"
     t.text     "skills"
@@ -57,14 +57,14 @@ ActiveRecord::Schema.define(version: 20150917150419) do
     t.boolean  "public"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
-    t.text     "three_descriptive_words"
-    t.text     "website"
+    t.string     "three_descriptive_words"
+    t.string     "website"
     t.boolean  "sponsor"
-    t.text     "year"
+    t.string     "year"
   end
 
   create_table "users", force: :cascade do |t|
-    t.text     "email"
+    t.string   "email"
     t.string   "encrypted_password",     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20150917150419) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "user_id"
-    t.text     "password"
-    t.text     "type_of_user"
+    t.string     "password"
+    t.string     "type_of_user"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "invitation_token"

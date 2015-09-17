@@ -87,7 +87,7 @@ a:focus {
 }
 
 .nav.navbar-nav {
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(255,255,255,0.8);
 }
 
 .navbar-custom.top-nav-collapse .nav.navbar-nav {
@@ -361,10 +361,10 @@ body#page-top {
   color: #FFF;
   text-shadow: none;
   font-size: 60px;
-  line-height: 60px;
+  line-height: 90px;
   font-weight: 700;
   font-family: Montserrat, sans-serif;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
   text-transform: uppercase;
   border-width: 0px;

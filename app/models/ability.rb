@@ -6,15 +6,15 @@ class Ability
     #
       user ||= User.new # guest user (not logged in)
        if user.type_of_user == 'admin'
-        can :manage, :all  
+        can :manage, :all
         can :read, User
         can :read, :all
-     
+
        elsif user.type_of_user == 'business'
            can [:read, :index], StudentProfile
            can [:view_profile, :update, :create, :show], BusinessProfile
            can [:view_profile, :update, :create, :show], BusinessListing
-           
+
            # can [:read, :update, :create], BusinessProfile # needs to be restricted to own profile
            # can [:read, :update, :create], BusinessListing# needs to be restricted to own profile
             can [:read, :edit], User, id: user.id
@@ -25,11 +25,9 @@ class Ability
            can [:read, :index], [BusinessProfile, BusinessListing]
            can [:view_profile, :update, :create, :show], StudentProfile
            can [:read, :edit, :delete], User, id: user.id
-      
-       else
-            can :read, Landing
-            can :read, User
-        end
+
+
+      end
 
 
 
@@ -51,5 +49,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-  end 
+  end
 end
