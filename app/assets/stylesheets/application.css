@@ -58,8 +58,8 @@
 
 /* User sign in and sign forms. */
 .border-form-div {
-  max-width: 300px;
-  padding: 19px 29px 29px;
+  
+  
   margin: 0 auto 20px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
@@ -100,8 +100,14 @@ i {
 }
 
 .sign_up_reasons {
+  margin-left: 320px;
   font-size: 20px;
   color: grey;
   font-family: 'Arial';
-  padding-left: 50%;
+  padding-left: 12%;
 }
+
+
+
+
+
