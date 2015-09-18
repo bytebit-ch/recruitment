@@ -55,7 +55,7 @@
 
       
 
-         <p id="index_student_name"> <h4><%= student_profile.first_name %></h4><span><%= student_profile.three_descriptive_words %></span> <%= image_tag avatar_url(student_profile) %></p>
+         <p id="index_student_name"> <h4><%= student_profile.first_name %></h4><%= student_profile.three_descriptive_words %> <%= image_tag avatar_url(student_profile), :class => "s_img_index" %></p>
            
              <p> <%= student_profile.short_description %></p>
 
