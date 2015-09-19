@@ -89,15 +89,12 @@
 </div>
 
 
-<div class="edit_profiles">
 <%  if can? :edit, BusinessProfile %>
-  <%= link_to 'Edit', edit_business_profile_path(@business_profile) %>
-<% end %>
-</div>
-<div class="destroy_profiles">
-<%  if can? :manage, :all %>
-  <%= link_to 'Destroy', @business_profile,  :method => :delete  %>
+  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
 <% end %>
 
-</div>
+<%  if can? :manage, :all %>
+  <%= link_to 'Delete Profile', @business_profile,  :method => :delete,  :class => "edit_profiles_destroy_biz"  %>
+<% end %>
+
 

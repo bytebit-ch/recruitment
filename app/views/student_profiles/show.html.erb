@@ -7,7 +7,7 @@
                         <p class="name">  <%= @student_profile.first_name %><br> <%= @student_profile.last_name %></p>
                         <p><%= image_tag avatar_url(@student_profile), :class => "s_img" %></p>
                         <% if @student_profile.sponsor == true %>
-                            <p>Student already has a sponsor</p>
+                            <p class="sponsor">Student already has a sponsor</p>
                         <% end %>
 
 
@@ -148,12 +148,11 @@
             </div>
         </div>
     </section>
-<div class="edit_profiles">
+
 <%  if can? :edit, StudentProfile %>
-  <%= link_to 'Edit', edit_student_profile_path(@student_profile) %>
+  <%= link_to 'Edit ', edit_student_profile_path(@student_profile),  :class => "edit_profiles" %>
 <% end %>
 
 <%  if can? :manage, :all %>
-  <%= link_to 'Destroy', @student_profile,  :method => :delete  %>
+  <%= link_to 'Delete ', @student_profile,  :method => :delete,  :class => "edit_profiles_destroy"  %>
 <% end %>
-</div>

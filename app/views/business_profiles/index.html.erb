@@ -52,17 +52,14 @@
  <% @business_profiles.each do |business_profile| %>
 <div class='card_index'>
 
-      
-
-         <h4 id="index_business_name"> <%= business_profile.business_name %></h4>
-            <%= business_profile.description_business %>
-            <br>
-            <br>
-         <p>
+         <strong><p id="index_business_name"> <%= business_profile.business_name %></strong><br>
+            <small><%= business_profile.description_business %></small></p>
+            
+         
        <a href="<%= business_profile.url_of_business %>" class="website_b">Website</a>
-     </p>
+     
 
-      <p><%= link_to 'VIEW PROFILE', business_profile %></p>
+      <%= link_to 'VIEW PROFILE', business_profile %>
 
 </div>
 <% end %>

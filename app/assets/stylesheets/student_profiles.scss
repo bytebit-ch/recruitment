@@ -36,6 +36,14 @@ body {
 
 
 }
+
+/*style for business name on business index */
+#index_business_name {
+  float: left;
+  font-weight: bold;
+  
+}
+
 /* inside of card style for biz */
 .card_index {
   display: -webkit-flex;
@@ -117,16 +125,20 @@ body {
   background-color: #e8f3f7;
 
 }
-/* website link style */
+/* website link style on business card on business index*/
 .website_b {
-  float: left;
+  
   color: #00BCD4;
 }
 
+/* view prfoile link style on business card on business index*/
+.b_view_profile_link {
+  float: right;
+  
+}
 
 a {
   text-decoration: none;
-  float: right;
    color: #a45f99;
 
 }
@@ -193,22 +205,59 @@ a:hover {
 /* edit profile link for admins and users */
 .edit_profiles {
   height: 40px;
-  width: 40px;
+  width: 90px;
   margin-left: 8%;
   padding-left: 8%;
   font-size: 40px;
-
+  color: green;
+  float: left;
+ 
 
 }
+/* destroy profile link for admins and users */
+.edit_profiles_destroy {
+  height: 40px;
+  width: 90px;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 40px;
+  color: green;
+  float: right;
+  
+  margin-bottom: 5%;
+
+}
+
+.edit_profiles_biz {
+  font-size: 23px;
+  color: green;
+  padding-left: 5%;
+  margin-bottom: 2%;
+ 
+
+}
+/* destroy profile link for admins and users */
+.edit_profiles_destroy_biz {
+  font-size: 23px;
+  color: green;
+  float: right;
+  padding-left: 5%;
+}
+
+
+
+
 /* destroy link for admins */
 .destroy_profiles {
   height: 40px;
   width: 40px;
-  margin-left: 20%;
-  padding-left: 20%;
+  display: inline;
   font-size: 40px;
+  
 
 }
+
+
 /* form div for new student profile */
 .form {
   margin: 5%;
@@ -221,6 +270,10 @@ a:hover {
   background-position: left top;
 }
 
+.sponsor {
+  color: grey;
+  
+}
 
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
