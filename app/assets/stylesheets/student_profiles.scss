@@ -68,7 +68,7 @@ body {
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 18%;
+  padding-top: 1%;
 
 
 }
@@ -89,6 +89,15 @@ body {
 
 .admin_card_index:hover {
     background-color: #e8f3f7;
+}
+
+/*admin paragraph describing what the panel does*/
+.admin_para {
+  color: grey;
+  font-size: 1.5em;
+  padding-top: 10%;
+  margin-left: 10%;
+  margin-bottom: 1%;
 }
 
 /* outside of card style  student profile*/
