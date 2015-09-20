@@ -51,12 +51,12 @@ body {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   background: white;
-  border-color: #00BCD4;
-  border-style: dotted;
+  border-color: #ECEAEA;
+  border-style: solid;
   border-width: 2px;
   padding: 20px;
   transition: background-color 2s ease-out;
-  width: 19%;
+  width: 200px;
   margin: 10px;
 
 
@@ -117,12 +117,12 @@ body {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   background: white;
-  border-color: #00BCD4;
-  border-style: dotted;
+  border-color: #ECEAEA;
+  border-style: solid;
   border-width: 2px;
   padding: 20px;
   transition: background-color 2s ease-out;
-  width: 29%;
+  width: 300px;
   margin: 10px;
   padding: 10;
   
@@ -130,12 +130,14 @@ body {
 }
 /* card hover color */
 .card_index:hover{
-  background-color: #e8f3f7;
+  background-color: #f3f3f2;
+  border-color: #00BCD4;
 
 }
 
 .card_index_student:hover {
-  background-color: #e8f3f7;
+  background-color: #f3f3f2;
+  border-color: #00BCD4;
 
 }
 /* website link style on business card on business index*/
@@ -173,6 +175,17 @@ a:hover {
 
 #index_student_name {
   float: center;
+}
+
+/* name on student_profiles/index */
+.student_name {
+  padding-right: 200px;
+  
+}
+
+/* three words on profiles/index */
+.three_words {
+  padding-left: 70px;
 }
 
 #new_student_profile{
@@ -257,7 +270,11 @@ a:hover {
   padding-left: 5%;
 }
 
-
+/* destroy profile link for admins and users */
+.s_view_profile {
+ 
+  background-position: right bottom; 
+}
 
 
 /* destroy link for admins */
@@ -280,7 +297,7 @@ a:hover {
 /* gravatars for index student */
 .s_img_index {
   border-radius: 50%;
-  background-position: left top;
+  margin-left: 90px;
 }
 
 .sponsor {
