@@ -34,6 +34,7 @@
       </div>
 
   </div>
+  <br>
   <div class="form-group">
     
     <%= f.label :three_descriptive_words, "3 Words", class: "col-md-4 control-label" %>
@@ -42,7 +43,7 @@
       </div>
 
   </div>
-
+<br>
   <div class="form-group">
     
     <%= f.label :github_url, "Github URL", class: "col-md-4 control-label" %>
@@ -51,7 +52,7 @@
       </div>
 
   </div>
-
+<br>
    <div class="form-group">
     
     <%= f.label :short_description, "Description", class: "col-md-4 control-label" %>
@@ -60,6 +61,7 @@
       </div>
 
   </div>
+  <br>
    <div class="form-group">
     
     <%= f.label :long_decription, "About You", class: "col-md-4 control-label" %>
@@ -68,6 +70,7 @@
       </div>
 
   </div>
+  <br>
   <div class="form-group">
     
     <%= f.label :skills, "Skills", class: "col-md-4 control-label" %>
@@ -76,6 +79,7 @@
       </div>
 
   </div>
+  <br>
     <div class="form-group">
     
     <%= f.label :ruby, "Ruby", class: "col-md-4 control-label" %>
@@ -84,6 +88,7 @@
       </div>
 
   </div>
+  <br>
    <div class="form-group">
     
     <%= f.label :rails, "Rails", class: "col-md-4 control-label" %>
@@ -92,6 +97,7 @@
       </div>
 
   </div>
+  <br>
    <div class="form-group">
     
     <%= f.label :sql, "SQL", class: "col-md-4 control-label" %>
@@ -100,6 +106,7 @@
       </div>
 
   </div>
+  <br>
   <div class="form-group">
     
     <%= f.label :html, "HTML5", class: "col-md-4 control-label" %>
@@ -108,6 +115,7 @@
       </div>
 
   </div>
+  <br>
  <div class="form-group">
     
     <%= f.label :css, "CSS3", class: "col-md-4 control-label" %>
@@ -116,30 +124,38 @@
       </div>
 
   </div>
- <div class="field">
-   <%= f.label :year %><br>
-  <%= f.select :year, [['2014'],['2015'],['2016'],['2017'],['2018'],['2019']] %>
+  <br>
+  <br>
+ <div class="form-group">
+   <%= f.label :year, class: "col-md-4 control-label" %>
+   <div class="col-md-8">
+  <%= f.select(:year, options_for_select([['2014', 1],['2015', 2],['2016', 3],['2017', 4],['2018', 5],['2019', 6]]), class: "form-control") %>
  
   </div>
   <br>
+  <br>
+
+  <div class="boxes_for_form">
   <div class="checkbox">
    
    
     <%= f.check_box :part_time %> Part Time - willing to take a part time position?
   </div>
+  <br>
   
   <div class="checkbox">
    
      
     <%= f.check_box :full_time %> Full Time - willing to take a full time position?
   </div>
+  <br>
   
   <div class="checkbox"> 
    
     
     <%= f.check_box :contract %> Contract - willing to take a contract time position?
   </div>
-  
+  <br>
   
   <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
    <div class="checkbox">
@@ -150,10 +166,14 @@
   
     <% end %>
   </div>
+</div>
+<br>
+<br>
+<br>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="login-field">
+    <%= f.submit class: "button" %>
   </div>
-
+</div>
 <% end %>
 
