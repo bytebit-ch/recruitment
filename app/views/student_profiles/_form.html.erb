@@ -46,9 +46,17 @@
 <br>
   <div class="form-group">
     
-    <%= f.label :github_url, "Github URL", class: "col-md-4 control-label" %>
+    <%= f.label :github_url, "Github", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :github_url, class: "form-control" %>
+      <%= f.text_field :github_url, class: "form-control", :placeholder => 'Link to your github profile' %>
+      </div>
+
+  </div>
+  <div class="form-group">
+    
+    <%= f.label :website, "Website", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :website, class: "form-control", :placeholder => 'If you have a personal website, blog, linkedin, etc link to it here' %>
       </div>
 
   </div>
@@ -66,7 +74,7 @@
     
     <%= f.label :long_decription, "About You", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-     <textarea class="form-control" rows="15"> <%= f.text_field :long_decription, class: "form-control" %></textarea>
+     <textarea class="form-control" rows="15"> <%= f.text_field :long_decription, class: "form-control", :placeholder => 'Write about yourself explaining why someone should hire you. Be creative, you can use HTML tags such as strong, img, etc ' %></textarea>
       </div>
 
   </div>
@@ -84,7 +92,7 @@
     
     <%= f.label :ruby, "Ruby", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :ruby, class: "form-control", :placeholder => 'Rate your Ruby skills, 100 is the highest rating ' %>
+      <%= f.text_field :ruby, class: "form-control", :placeholder => 'Rate your Ruby skills out of 100' %>
       </div>
 
   </div>
@@ -93,7 +101,7 @@
     
     <%= f.label :rails, "Rails", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :rails, class: "form-control", :placeholder => 'Rate your Rails skills, 100 is the highest rating ' %>
+      <%= f.text_field :rails, class: "form-control", :placeholder => 'Rate your Rails skills out of 100 ' %>
       </div>
 
   </div>
@@ -102,7 +110,7 @@
     
     <%= f.label :sql, "SQL", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :sql, class: "form-control", :placeholder => 'Rate your SQL skills, 100 is the highest rating ' %>
+      <%= f.text_field :sql, class: "form-control", :placeholder => 'Rate your SQL skills out of 100 ' %>
       </div>
 
   </div>
@@ -111,7 +119,7 @@
     
     <%= f.label :html, "HTML5", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :html, class: "form-control", :placeholder => 'Rate your HTML5 skills, 100 is the highest rating ' %>
+      <%= f.text_field :html, class: "form-control", :placeholder => 'Rate your HTML5 skills out of 100' %>
       </div>
 
   </div>
@@ -120,7 +128,7 @@
     
     <%= f.label :css, "CSS3", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :css, class: "form-control", :placeholder => 'Rate your CSS3 skills, 100 is the highest rating ' %>
+      <%= f.text_field :css, class: "form-control", :placeholder => 'Rate your CSS3 skills out of 100 ' %>
       </div>
 
   </div>
