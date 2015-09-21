@@ -35,4 +35,8 @@ $(document).ready(function(){
 		});
 	});
 
+	$('.progress-bar').each(function(i,o) {
+		var $o = $(o);
+		$o.width($o.attr('data-percent') + '%')
+	});
 });

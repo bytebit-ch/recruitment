@@ -46,7 +46,9 @@
         </nav>
       </div>
     </header>
-
+<div class="instructions">
+  <p> Below view Coding Program Students who are seeking a job. Remember you can also sponsor students to learn skills and employ them within 6 months. To sponsor a student or to find out more e-mail Tom Hacquoil at thomas@hacqouil.com. In the navigation bar you can find links to set your company profile and post jobs.</p>
+</div>
 
 
   <div class='student_flex_index'>
@@ -55,11 +57,11 @@
 
       
 
-         <p id="index_student_name"> <h4><%= student_profile.first_name %></h4><span><%= student_profile.three_descriptive_words %></span> <%= image_tag avatar_url(student_profile) %></p>
+         <p id="index_student_name"> <h4 class="student_name"><%= student_profile.first_name %></h4><%= student_profile.three_descriptive_words %> <%= image_tag avatar_url(student_profile), :class => "s_img_index" %></p>
            
-             <p> <%= student_profile.short_description %></p>
+             <p class="three_words"> <%= student_profile.short_description %></p>
 
-      <p><%= link_to 'VIEW PROFILE', student_profile %></p>
+      <p><%= link_to 'VIEW PROFILE', student_profile, :class => "s_view_profile" %></p>
 
 </div>
 <% end %>

@@ -15,10 +15,11 @@
   <% end %>
 
 
+
   <div class="field">
     <span class="hover_hints">no special characters>
       <%= f.input :first_name %>
-      </span>
+      
 
   </div>
   <br>
@@ -46,11 +47,31 @@
     <%= f.label :skills %><br>
     <%= f.text_area :skills %>
   </div>
- <!--  <div class="field">
+    <div class="field">
+    <%= f.label :ruby %><br>
+    <%= f.text_area :ruby %>
+  </div>
+  <div class="field">
+    <%= f.label :rails %><br>
+    <%= f.text_area :rails %>
+  </div>
+  <div class="field">
+    <%= f.label :sql %><br>
+    <%= f.text_area :sql %>
+  </div>
+  <div class="field">
+    <%= f.label :html %><br>
+    <%= f.text_area :html %>
+  </div>
+  <div class="field">
+    <%= f.label :css %><br>
+    <%= f.text_area :css %>
+  </div>
+ <div class="field">
    <%= f.label :year %><br>
   <%= f.select :year, [['2014'],['2015'],['2016'],['2017'],['2018'],['2019']] %>
  
-  </div> -->
+  </div>
   <br>
   <div class="field">
     <%= f.label :part_time %><br>
@@ -74,6 +95,7 @@
     <%= f.check_box :sponsor %>
     <% end %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

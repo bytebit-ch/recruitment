@@ -21,6 +21,22 @@ body {
   font-family: 'Dosis', sans-serif;
    background-size: 100%;
   font-size: 1.2em;
+  
+}
+
+.instructions {
+   display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: white;
+  border-color: #ECEAEA;
+  border-style: solid;
+  border-width: 2px;
+  padding: 20px;
+  width: 1000px;
+  height: 120px;
+  margin-top: 8%;
+  margin-left: 8%;
+  padding-bottom: 6%;
 }
 
 
@@ -30,34 +46,42 @@ body {
   -webkit-flex-direction: row;
   padding: 20px;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 8%;
-  margin-top: 8%;
-
-
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 6%;
+  
 }
+
+/*style for business name on business index */
+#index_business_name {
+  float: left;
+  font-weight: bold;
+  
+}
+
 /* inside of card style for biz */
 .card_index {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   background: white;
-  border-color: #00BCD4;
-  border-style: dotted;
+  border-color: #ECEAEA;
+  border-style: solid;
   border-width: 2px;
   padding: 20px;
   transition: background-color 2s ease-out;
-  width: 19%;
-  margin-bottom: 10px;
+  width: 200px;
+  margin: 10px;
 
 
 }
 /* inside of card style for admin */
 .admin_flex_index {
-  display: -webkit-flex;
+  display: inline-flex;
   -webkit-flex-direction: row;
   padding: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 1%;
 
 
 }
@@ -80,14 +104,23 @@ body {
     background-color: #e8f3f7;
 }
 
+/*admin paragraph describing what the panel does*/
+.admin_para {
+  color: grey;
+  font-size: 1.5em;
+  padding-top: 10%;
+  margin-left: 10%;
+  margin-bottom: 1%;
+}
+
 /* outside of card style  student profile*/
 .student_flex_index {
   display: -webkit-flex;
   -webkit-flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
   padding: 8%;
-
   margin-bottom: 8%;
 
 
@@ -97,37 +130,43 @@ body {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   background: white;
-  border-color: #00BCD4;
-  border-style: dotted;
+  border-color: #ECEAEA;
+  border-style: solid;
   border-width: 2px;
   padding: 20px;
   transition: background-color 2s ease-out;
-  width: 29%;
-  margin-bottom: 10px;
-  padding: 10px;
-
+  width: 300px;
+  margin: 10px;
+  padding: 10;
+  
 
 }
 /* card hover color */
 .card_index:hover{
-  background-color: #e8f3f7;
+  background-color: #f3f3f2;
+  border-color: #00BCD4;
 
 }
 
 .card_index_student:hover {
-  background-color: #e8f3f7;
+  background-color: #f3f3f2;
+  border-color: #00BCD4;
 
 }
-/* website link style */
+/* website link style on business card on business index*/
 .website_b {
-  float: left;
+  
   color: #00BCD4;
 }
 
+/* view prfoile link style on business card on business index*/
+.b_view_profile_link {
+  float: right;
+  
+}
 
 a {
   text-decoration: none;
-  float: right;
    color: #a45f99;
 
 }
@@ -149,6 +188,17 @@ a:hover {
 
 #index_student_name {
   float: center;
+}
+
+/* name on student_profiles/index */
+.student_name {
+  padding-right: 200px;
+  
+}
+
+/* three words on profiles/index */
+.three_words {
+  padding-left: 70px;
 }
 
 #new_student_profile{
@@ -194,28 +244,79 @@ a:hover {
 /* edit profile link for admins and users */
 .edit_profiles {
   height: 40px;
-  width: 40px;
+  width: 90px;
   margin-left: 8%;
   padding-left: 8%;
   font-size: 40px;
-
+  color: green;
+  float: left;
+ 
 
 }
+/* destroy profile link for admins and users */
+.edit_profiles_destroy {
+  height: 40px;
+  width: 90px;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 40px;
+  color: green;
+  float: right;
+  
+  margin-bottom: 5%;
+
+}
+
+.edit_profiles_biz {
+  font-size: 23px;
+  color: green;
+  padding-left: 5%;
+  margin-bottom: 2%;
+ 
+
+}
+/* destroy profile link for admins and users */
+.edit_profiles_destroy_biz {
+  font-size: 23px;
+  color: green;
+  float: right;
+  padding-left: 5%;
+}
+
+/* destroy profile link for admins and users */
+.s_view_profile {
+ 
+  background-position: right bottom; 
+}
+
+
 /* destroy link for admins */
 .destroy_profiles {
   height: 40px;
   width: 40px;
-  margin-left: 20%;
-  padding-left: 20%;
+  display: inline;
   font-size: 40px;
+  
 
 }
+
+
 /* form div for new student profile */
 .form {
   margin: 5%;
 
 }
 
+/* gravatars for index student */
+.s_img_index {
+  border-radius: 50%;
+  margin-left: 90px;
+}
+
+.sponsor {
+  color: grey;
+  
+}
 
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
@@ -224,6 +325,54 @@ a:hover {
  this is student profile show below
  */
 
+/* proficiencie sliders start*/
+
+#Proficiencies {
+  float: left;
+  clear: right;
+  width: 500px;
+  margin: 20px 0px 30px 30px;
+}
+
+#ProficienciesTop {
+  float: left;
+  clear: right;
+  width: 100%;
+  margin: -5px 0px 0px 0px;
+  text-align: left;
+  font-weight: 600;
+}
+
+#ProficienciesBottom {
+  float: left;
+  clear: right;
+  width: 80%;
+  margin: 2px 0px 0px 0px;
+}
+
+.progress {
+  background:#e9e5e2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#e9e5e2));
+  background-image: -webkit-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: -moz-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: -ms-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: -o-linear-gradient(top, #dddddd, #e9e5e2);
+  background-image: linear-gradient(top, #dddddd, #e9e5e2);  
+  height:20px; 
+  border-radius: 0px;
+  -moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;   
+  -webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;  
+  box-shadow: 0 1px 0px #bbbbbb inset, 0 1px 0 #fcfcfc;   
+}
+
+.jquery, .javascript {
+
+ -webkit-transition: width 4.50s ease !important;
+ -moz-transition: width 4.50s ease !important;
+   -o-transition: width 4.50s ease !important;
+      transition: width 4.50s ease !important;
+ }
+/* proficiencie sliders end*/
 body {
     overflow-x: hidden;
 }
@@ -260,7 +409,7 @@ hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
     padding: 0;
-    max-width: 250px;
+    max-width: 350px;
     border: 0;
     border-top: solid 5px;
     text-align: center;
@@ -268,13 +417,13 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f121";
     display: inline-block;
     position: relative;
     top: -.8em;
     padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 hr.star-light {
@@ -295,24 +444,32 @@ hr.star-primary:after {
     background-color: #fff;
 }
 
-.img-centered {
-    margin: 0 auto;
-}
+
 
 header {
     text-align: center;
     color: #fff;
     background: #00BCD4;
+    height: 200px;
 }
 
 header .container {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 header img {
     display: block;
     margin: 0 auto 20px;
+    border-radius: 50%;
+    -webkit-justify-content: center; 
+    justify-content: center; 
+}
+/* image on show profile */
+.s_img {
+  float: none;
+  width: 100px;
+  height: 100px;
 }
 
 header .intro-text .name {
@@ -330,12 +487,12 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 1.75em;
     }
 
     header .intro-text .skills {
@@ -388,6 +545,10 @@ header .intro-text .skills {
 .navbar-default,
 .navbar-inverse {
     border: 0;
+}
+
+.s_skills {
+  font-size: 2em;
 }
 
 section {

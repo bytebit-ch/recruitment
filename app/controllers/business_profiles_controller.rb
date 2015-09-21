@@ -28,6 +28,7 @@ class BusinessProfilesController < ApplicationController
 
   # GET /business_profiles/1/edit
   def edit
+    @business_profiles = BusinessProfile.all
   end
 
   # POST /business_profiles
