@@ -113,6 +113,18 @@ body {
   margin-bottom: 1%;
 }
 
+/* admin send invite back slink in header*/
+.invite_back {
+  color: white;
+  background-position: right bottom;
+}
+
+/* admin header on invite page*/
+.admin_invite_header {
+  height: 100px;
+  width: 100%;
+}
+
 /* outside of card style  student profile*/
 .student_flex_index {
   display: -webkit-flex;
