@@ -137,26 +137,43 @@ a:focus {
 /* misc */
 hr {
   margin-top: 10px;
+  border-color: #666;
+}
+
+.student-header-underline {
+  margin-left: 40.6%;
 }
 
 /* margins */
-.marginbot-0{margin-bottom:0 !important;}
-.marginbot-10{margin-bottom:10px !important;}
-.marginbot-20{margin-bottom:20px !important;}
-.marginbot-30{margin-bottom:30px !important;}
-.marginbot-40{margin-bottom:40px !important;}
-.marginbot-50{margin-bottom:50px !important;}
+.marginbot-0 {
+  margin-bottom:0 !important;
+}
+.marginbot-10 {
+  margin-bottom:10px !important;
+}
+.marginbot-20 {
+  margin-bottom:20px !important;
+}
+.marginbot-30 {
+  margin-bottom:30px !important;
+}
+.marginbot-40 {
+  margin-bottom:40px !important;
+}
+.marginbot-50 {
+  margin-bottom:50px !important;
+}
 
 /* ===========================
 --- General sections
 ============================ */
 
 .home-section {
-    padding-top: 110px;
-    padding-bottom: 0;
+/*  padding-top: 50px;*/
+  padding-bottom: 0;
   display:block;
-    position:relative;
-    z-index:120;
+  position:relative;
+  z-index:120;
 }
 
 
@@ -165,6 +182,7 @@ hr {
 }
 .section-heading i {
   margin-bottom: 20px;
+  color: #666;
 }
 
 
@@ -206,11 +224,12 @@ body#page-top {
 ============================ */
 
 .intro {
-  width:100%;
+  width:100vw;
   position:relative;
   background: url("students.JPG") no-repeat top center;
   background-size: 100%;
-  
+  max-height: 98vh;
+
 }
 
 #intro.intro {
@@ -219,7 +238,7 @@ body#page-top {
 
 .intro .slogan {
   text-align: center;
-  margin-top: -140px;
+  margin-top: -145px;
 
 }
 
@@ -236,22 +255,6 @@ body#page-top {
     font-size: 18px;
 }
 
-.intro .slogan h2 {
-  color: #FFF;
-  text-shadow: none;
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 700;
-  font-family: Montserrat, sans-serif;
-  background-color: rgba(0, 0, 0, 0);
-  text-decoration: none;
-  text-transform: uppercase;
-  border-width: 0px;
-  border-color: #000;
-  border-style: none;
-  text-shadow: -1px 0 1px #000;
-}
-
 .intro .slogan h4 {
   color: #fff;
   text-shadow: -1px 1px 1px #000;
@@ -263,13 +266,9 @@ body#page-top {
 ============================ */
 
 .boxed-grey {
-  background: #f9f9f9;
   padding: 20px;
 }
 
-.team h5 {
-  margin-bottom: 10px;
-}
 
 .team p.subtitle {
   margin-bottom: 10px;
@@ -463,6 +462,43 @@ Parallax
 --- Elements
 ============================ */
 
+.hero-text {
+  border-style: none;
+  font-family: 'roboto', sans-serif;
+  border-width: 0;
+  color: #eee;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: 700;
+  font-family: 'roboto', sans-serif;
+  background-color: rgba(0,0,0,.5);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/* text above scroll button */
+
+.scroll-text {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 2rem;
+  top: 110px;
+  font-family: 'roboto', sans-serif;
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+  width: 12%;
+  left: 44%;
+  border-radius: 5px;   
+
+}
+
+
+
+
+
+/* Scroll button */
+
 .btn {
   border-radius: 0;
     text-transform: uppercase;
@@ -473,11 +509,17 @@ Parallax
     transition: all .3s ease-in-out;
 }
 
+i {
+  color: #FFF;
+  padding-top: 5px; 
+}
+
+
 
 .btn-circle {
     width: 70px;
     height: 70px;
-    margin-top: 15px;
+    margin-top: 100px;
     margin-right: 47.4%;
     margin-bottom: 45px;
     padding: 7px 16px;
@@ -485,10 +527,10 @@ Parallax
     border-radius: 50%;
     font-size: 40px;
     color: #fff;
-    background: 0 0;
+    background: rgba(255,255,255,.5);
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;  
 }
 
 .btn-circle.btn-dark {
@@ -496,13 +538,21 @@ Parallax
     color: #666;
 }
 
+.btn-circle:hover {
+  color: #000;
+  background-color: #FFF;
 
-.btn-circle:hover,
-.btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
+  i {
+    color: #000;
+  }
+
 }
+
+.btn-circle:focus {
+  color: #FFF;
+  background: rgba(255,255,255,.5);
+}
+
 
 .btn-circle.btn-dark :hover,
 .btn-circle.btn-dark :focus {
@@ -607,6 +657,12 @@ Parallax
 }
 
 
+
+
+
+
+
+
 /* Media queries */
 
 @media(min-width:767px) {
@@ -671,3 +727,108 @@ Parallax
 .heading-about h2 {
   margin-top: 20px;
 }
+
+
+/* Landing page - 'why join?' section */
+
+#service p {
+  font-size: 2.3rem;
+}
+
+.why-join-1 {
+  width: 26.666%;
+  margin-left: 5%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.why-join-2 {
+  width: 26.666%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.why-join-3 {
+  width: 26.666%;
+  margin-right: 5%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+/* Landing page - student preview section */
+
+.student-preview-card {
+  background-color: #F8F8F8;
+  border-radius: 20px;
+  min-height: 177px;
+}
+
+.student-preview-name {
+  float: left;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.student-preview-avatar img {
+  float: right;
+  border-radius: 20%;
+  width: 70px;
+  height: 70px;
+}
+
+.student-preview-year {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.student-preview-skills {
+  text-align: left;
+  margin: 0;
+}
+
+
+/* sign up now button */
+
+#sign-up {
+  margin: 20px 0;
+  padding: 20px 0;
+  height: 100px;
+}
+
+.sign-up-now {
+  width: 20%;
+  height: 100px;
+  background-color: #67B0D1;
+  border-radius: 25px;  
+  margin: 0 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  bottom: 20px;
+
+    :hover {
+      background-color: rgba(255,255,255,.3)
+
+    }
+}
+
+
+
+.sign-up-now a {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family: 'roboto', sans-serif;
+  text-align: center;
+  line-height: 3rem;
+  padding: 20px 55px;
+  text-transform: uppercase;
+}
+
+
+
+
+

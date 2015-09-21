@@ -24,16 +24,16 @@
 
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 
-      <div class="navbar-header page-scroll">
-        <p class="logo-text">DJ Recruitment<br>Platform</p>
-        <%= image_tag 'logo.png', class: "logo" %>
-
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+      <div class="logo">
+        <p class="logo-text">Recruitment<br>Platform</p>
+        <%= image_tag 'logo.png', class: "logo-img" %>
+      </div>
+<!--         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
             <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand" href="index.html"></a>
       </div>
-
+ -->
 <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
@@ -48,13 +48,13 @@
 
         <li>
           <% if current_page?('/') or current_page?('/landing/index') %>
-            <a href="#about">Our Students</a>
+            <a href="#service">Why Join?</a>
           <% end %>
         </li>
 
     		<li>
           <% if current_page?('/') or current_page?('/landing/index') %>
-            <a href="#service">Why Join?</a>
+            <a href="#about">Our Students</a>
           <% end %>
         </li>
 
