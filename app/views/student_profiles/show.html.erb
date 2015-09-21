@@ -84,7 +84,7 @@
                 </div>
             </div>
             
-                    <p class="s_skills">  <%= @student_profile.long_decription.html_safe %></p>
+                    <p class="s_skills">  <%= sanitize @student_profile.long_decription.html_safe %></p>
                 
             
     </section>
