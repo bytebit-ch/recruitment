@@ -32,7 +32,7 @@
     
     <%= f.label :skills_wanted, "Skills", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :skills_wanted, class: "form-control", :placeholder => 'List the skills you are looking for' %>
+      <%= f.text_area :skills_wanted, :rows => 10, class: "form-control", :placeholder => 'List the skills you are looking for' %>
       </div>
 
   </div>
@@ -43,7 +43,7 @@
     
     <%= f.label :job_description, "Job Description", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :job_description, class: "form-control", :placeholder => 'Describe Job' %>
+      <%= f.text_area :job_description, :rows => 18, class: "form-control", :placeholder => 'Describe Job', rows: 18 %>
       </div>
       </div>
 
@@ -73,8 +73,13 @@
   </div>
 </div>
 </div>
+<br><br>
   <div class="login-field">
     <%= f.submit class: "button" %>
   </div>
 </div>
 <% end %>
+<br>
+<br>
+<br>
+<br>

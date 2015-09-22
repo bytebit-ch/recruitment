@@ -74,7 +74,7 @@
     
     <%= f.label :long_decription, "About You", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :long_decription, class: "form-control", :placeholder => 'Write about yourself explaining why someone should hire you. Be creative, you can use HTML tags such as strong, img, etc ' %>
+      <%= f.text_area :long_decription, :rows => 15, class: "form-control", :placeholder => 'Write about yourself explaining why someone should hire you. Be creative, you can use HTML tags such as strong, img, etc ' %>
       </div>
 
   </div>
@@ -83,7 +83,7 @@
     
     <%= f.label :skills, "Skills", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :skills, class: "form-control", :placeholder => 'List your relevant skills', :rows => 8 %>
+      <%= f.text_area :skills, :rows => 8, class: "form-control", :placeholder => 'List your relevant skills', :rows => 8 %>
       </div>
 
   </div>
