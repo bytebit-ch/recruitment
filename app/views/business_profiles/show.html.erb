@@ -47,10 +47,10 @@
 <span><%  if can? :edit, BusinessListing %>
   <small><%= link_to 'Edit Job', edit_business_listing_path(business_listing) %></span><small>
 <% end %>
-
+</div>
+</div>
 <% end %>
-</div>
-</div>
+
 <%  if can? :edit, BusinessProfile %>
   <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
 <% end %>

@@ -214,7 +214,9 @@
 
 
 
-
+.fa-check-circle {
+  color: #67b0d1;
+}
 
 
 
@@ -256,11 +258,15 @@
 }
 
 .sign_up_reasons {
-  margin-left: 320px;
+  margin: 200px 0 0 50px;
   font-size: 20px;
   color: grey;
   font-family: 'Arial';
-  padding-left: 50%;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  
 }
 
 /* -------------------------------- FOOTER ------------------------------ */
