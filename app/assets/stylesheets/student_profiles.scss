@@ -1,4 +1,4 @@
-
+f
 
 img {
   height: 100px;
@@ -23,6 +23,13 @@ body {
   font-size: 1.2em;
   
 }
+
+.form-container {
+ 
+  margin-right: 300px;
+}
+
+
 
 .instructions {
    display: -webkit-flex;
@@ -71,6 +78,8 @@ body {
   transition: background-color 2s ease-out;
   width: 200px;
   margin: 10px;
+  height: 140px;
+  width: 170px;
 
 
 }
@@ -90,8 +99,8 @@ body {
   display: -webkit-flex;
   -webkit-flex-direction: column;
   background: white;
-  border-color: #00BCD4;
-  border-style: dotted;
+  border-color: #ECEAEA;
+  border-style: solid;
   border-width: 2px;
   padding: 20px;
   transition: background-color 2s ease-out;
@@ -111,6 +120,10 @@ body {
   padding-top: 10%;
   margin-left: 10%;
   margin-bottom: 1%;
+}
+
+.boxes_for_form {
+  padding-left: 35%;
 }
 
 /* admin send invite back slink in header*/
@@ -213,21 +226,7 @@ a:hover {
   padding-left: 70px;
 }
 
-#new_student_profile{
 
-  border-style: double;
-  margin-left: 350px;
-  margin-right: 350px;
-  margin-bottom: 20px;
-  border-radius: 20px;
-
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-
-
-
-}
 .field {
   margin-left: 37%;
 
@@ -293,6 +292,7 @@ a:hover {
   color: green;
   float: right;
   padding-left: 5%;
+  padding-right: 2%;
 }
 
 /* destroy profile link for admins and users */
@@ -323,11 +323,17 @@ a:hover {
 .s_img_index {
   border-radius: 50%;
   margin-left: 90px;
+  height: 100px;
+  width: 100px;
 }
 
 .sponsor {
   color: grey;
   
+}
+.form-group {
+  
+  padding-left: 10%;
 }
 
 /*!

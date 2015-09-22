@@ -82,15 +82,15 @@
 
 
 <%  if can? :edit, BusinessListing %>
-  <%= link_to '[Destroy Business Listing]', @business_listing,  :method => :delete  %>
+ <small> <%= link_to 'Delete Job', @business_listing,  :method => :delete  %></small>
 <% end %>
-<%  if can? :edit, BusinessListing %>
-  <%= link_to 'Edit Business Lisiting', edit_business_listing_path(business_listing) %>
-<% end %>
-</div>
-</div>
+<span><%  if can? :edit, BusinessListing %>
+  <small><%= link_to 'Edit Job', edit_business_listing_path(business_listing) %></span><small>
 <% end %>
 
+<% end %>
+</div>
+</div>
 <%  if can? :edit, BusinessProfile %>
   <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
 <% end %>

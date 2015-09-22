@@ -1,4 +1,7 @@
-<%= form_for(@business_listing) do |f| %>
+<br>
+<br>
+
+<%= simple_form_for (@business_listing), :html => {:class => "form-horizontal center"} do |f| %>
   <% if @business_listing.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@business_listing.errors.count, "error") %> prohibited this business_listing from being saved:</h2>
@@ -10,36 +13,72 @@
       </ul>
     </div>
   <% end %>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+   <br>
+   <div class="form-container">
+     <div class="form-group">
+    
+    <%= f.label :title, "Job Title", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :title, class: "form-control", :placeholder => 'Title of job' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :skills_wanted %><br>
-    <%= f.text_area :skills_wanted %>
   </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_area :title %>
+  <div class="form-group">
+    
+    <%= f.label :skills_wanted, "Skills", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <textarea class="form-control" rows="5"><%= f.text_field :skills_wanted, class: "form-control", :placeholder => 'List the skills you are looking for' %></textarea>
+      </div>
+
   </div>
-  <div class="field">
-    <%= f.label :part_time %><br>
-    <%= f.check_box :part_time %>
+  <br>
+  
+
+  <br>
+  
+
+  
+  <div class="form-group">
+    
+    <%= f.label :job_description, "Job Description", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <textarea class="form-control" rows="10"><%= f.text_field :job_description, class: "form-control", :placeholder => 'Describe Job' %></textarea>
+      </div>
+      <br>
+      <br>
+
+  <div class="form-group">
+    
+    <%= f.label :contact_email, "Contact Email", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+     <textarea class="form-control" rows="1"> <%= f.text_field :contact_email, class: "form-control", :placeholder => 'Title of job' %></textarea>
+      </div>
+
   </div>
-  <div class="field">
-    <%= f.label :full_time %><br>
-    <%= f.check_box :full_time %>
+  <br>
+    <div class="boxes_for_form">
+  
+  <div class="checkbox">
+    <%= f.check_box :part_time %> Part Time - is this a part time position?
   </div>
-  <div class="field">
-    <%= f.label :contract %><br>
-    <%= f.check_box :contract %>
+  <br>
+  
+  <div class="checkbox">
+    <%= f.check_box :full_time %> Full Time - is this a full time position?
   </div>
-  <div class="field">
-    <%= f.label :job_description %><br>
-    <%= f.text_area :job_description %>
+  <br>
+  
+  <div class="checkbox"> 
+    <%= f.check_box :contract %> Contract - is this a contract time position?
   </div>
-  <div class="field">
-    <%= f.label :contact_email %><br>
-    <%= f.text_area :contact_email %>
+</div>
+  <div class="login-field">
+    <%= f.submit class: "button" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>
