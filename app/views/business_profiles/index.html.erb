@@ -58,7 +58,7 @@
             <small><%= business_profile.description_business %></small></p>
             
          
-       <a href="<%= business_profile.url_of_business %>" class="website_b">Website</a>
+   <%= link_to business_profile.url_of_business, "http://#{business_profile.url_of_business}", :class => "website_b" %>
      
 
       <%= link_to 'VIEW PROFILE', business_profile %>
