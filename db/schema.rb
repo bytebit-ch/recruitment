@@ -36,6 +36,11 @@ ActiveRecord::Schema.define(version: 20150917213054) do
     t.datetime "updated_at",                         null: false
   end
 
+  create_table "resumes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "student_profiles", force: :cascade do |t|
     t.integer  "student_id",              limit: 4
     t.integer  "user_id",                 limit: 4
