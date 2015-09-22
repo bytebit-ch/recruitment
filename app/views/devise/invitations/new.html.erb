@@ -1,7 +1,43 @@
-<header class="admin_invite_header">
-<p><%= link_to "back", @admin_path, :class => "invite_back" %></p>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Preloader -->
+	<div id="preloader">
+	  <div id="load"></div>
+	</div>
 
-</header>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+      <div class="logo">
+        <p class="logo-text">Recruitment<br>Platform</p>
+        <%= image_tag 'logo.png', class: "logo-img" %>
+      </div>
+<!--         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.html"></a>
+      </div>
+ -->
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
+
+        <li class="active">
+          <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+            <%= link_to('Home', admin_path) %>
+          <% end %>
+        </li>
+
+       
+        <li class="dropdown">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path, class: "login") %>
+        <% end %>
+              
+      </ul>
+    </div>
+  </nav>
+
 
 
 
@@ -25,9 +61,25 @@
 </div>
 
 
-<footer class="invite_footer">
- 
-     Digital Jersey 2015
-      <span>Christine Harris Morti Alexandra  Dan Le Cornu Ben Whitley</span>
-    
+<br>
+<br>
+<br>
+
+
+<footer>
+  <div>
+    <ul>
+      <li class="copyright">Copyright &#0169; 2015 Digital Jersey Limited</li>
+      <div class="creators">
+      <li>Ben Whitley</li>
+      <li>Dan Le Cornu</li>
+      <li>Morti Alexandru</li>
+      <li>Christine Harris</li>
+      </div>
+    </ul>
+  </div>
 </footer>
+
+
+
+
