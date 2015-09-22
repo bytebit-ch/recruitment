@@ -71,7 +71,7 @@
 
         <li>
          <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
-           <%= link_to('New Listing', new_business_listing_path, class: 'business-profile-button') %>
+           <%= link_to('Post new job', new_business_listing_path, class: 'business-profile-button') %>
          <% end %>
         </li>
 
