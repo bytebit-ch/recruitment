@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
 	new WOW().init();
-
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
-	});
+	
+	djcpReady();
+		
+	
 
 
 	//jQuery to collapse the navbar on scroll
@@ -40,3 +39,12 @@ $(document).ready(function(){
 		$o.width($o.attr('data-percent') + '%')
 	});
 });
+
+$(document).on('ready page:load', function () {
+  djcpReady();
+});
+
+function djcpReady() {
+	$("#preloader").delay(500).fadeOut("slow");
+	$("#load").delay(500).fadeOut("slow");
+}
