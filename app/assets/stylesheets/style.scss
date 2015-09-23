@@ -9,6 +9,7 @@ body {
     font-weight: 300;
     color: #666;
     background-color: #eee;
+    position: absolute;
 }
 
 html {
@@ -170,7 +171,7 @@ hr {
 ============================ */
 
 .home-section {
-/*  padding-top: 50px;*/
+  padding-top: 5%;
   padding-bottom: 0;
   display:block;
   position:relative;
@@ -820,6 +821,23 @@ i {
 }
 
 
+/* New Business profile form */
 
+.new-bus-prof-header {
+  margin: 135px 30% 35px 30%;
+  width: 40%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
+.new-bus-prof-form {
+  margin: 80px 10% 115px 0;
+  width: 70%;
+}
+
+.new-bus-prof-button {
+  margin: 0 0 0 35%;
+}
 
 
