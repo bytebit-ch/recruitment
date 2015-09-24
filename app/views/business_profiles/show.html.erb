@@ -6,9 +6,11 @@
    <br>
    <br>
    <br>
+   <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
 <div class="instructions">
   <p>To add a job opening click POST NEW JOB in the navigation bar on the right hand side</p>
 </div>
+<% end %>
 <br>
 <br>
 
