@@ -19,14 +19,14 @@ class Ability
 
            # can [:read, :update, :create], BusinessProfile # needs to be restricted to own profile
            # can [:read, :update, :create], BusinessListing# needs to be restricted to own profile
-            can [:read, :edit, :delete], User, id: user.id
+            can [:read, :edit, :destroy], User, id: user.id
 
 
 
        elsif user.type_of_user == 'student'
            can [:read, :index], [BusinessProfile, BusinessListing]
            can [:view_profile, :update, :create, :show], StudentProfile
-           can [:read, :edit, :delete], User, id: user.id
+           can [:read, :edit, :destroy], User, id: user.id
 
 
       end
