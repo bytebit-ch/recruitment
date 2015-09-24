@@ -1,39 +1,46 @@
-<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
 
-<p>
-  <strong>Skills wanted:</strong>
-  <%= @business_listing.skills_wanted %>
-</p>
+<div class='biz_flex'>
 
-<p>
-  <strong>Title:</strong>
-  <%= @business_listing.title %>
-</p>
+    
 
-<p>
-  <strong>Part time:</strong>
-  <%= @business_listing.part_time %>
-</p>
+    
 
-<p>
-  <strong>Full time:</strong>
-  <%= @business_listing.full_time %>
-</p>
+      <div class='bottom_card'>
 
-<p>
-  <strong>Contract:</strong>
-  <%= @business_listing.contract %>
-</p>
+        <p>
 
-<p>
-  <strong>Job description:</strong>
-  <%= @business_listing.job_description %>
-</p>
+         <h4> <%= @business_listing.title %></h4>
+         <p class='created'> Job created: <%= @business_listing.created_at %></p>
+       </p>
 
-<p>
-  <strong>Contact email:</strong>
-  <%= @business_listing.contact_email %>
-</p>
+       <p>
+        <% if @business_listing.full_time == true %>
+        <strong> <%= 'Full Time' %></strong>
+        <% end %>
+        <% if @business_listing.part_time == true %>
+        <strong> <%= 'Part Time' %> </strong>
+        <% end %>
+        <% if @business_listing.contract == true %>
+        <strong> <%= 'Contract' %> </strong>
+        <% end %>
+      </p>
 
-<%= link_to 'Edit', edit_business_listing_path(@business_listing) %> |
-<%= link_to 'Back', student_profiles_path %>
+      <p>
+        <strong>Skills:</strong>
+        <%= @business_listing.skills_wanted %>
+      </p>
+
+      <p>
+        <%= @business_listing.job_description %>
+      </p>
+
+      <p>
+       <strong>Contact:</strong> <a href='mailto:<%= @business_listing.contact_email %>'><%= @business_listing.contact_email %></a>
+     </p>
+   </div>
+<br>
+<br>
+
