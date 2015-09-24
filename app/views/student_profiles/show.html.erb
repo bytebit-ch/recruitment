@@ -103,7 +103,7 @@
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>GitHub: <%= @student_profile.github_url %></p>
+                                <p> GitHub: <%= link_to @student_profile.github_url, "http://#{@student_profile.github_url}" %> </p>
                                 
                             </div>
                         </div>
