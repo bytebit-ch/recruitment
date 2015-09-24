@@ -16,14 +16,14 @@
  <div class="form-group">
     <%= f.label :business_name, "Business Name", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :business_name, class: "form-control", :placeholder => 'Name of Company' %>
+      <%= f.text_field :business_name, :maxlength => 15, class: "form-control", :placeholder => 'Name of Company' %>
       </div>
     </div>
 <br>
       <div class="form-group">
     <%= f.label :url_of_business, "Company Website", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :url_of_business, class: "form-control", :placeholder => 'Website' %>
+      <%= f.text_field :url_of_business, :maxlength => 30, class: "form-control", :placeholder => 'Website' %>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
     
     <%= f.label :description_business, "Type of Business", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :description_business, class: "form-control", :placeholder => 'Put what type of business you are such as development, finance, games, etc ' %>
+      <%= f.text_field :description_business, :maxlength => 15, class: "form-control", :placeholder => 'Put what type of business you are such as development, finance, games, etc ' %>
       </div>
 
   </div>
