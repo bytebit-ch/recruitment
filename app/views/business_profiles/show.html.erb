@@ -2,9 +2,22 @@
 
     <br>
     <br>
+   <br>
+   <br>
+   <br>
+   <br>
+<div class="instructions">
+  <p>To add a job opening click POST NEW JOB in the navigation bar on the right hand side</p>
+</div>
+<br>
+<br>
+
 
     <div class='biz_flex'>
+
     <% @business_profile.business_listings.each do |business_listing| %>
+
+    
 
       <div class='bottom_card'>
 
@@ -39,7 +52,11 @@
        <strong>Contact:</strong> <a href='mailto:<%= business_listing.contact_email %>'><%= business_listing.contact_email %></a>
      </p>
    
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <%  if can? :edit, BusinessListing %>
  <small> <%= link_to 'Delete Job', @business_listing,  :method => :delete  %></small>

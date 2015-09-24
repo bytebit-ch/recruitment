@@ -19,7 +19,7 @@ class Ability
 
            # can [:read, :update, :create], BusinessProfile # needs to be restricted to own profile
            # can [:read, :update, :create], BusinessListing# needs to be restricted to own profile
-            can [:read, :edit], User, id: user.id
+            can [:read, :edit, :delete], User, id: user.id
 
 
 
