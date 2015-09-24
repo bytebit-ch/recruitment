@@ -15,6 +15,7 @@ class BusinessListingsController < ApplicationController
   # GET /business_listings/1.json
   def show
      @business_profiles = BusinessProfile.all
+     redirect_to business_listing
   end
 
   # GET /business_listings/new
@@ -25,6 +26,7 @@ class BusinessListingsController < ApplicationController
   # GET /business_listings/1/edit
   def edit
     @business_profiles = BusinessProfile.all
+
   end
 
   def view_profile
