@@ -3,5 +3,5 @@ class BusinessProfile < ActiveRecord::Base
 	has_many :business_listings
 
 	validates_presence_of :business_name
-	validates_uniqueness_of :user_id, :email
+	validates_uniqueness_of :user_id
 end
