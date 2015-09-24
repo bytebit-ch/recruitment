@@ -16,16 +16,7 @@ body {
 	margin-bottom: 2%;
 }
 
-.mdl-layout {
-	
-	background-color: #F5F5F5;
-}
 
-.mdl-layout__header--waterfall {
-	background-color: #67B0D1;
-	height: 70px;
-	position: fixed;
-}
 
 .business_profiles_show_header {
 	height: 200px;
@@ -51,9 +42,6 @@ a {
 	justify-content: center;
 }
 
-.mdl-layout__header-row>* {
-	padding-top: 5%;
-}
 
 .url {
 	color: white;
