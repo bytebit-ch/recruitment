@@ -74,3 +74,26 @@ $('#sortNameDesc').click(function() {
     });
   });
  })
+
+$(document).ready(function() {
+  var $container = $('.biz_flex_index').isotope({
+    itemSelector: '.item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      name: '[data-name]'
+    }
+  });
+
+  $('#sortNameAsc').click(function() {
+    $container.isotope({
+      sortBy: 'name',
+      sortAscending: true
+    })
+  });
+$('#sortNameDesc').click(function() {
+    $container.isotope({
+      sortBy: 'name',
+      sortAscending: false
+    });
+  });
+ })

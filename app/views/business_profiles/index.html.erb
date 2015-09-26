@@ -4,10 +4,13 @@
   <p>A list of businesses who are looking to employ coders. To view the job opportunities that a business has to offer, click the 'View jobs' link in the chosen business profile.</p>
 </div>
 
-    
+    <h2>Sort </h2>
+  <button id='sortNameAsc'>Last Name</button>
+    <button id='sortNameDesc'>Sort desc</button>
+
 <div class='biz_flex_index'>
  <% @business_profiles.each do |business_profile| %>
-<div class='card_index'>
+<div class='item card_index' data-name="<%= business_profile.business_name %>">
 
          <strong><p id="index_business_name"> <%= business_profile.business_name %></strong><br>
             <small><%= business_profile.description_business %></small></p>
@@ -22,9 +25,8 @@
 <% end %>
 </div>
 
-<br>
-<br>
-<br>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
 
 
 
