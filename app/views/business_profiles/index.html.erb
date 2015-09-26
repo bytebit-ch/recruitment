@@ -4,9 +4,11 @@
   <p>A list of businesses who are looking to employ coders. To view the job opportunities that a business has to offer, click the 'View jobs' link in the chosen business profile.</p>
 </div>
 
-    <h2>Sort </h2>
-  <button id='sortNameAsc'>Last Name</button>
-    <button id='sortNameDesc'>Sort desc</button>
+<div class="iso_sort">
+  <button id='sortNameAsc'>Ascending </button>
+    <button id='sortNameDesc'>Descending</button>
+</div>
+
 
 <div class='biz_flex_index'>
  <% @business_profiles.each do |business_profile| %>

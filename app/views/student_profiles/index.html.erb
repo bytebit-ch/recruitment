@@ -5,10 +5,10 @@
 
 
 
-<h2>Sort </h2>
-  <button id='sortNameAsc'>Last Name</button>
-    <button id='sortNameDesc'>Sort desc</button>
-
+<div class="iso_sort">
+  <button id='sortNameAsc'>Ascending</button>
+    <button id='sortNameDesc'>Descending</button>
+</div>
   <div class='student_flex_index'>
  <% @student_profiles.each do |student_profile| %>
 <div class="item card_index_student" data-last="<%= student_profile.last_name %>">
