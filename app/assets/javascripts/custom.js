@@ -48,3 +48,29 @@ function djcpReady() {
 	$("#preloader").delay(500).fadeOut("slow");
 	$("#load").delay(500).fadeOut("slow");
 }
+
+
+//sorting 
+
+$(document).ready(function() {
+  var $container = $('.student_flex_index').isotope({
+    itemSelector: '.item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      last: '[data-last]'
+    }
+  });
+
+  $('#sortNameAsc').click(function() {
+    $container.isotope({
+      sortBy: 'last',
+      sortAscending: true
+    })
+  });
+$('#sortNameDesc').click(function() {
+    $container.isotope({
+      sortBy: 'last',
+      sortAscending: false
+    });
+  });
+ })
