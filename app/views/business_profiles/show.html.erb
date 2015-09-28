@@ -10,7 +10,9 @@
    <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
 
 <div class="business-profile-header">
-  <h2>My Profile</h2>
+  <h2>My Profile</h2> <%  if can? :edit, BusinessProfile %>
+  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
+<% end %>
 </div>
 
 <div class="business-profile-info">
@@ -83,9 +85,7 @@
 </div>
 <% end %>
 
-<%  if can? :edit, BusinessProfile %>
-  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
-<% end %>
+
 
 <%  if can? :manage, :all %>
   <%= link_to 'Delete Profile', @business_profile,  :method => :delete,  :class => "edit_profiles_destroy_biz"  %>
