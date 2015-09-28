@@ -33,22 +33,26 @@ body {
 .iso_sort {
   
   padding-top: 30px;
-  padding-left: 200px;
+  padding-left: 40%;
   color: white;
 
 }
 #sortNameAsc, #sortNameDesc {
   width: 110px;
   height: 50px;
-  border-radius: 5%;
   background-color: #67B0D1;
   margin: 10px;
   font-size: 1.5em;
+  border-style: solid;
+  border-color: #67B0D1;
+  outline-style: none;
 
 }
 
 #sortNameAsc:hover, #sortNameDesc:hover {
-   background-color: yellow;
+   background-color: white;
+   color: grey;
+   
 
 }
 
@@ -143,7 +147,7 @@ body {
 }
 
 .admin_card_index:hover {
-    background-color: #e8f3f7;
+    border-color: #00BCD4;
 }
 
 /*admin paragraph describing what the panel does*/
