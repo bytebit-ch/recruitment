@@ -68,7 +68,7 @@ class BusinessProfilesController < ApplicationController
     @business_profile.destroy
     
     respond_to do |format|
-      format.html { redirect_to business_profiles_path notice: 'Business profile was successfully destroyed.' }
+      format.html { redirect_to business_profiles_url, notice: 'Business profile was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
