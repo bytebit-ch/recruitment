@@ -14,6 +14,7 @@ class Ability
 
        elsif user.type_of_user == 'business'
            can [:read, :index], StudentProfile
+           can [:create], BusinessProfile
            can [:view_profile, :update, :create, :show], BusinessProfile, user: { id: user.id }
            can [:create], BusinessListing
            can [:view_profile, :update, :show, :destroy], BusinessListing, business_profile: { user: { id: user.id } }
