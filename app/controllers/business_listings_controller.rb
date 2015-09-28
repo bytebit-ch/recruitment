@@ -41,7 +41,7 @@ class BusinessListingsController < ApplicationController
 
     respond_to do |format|
       if @business_listing.save
-        format.html { redirect_to @business_listing, notice: 'Business listing was successfully created.' }
+        format.html { redirect_to current_user, notice: 'Business listing was successfully created.' }
         format.json { render :show, status: :created, location: @business_listing }
       else
         format.html { render :new }
@@ -55,7 +55,7 @@ class BusinessListingsController < ApplicationController
   def update
     respond_to do |format|
       if @business_listing.update(business_listing_params)
-        format.html { redirect_to @business_listing, notice: 'Business listing was successfully updated.' }
+        format.html { redirect_to current_user, notice: 'Business listing was successfully updated.' }
         format.json { render :show, status: :ok, location: @business_listing }
       else
         format.html { render :edit }

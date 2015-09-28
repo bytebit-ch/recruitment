@@ -245,6 +245,7 @@ body#page-top {
 
 .intro .page-scroll {
   text-align: center;
+  margin-top: 100px;
 
 }
 
@@ -473,6 +474,7 @@ Parallax
   font-weight: 700;
   background-color: rgba(0,0,0,.5);
   text-decoration: none;
+  padding: 10px 0;
 }
 
 
@@ -837,6 +839,16 @@ i {
   margin: 0 0 0 35%;
 }
 
+/* New business job posting form */
+
+.business-listing-form {
+
+  h2 {
+    width: 50%;
+    margin: 150px 25% 0 25%;
+    text-align: center;
+  }
+}
 
 
 

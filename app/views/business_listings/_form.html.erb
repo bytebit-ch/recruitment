@@ -1,5 +1,7 @@
-<br>
-<br>
+
+<div class="business-listing-form">
+
+<h2>Add a new job posting</h2>
 
 <%= simple_form_for (@business_listing), :html => {:class => "form-horizontal center"} do |f| %>
   <% if @business_listing.errors.any? %>
@@ -32,7 +34,7 @@
     
     <%= f.label :skills_wanted, "Skills", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_area :skills_wanted, :rows => 10, class: "form-control", :placeholder => 'List the skills you are looking for' %>
+      <%= f.text_area :skills_wanted, :rows => 5, class: "form-control", :placeholder => 'List the skills you are looking for' %>
       </div>
 
   </div>
@@ -43,7 +45,7 @@
     
     <%= f.label :job_description, "Job Description", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_area :job_description, :rows => 18, class: "form-control", :placeholder => 'Describe Job', rows: 18 %>
+      <%= f.text_area :job_description, :rows => 10, class: "form-control", :placeholder => 'Describe Job' %>
       </div>
       </div>
 
@@ -83,3 +85,5 @@
 <br>
 <br>
 <br>
+
+</div>
