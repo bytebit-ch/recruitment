@@ -1,28 +1,28 @@
 
 <div class="instructions">
-  <p> Below view Coding Program Students who are seeking a job. Remember you can also sponsor students to learn skills and employ them within 6 months. To sponsor a student or to find out more e-mail Tom Hacquoil at thomas@hacqouil.com. In the navigation bar you can find links to set your company profile and post jobs.</p>
+	<p> Below view Coding Program Students who are seeking a job. Remember you can also sponsor students to learn skills and employ them within 6 months. To sponsor a student or to find out more e-mail Tom Hacquoil at thomas@hacqouil.com. In the navigation bar you can find links to set your company profile and post jobs.</p>
 </div>
 
 
 
 <div class="iso_sort">
-  <button id='sortNameAsc'>Ascending</button>
-    <button id='sortNameDesc'>Descending</button>
+	<button id='sortNameAsc'>Ascending</button>
+	<button id='sortNameDesc'>Descending</button>
 </div>
-  <div class='student_flex_index'>
- <% @student_profiles.each do |student_profile| %>
-<div class="item card_index_student" data-last="<%= student_profile.last_name %>">
+<div class='student_flex_index'>
+	<% @student_profiles.each do |student_profile| %>	
+	<%= link_to(student_profile, class: "item card_index_student", data: { name: student_profile.last_name }) do %>     
 
-      
+		<h4 class="student_name"><%= student_profile.first_name %></h4>
+		<p><%= student_profile.three_descriptive_words %></p> 
+		<p><%= image_tag avatar_url(student_profile), :class => "s_img_index" %></p>
 
-         <p id="index_student_name"> <h4 class="student_name"><%= student_profile.first_name %></h4><p><%= student_profile.three_descriptive_words %></p> <%= image_tag avatar_url(student_profile), :class => "s_img_index" %></p>
-           
-             <p class="three_words"> <%= student_profile.short_description %></p>
+		<p class="three_words"> <%= student_profile.short_description %></p>
 
-      <p><%= link_to 'VIEW PROFILE', student_profile, :class => "s_view_profile" %></p>
 
-</div>
+	<% end %>
 <% end %>
+
 </div>
 
 

@@ -1,4 +1,4 @@
-
+x
 <%= simple_form_for (@student_profile), :html => {:class => "form-horizontal center"} do |f| %>
   
 
@@ -63,9 +63,9 @@
 <br>
    <div class="form-group">
     
-    <%= f.label :short_description, "Description", class: "col-md-4 control-label" %>
+    <%= f.label :short_description, "Short description", class: "col-md-4 control-label" %>
     <div class="col-md-8">
-      <%= f.text_field :short_description, class: "form-control", :placeholder => 'Write a short 2 sentence description of yourself'  %>
+      <%= f.text_area :short_description, :maxlength => 120, :rows => 4, class: "form-control", :placeholder => 'Write a short 2 sentence description of yourself'  %>
       </div>
 
   </div>
