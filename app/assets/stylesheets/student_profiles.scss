@@ -68,6 +68,20 @@ body {
   margin: 10% 8% 0% 8%;
 }
 
+.instructions_two {
+   display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: white;
+  border-color: #ECEAEA;
+  border-style: solid;
+  border-width: 2px;
+  padding: 35px;
+  margin-top: 200px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 274px;
+}
+
 .instructions_long {
    display: -webkit-flex;
   -webkit-flex-direction: column;
