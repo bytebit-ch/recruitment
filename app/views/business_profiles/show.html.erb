@@ -79,7 +79,7 @@
  <small> <%= link_to 'Delete Job', business_listing_path(business_listing), :method => :delete  %></small>
 <% end %>
 <span><%  if can? :edit, BusinessListing %>
-  <small><%= link_to 'Edit Job', edit_business_listing_path(business_listing) %></span><small>
+  <small><%= link_to 'Edit Job', edit_business_listing_path(business_listing) %></span></small>
 <% end %>
 </div>
 </div>
