@@ -69,9 +69,16 @@ class BusinessListingsController < ApplicationController
   def destroy
     @business_listing.destroy
     
-    respond_to do |format|
-      format.html { redirect_to business_profile_path(current_user.business_profile), notice: 'Business listing was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user.type_of_user == "admin"
+      respond_to do |format|
+        format.html { redirect_to business_profiles_path, notice: 'Business listing was successfully destroyed.' }
+       format.json { head :no_content }
+      end
+    else current_user.type_of_user != "admin"
+      respond_to do |format|
+        format.html { redirect_to business_profile_path(current_user.business_profile), notice: 'Business listing was successfully destroyed.' }
+       format.json { head :no_content }
+      end
     end
   end
 
