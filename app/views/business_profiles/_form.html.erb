@@ -1,3 +1,14 @@
+<div class="business-prof-form">
+
+
+<% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
+<h2>Edit your Profile</h2>
+<% elsif user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+<h2>Edit <%= @business_profile.business_name %>'s Profile</h2>
+<% end %>
+
+
+
 <%= simple_form_for (@business_profile), :html => {:class => "form-horizontal center"}  do |f| %>
   <% if @business_profile.errors.any? %>
     <div id="error_explanation">
@@ -36,10 +47,17 @@
       </div>
 
   </div>
-  <br><br>
-  <div class="login-field new-bus-prof-button">
-    <%= f.submit class: "button" %>
-  </div>
+  <br>
+  <br>
+
+  <%  if can? :edit, BusinessProfile %>
+    <div class="login-field new-bus-prof-button">
+      <%= f.submit class: "button" %>
+    </div>
+  <% end %>
+
 </div>
+
 <% end %>
 
+</div>

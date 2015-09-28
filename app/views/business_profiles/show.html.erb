@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <br>
 <br>
 <br>
@@ -21,6 +22,58 @@
     <h2>My job listings</h2>
     <p>To add a job opening click the 'POST NEW JOB' link in the navigation bar.</p>
  
+=======
+
+
+    <br>
+    <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+   <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
+
+<div class="business-profile-header">
+  <h2>My Profile</h2> <%  if can? :edit, BusinessProfile %>
+  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
+<% end %>
+</div>
+
+<div class="business-profile-info">
+  <ul>
+    <li><strong>Business Name:</strong>  <%= @business_profile.business_name %></li>
+    <li><strong>Company Website:</strong>  <%= @business_profile.url_of_business %></li>
+    <li><strong>Business Sector:</strong>  <%= @business_profile.description_business %></li>
+  </ul>
+</div>
+
+<div class="job-listing-instructions">
+  <h2>My job listings</h2>
+  <p><%= link_to 'Post a new job listing', new_business_listing_path %></p>
+</div>
+
+<% end %>
+
+<% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+
+<div class="business-profile-header">
+  <h2>You are viewing <%= @business_profile.business_name %>'s Profile</h2> <%  if can? :edit, BusinessProfile %>
+  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
+<% end %>
+</div>
+
+<div class="business-profile-info">
+  <ul>
+    <li><strong>Business Name:</strong>  <%= @business_profile.business_name %></li>
+    <li><strong>Company Website:</strong>  <%= @business_profile.url_of_business %></li>
+    <li><strong>Business Sector:</strong>  <%= @business_profile.description_business %></li>
+  </ul>
+</div>
+
+<div class="job-listing-instructions">
+  <h2><%= @business_profile.business_name %>'s job listings</h2>
+>>>>>>> origin/developtment
 </div>
 <% end %>
  
