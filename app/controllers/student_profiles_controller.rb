@@ -55,6 +55,7 @@ class StudentProfilesController < ApplicationController
   # PATCH/PUT /student_profiles/1
   # PATCH/PUT /student_profiles/1.json
   def update
+    @business_profiles = BusinessProfile.all
     respond_to do |format|
       if @student_profile.update(student_profile_params)
         format.html { redirect_to @student_profile, notice: 'Student profile was successfully updated.' }
