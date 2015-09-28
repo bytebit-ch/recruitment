@@ -49,10 +49,13 @@
 }
 
 .nav.navbar-nav {
-    background-color: rgba(255,255,255,.4);
+    background-color: rgba(255,255,255,.8);
     margin: 0.6%;
     right: 0;
     position: fixed;
+    -webkit-transition: background-color .2s ease-in-out;
+    -moz-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
 
 }
 
@@ -60,6 +63,9 @@
     background-color: rgba(0,0,0,0);
 }
 
+.navbar-custom.top-nav-collapse .logo {
+ background-color: rgba(0,0,0,0); 
+}
 
 .navbar-custom ul.nav li a {
   font-size: 12px;
@@ -152,10 +158,6 @@
 }
 
 
-.navbar-custom .nav.navbar-nav {
-  background-color: rgba(255,255,255,.8);
-}
-
 .navbar.navbar-custom.navbar-fixed-top {
   margin-bottom: 0;
 }
@@ -174,7 +176,14 @@
 .logo {
   margin-left: 8px;
   float: left;
+  background-color: rgba(255,255,255,.8);
+  padding: 0 20px;
+  
+  -webkit-transition: background-color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
 }
+
 
 .logo-img {
   border-radius: 10px;
