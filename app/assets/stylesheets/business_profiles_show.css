@@ -8,8 +8,9 @@ body {
 
 /* this is getting the cards to line up next to eachother */
 .biz_flex {
-	display: -webkit-flex;
+	display: inline-flex;
 	-webkit-flex-direction: row;
+	  
 	padding: 20px;
 	flex-wrap: wrap;
 	justify-content: space-between;
