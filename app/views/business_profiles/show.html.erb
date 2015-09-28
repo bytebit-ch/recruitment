@@ -15,9 +15,9 @@
 
 <div class="business-profile-info">
   <ul>
-    <li>Business Name: <%= @business_profile.business_name %></li>
-    <li>Business URL: <%= @business_profile.url_of_business %></li>
-    <li>Business Description: <%= @business_profile.description_business %></li>
+    <li>Business Name:  <%= @business_profile.business_name %></li>
+    <li>Company Website:  <%= @business_profile.url_of_business %></li>
+    <li>Business Sector:  <%= @business_profile.description_business %></li>
   </ul>
 </div>
 
@@ -74,7 +74,7 @@
 <br>
 
 <%  if can? :destroy, BusinessListing %>
- <small> <%= link_to 'Delete Job', business_listing_path, :method => :delete  %></small>
+ <small> <%= link_to 'Delete Job', business_listing_path(business_listing), :method => :delete  %></small>
 <% end %>
 <span><%  if can? :edit, BusinessListing %>
   <small><%= link_to 'Edit Job', edit_business_listing_path(business_listing) %></span><small>

@@ -70,7 +70,7 @@ class BusinessListingsController < ApplicationController
     @business_listing.destroy
     
     respond_to do |format|
-      format.html { redirect_to business_listings_url, notice: 'Business listing was successfully destroyed.' }
+      format.html { redirect_to business_profile_path(current_user.business_profile), notice: 'Business listing was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
