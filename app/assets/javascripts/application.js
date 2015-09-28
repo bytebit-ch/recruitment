@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.isotope
+//= require jquery.turbolinks
 
 //= require bootstrap
 //= require jquery.easing.min
