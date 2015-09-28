@@ -10,7 +10,6 @@ body {
 .biz_flex {
 	display: inline-flex;
 	-webkit-flex-direction: row;
-	  
 	padding: 20px;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -59,7 +58,7 @@ a {
 	border-width: 2px;
 	padding: 20px;
 	transition: background-color 2s ease-out;
-	width: 500px;
+	width: 44%;
 	margin: 4%;
 
 }
