@@ -1,9 +1,66 @@
-<p><%= I18n.t("devise.mailer.invitation_instructions.hello", email: @resource.email) %></p>
 
-<p><%= I18n.t("devise.mailer.invitation_instructions.someone_invited_you", url: root_url) %></p>
+<head>
+<style>
+
+	body {
+		width: 100%;
+		height: 100%;
+		background-color: #eee;
+		font-family:'roboto', sans-serif;
+		font-size: 20px;
+	}
+
+	.text {
+
+		margin: 30px 20%;
+		padding: 30px;
+		background-color: #FFF;
+		border-style: none;
+		border-radius: 20px;
+		width: 60%;
+	}
+
+	a {
+		text-decoration: none;
+		margin: 10px;
+		padding: 10px;
+		border-style: none;
+		border-radius: 10px;
+		background-color: #67b0d1;
+		color: #333;
+	}
+
+
+</style>
+</head>
+
+
+
+
+
+
+
+<body>
+<div class="text">
+
+<h2>Welcome to the Digital Jersey Recruitment Platform!</h2>
+
+<br>
+
+<p>To accept the invitation, simply click the link below</p>
+
+<br>
 
 <p><%= link_to I18n.t("devise.mailer.invitation_instructions.accept"), accept_invitation_url(@resource, :invitation_token => @token) %></p>
 
+<br>
+
 <p><%= I18n.t("devise.mailer.invitation_instructions.ignore").html_safe %></p>
 
-<p>test edit</p>
+<br>
+
+<p>Kind Regards</p>
+<p>The Digital Jersey Team</p>
+
+</div>
+</body>
