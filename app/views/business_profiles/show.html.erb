@@ -1,12 +1,7 @@
-
-
-    <br>
-    <br>
-   <br>
-   <br>
-   <br>
-   <br>
-
+<br>
+<br>
+<br>
+<br>
    <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
 
 <div class="business-profile-header">
@@ -48,77 +43,56 @@
 
 <div class="job-listing-instructions">
   <h2><%= @business_profile.business_name %>'s job listings</h2>
+
 </div>
-
 <% end %>
+ 
+<% if @business_profile.business_listings.empty?  %>
+  
+   <div class="instructions_two"> There are no job listings for this company. Please check back at a later date.</div>
+  </div>
 
-    <div class='biz_flex'>
 
+<% else %>
+  <div class='biz_flex'>
     <% @business_profile.business_listings.each do |business_listing| %>
-
-    
-
       <div class='bottom_card'>
-
         <p>
-
-         <h4> <%= business_listing.title %></h4>
-         <p class='created'> Job created: <%= business_listing.created_at %></p>
-       </p>
-
-       <p>
-        <% if business_listing.full_time == true %>
-        <strong> <%= 'Full Time' %></strong>
+          <h4> <%= business_listing.title %></h4>
+          <p class='created'> Job created: <%= business_listing.created_at %></p>
+        </p>
+        <p>
+          <% if business_listing.full_time == true %>
+            <strong> <%= 'Full Time' %></strong>
+          <% end %>
+          <% if business_listing.part_time == true %>
+            <strong> <%= 'Part Time' %> </strong>
+          <% end %>
+          <% if business_listing.contract == true %>
+            <strong> <%= 'Contract' %> </strong>
+          <% end %>
+        </p>
+        <p>
+          <strong>Skills:</strong>
+          <%= business_listing.skills_wanted %>
+        </p>
+        <p>
+          <%= business_listing.job_description %>
+        </p>
+        <p>
+          <strong>Contact:</strong>
+          <a href='mailto:<%= business_listing.contact_email %>'><%= business_listing.contact_email %></a>
+        </p>
+        <%  if can? :destroy, BusinessListing %>
+          <%= link_to 'Delete Job', business_listing_path(business_listing), :method => :delete  %>
         <% end %>
-        <% if business_listing.part_time == true %>
-        <strong> <%= 'Part Time' %> </strong>
+        <%  if can? :edit, BusinessListing %>
+          <%= link_to 'Edit Job', edit_business_listing_path(business_listing) %>
         <% end %>
-        <% if business_listing.contract == true %>
-        <strong> <%= 'Contract' %> </strong>
-        <% end %>
-      </p>
-
-      <p>
-        <strong>Skills:</strong>
-        <%= business_listing.skills_wanted %>
-      </p>
-
-      <p>
-        <%= business_listing.job_description %>
-      </p>
-
-      <p>
-       <strong>Contact:</strong> <a href='mailto:<%= business_listing.contact_email %>'><%= business_listing.contact_email %></a>
-     </p>
-   
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<%  if can? :destroy, BusinessListing %>
- <%= link_to 'Delete Job', business_listing_path(business_listing), :method => :delete  %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
-
-<span>
-  <%  if can? :edit, BusinessListing %>
-  <%= link_to 'Edit Job', edit_business_listing_path(business_listing) %>
-</span>
-
-<% end %>
-
-</div>
-
-
-
-
-<% end %>
-
-</div>
-
 <%  if can? :manage, :all %>
   <%= link_to 'Delete Profile', @business_profile,  :method => :delete,  :class => "edit_profiles_destroy_biz"  %>
 <% end %>
-
-
