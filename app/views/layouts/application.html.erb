@@ -2,10 +2,11 @@
 
 <head>
 
-<title>DJ Recruitment Platform</title>
+<title>Find Jersey Coders</title>
+<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <%= csrf_meta_tags %>
@@ -24,14 +25,17 @@
 
   <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 
-      <div class="navbar-header page-scroll">
-        <%#= image_tag 'logo.png', class: "logo" %>  
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+      <div class="logo">
+        <p class="logo-text">Recruitment<br>Platform</p>
+        <%= image_tag 'logo.png', class: "logo-img" %>
+      </div>
+      <div></div>
+<!--         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
             <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand" href="index.html"></a>
       </div>
-
+ -->
 <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
@@ -41,18 +45,20 @@
             <%= link_to('Home', business_profiles_path) %>
           <% elsif user_signed_in? and current_user and current_user.type_of_user == "business" %>
             <%= link_to('Home', student_profiles_path) %>
+          <% elsif user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+            <%= link_to('Home', admin_path) %>
           <% end %>
         </li>
 
         <li>
           <% if current_page?('/') or current_page?('/landing/index') %>
-            <a href="#about">Our Students</a>
+            <a href="#service">Why Join?</a>
           <% end %>
         </li>
 
     		<li>
           <% if current_page?('/') or current_page?('/landing/index') %>
-            <a href="#service">Why Join?</a>
+            <a href="#about">Our Students</a>
           <% end %>
         </li>
 
@@ -68,7 +74,7 @@
 
         <li>
          <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
-           <%= link_to('New Listing', new_business_listing_path, class: 'business-profile-button') %>
+           <%= link_to('Post new job', new_business_listing_path, class: 'business-profile-button') %>
          <% end %>
         </li>
 
@@ -96,7 +102,7 @@
 
 <br>
 <br>
-<!-- 
+
 <footer>
   <div>
     <ul>
@@ -110,7 +116,6 @@
     </ul>
   </div>
 </footer>
- -->
 
 
 

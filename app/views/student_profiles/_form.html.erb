@@ -1,80 +1,142 @@
-
-<%= simple_form_for(@student_profile) do |f| %>
-  
-
+<%= simple_form_for (@student_profile), :html => {:class => "form-horizontal center"} do |f| %>
   <% if @student_profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@student_profile.errors.count, "error") %> prohibited this student_profile from being saved:</h2>
-
       <ul>
-      <% @student_profile.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @student_profile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
-
-  <div class="field">
-    <span class="hover_hints">no special characters>
-      <%= f.input :first_name %>
-      </span>
-
-  </div>
   <br>
-  <div class="field">
-    <%= f.input :last_name %><br>
-
-  </div>
-  <div class="field">
-    <%= f.label :github_url %><br>
-    <%= f.text_area :github_url %>
-  </div>
-  <div class="field">
-    <%= f.label :profile_img %><br>
-    <%= f.text_area :profile_img %>
-  </div>
-  <div class="field">
-    <%= f.label :short_description %><br>
-    <%= f.text_area :short_description %>
-  </div>
-  <div class="field">
-    <%= f.label :long_decription %><br>
-    <%= f.text_area :long_decription %>
-  </div>
-  <div class="field">
-    <%= f.label :skills %><br>
-    <%= f.text_area :skills %>
-  </div>
- <!--  <div class="field">
-   <%= f.label :year %><br>
-  <%= f.select :year, [['2014'],['2015'],['2016'],['2017'],['2018'],['2019']] %>
- 
-  </div> -->
   <br>
-  <div class="field">
-    <%= f.label :part_time %><br>
-    <%= f.check_box :part_time %>
+  <div class="form-container">
+    <div class="form-group">
+      <%= f.label :first_name, "First name", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :last_name, "Last name", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :three_descriptive_words, "3 Words", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :three_descriptive_words, class: "form-control", :placeholder => 'Describe yourself in three descriptive words' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :github_url, "Github", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :github_url, class: "form-control", :placeholder => 'Link to your github profile' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :website, "Website", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :website, class: "form-control", :placeholder => 'If you have a personal website, blog, etc link to it here. No "http://" needed' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :short_description, "Short description", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_area :short_description, :maxlength => 110, :rows => 4, class: "form-control", :placeholder => 'Write a short 2 sentence description of yourself'  %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :long_decription, "About You", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_area :long_decription, :rows => 15, class: "form-control", :placeholder => 'Write about yourself explaining why someone should hire you. Be creative, you can use HTML tags such as strong, img, etc ' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :skills, "Skills", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_area :skills, :rows => 8, class: "form-control", :placeholder => 'List your relevant skills', :rows => 8 %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :ruby, "Ruby", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :ruby, class: "form-control", :placeholder => 'Rate your Ruby skills out of 100' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :rails, "Rails", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :rails, class: "form-control", :placeholder => 'Rate your Rails skills out of 100 ' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :sql, "SQL", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :sql, class: "form-control", :placeholder => 'Rate your SQL skills out of 100 ' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :html, "HTML5", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :html, class: "form-control", :placeholder => 'Rate your HTML5 skills out of 100' %>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.label :css, "CSS3", class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.text_field :css, class: "form-control", :placeholder => 'Rate your CSS3 skills out of 100 ' %>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <%= f.label :year, class: "col-md-4 control-label" %>
+      <div class="col-md-8">
+        <%= f.select(:year, options_for_select([['2014', 1],['2015', 2],['2016', 3],['2017', 4],['2018', 5],['2019', 6]]), class: "form-control") %>
+      </div>
+      <br>
+      <br>
+      <div class="boxes_for_form">
+        <div class="checkbox">
+          <%= f.check_box :part_time %> Part Time - willing to take a part time position?
   </div>
-  <div class="field">
-    <%= f.label :full_time %><br>
-    <%= f.check_box :full_time %>
+        <br>
+        <div class="checkbox">
+          <%= f.check_box :full_time %> Full Time - willing to take a full time position?
   </div>
-  <div class="field">
-    <%= f.label :contract %><br>
-    <%= f.check_box :contract %>
+        <br>
+        <div class="checkbox">
+          <%= f.check_box :contract %> Contract - willing to take a contract time position?
   </div>
-  <div class="field">
-    <%= f.label :public %><br>
-    <%= f.check_box :public %>
-  </div>
-  <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
-   <div class="field">
-    <%= f.label :sponsor %><br>
-    <%= f.check_box :sponsor %>
+        <br>
+        <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+          <div class="checkbox">
+            <%= f.check_box :sponsor %> Sponsor - admin check if student is already sponsored
+  
+  
     <% end %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="login-field">
+      <%= f.submit class: "button" %>
+    </div>
   </div>
 <% end %>

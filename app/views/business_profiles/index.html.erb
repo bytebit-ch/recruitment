@@ -1,77 +1,22 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-    <header class="mdl-layout__header mdl-layout__header--waterfall">
-      <!-- Top row, always visible -->
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-         
-        <span class="mdl-layout-title">Business Profiles</span>
-          
-        <br>
 
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-        mdl-textfield--floating-label mdl-textfield--align-right">
-        
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-          id="waterfall-exp" />
-        </div>
-        
-      </div>
-    </div>
-    
-    <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="waterfall-demo-header-nav mdl-navigation">
-        <!-- <p class='links_show'>
-          <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
-          </p> -->
-          <p class='links_show'>
-            <% if current_user and current_user.type_of_user != "admin" %>
-            <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
-          </p>
-          <% end %>
+<div class="instructions">
+	<h1>Business Profiles</h1>
+	<p>A list of businesses who are looking to employ coders. To view the job opportunities that a business has to offer, click the 'View jobs' link in the chosen business profile.</p>
+</div>
+
+<div class="iso_sort">
+	<button id='sortNameAsc'>Ascending </button>
+	<button id='sortNameDesc'>Descending</button>
+</div>
 
 
-     <p class='links_show'>
-          <% if user_signed_in? %>
-                <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-          <% else %>
-                <%= link_to('Login', new_user_session_path, class: "login") %>
-            <% end %>
-      </p>
-        </nav>
-      </div>
-    </header>
-
-
-    
 <div class='biz_flex_index'>
- <% @business_profiles.each do |business_profile| %>
-<div class='card_index'>
+	<% @business_profiles.each do |business_profile| %>
+	<%= link_to(business_profile, class: "item card_index", data: { name: business_profile.business_name }) do %>
 
-      
+		<h3> <%= business_profile.business_name %></h3>
+		<p><%= business_profile.description_business %></p>
 
-         <h4 id="index_business_name"> <%= business_profile.business_name %></h4>
-            <%= business_profile.description_business %>
-            <br>
-            <br>
-         <p>
-       <a href="<%= business_profile.url_of_business %>" class="website_b">Website</a>
-     </p>
-
-      <p><%= link_to 'VIEW PROFILE', business_profile %></p>
-
+	<% end %>
+	<% end %>
 </div>
-<% end %>
-</div>
-
-<br>
-
-
-
-
-
-

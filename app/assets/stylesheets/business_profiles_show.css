@@ -8,7 +8,8 @@ body {
 
 /* this is getting the cards to line up next to eachother */
 .biz_flex {
-	display: -webkit-flex;
+	width:	100%;
+	display: inline-flex;
 	-webkit-flex-direction: row;
 	padding: 20px;
 	flex-wrap: wrap;
@@ -16,16 +17,7 @@ body {
 	margin-bottom: 2%;
 }
 
-.mdl-layout {
-	
-	background-color: #F5F5F5;
-}
 
-.mdl-layout__header--waterfall {
-	background-color: #67B0D1;
-	height: 70px;
-	position: fixed;
-}
 
 .business_profiles_show_header {
 	height: 200px;
@@ -51,9 +43,6 @@ a {
 	justify-content: center;
 }
 
-.mdl-layout__header-row>* {
-	padding-top: 5%;
-}
 
 .url {
 	color: white;
@@ -65,18 +54,18 @@ a {
 	display: -webkit-flex;
 	-webkit-flex-direction: column;
 	background: white;
-	border-color: #00BCD4;
-	border-style: dotted;
+	border-color: #ECEAEA;
+	border-style: solid;
 	border-width: 2px;
 	padding: 20px;
 	transition: background-color 2s ease-out;
-	width: 44%;
-	margin: 2%;
+	width: 42%;
+	margin: 4%;
 
 }
 
 .bottom_card:hover{
-	background-color: #FFEFDB;
+	border-color: #00BCD4;
 	
 }
 

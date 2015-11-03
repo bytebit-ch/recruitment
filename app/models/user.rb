@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
    has_one :student_profile
    has_one :business_profile
 
+   validates_uniqueness_of :email
+
   # User::Roles
   # The available roles
   Roles = [ :admin , :student, :business ]

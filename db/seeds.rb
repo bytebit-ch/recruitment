@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Seed admins
-User.create(email: 'thomasgluce@gmail.com', password: 'password', type_of_user: 'admin')
+user_1 = User.create(email: 'thomasgluce@gmail.com', password: 'password', type_of_user: 'admin', sign_in_count: 1)
 
 # Seed students
-user_1 = User.create(email: 'dlec2@hotmail.co.uk', password: 'password', type_of_user: 'student')
-StudentProfile.create(user_id: user_1.id, first_name: 'Dan', last_name: "Le Cornu")
+user_2 = User.create(email: 'dlec2@hotmail.co.uk', password: 'password', type_of_user: 'student', sign_in_count: 1)
 
 # Seed businesses
+user_3 = User.create(email: 'test@business.com', password: 'password', type_of_user: 'business', sign_in_count: 1)

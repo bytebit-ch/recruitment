@@ -1,80 +1,31 @@
 
-<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-    <header class="mdl-layout__header mdl-layout__header--waterfall">
-      <!-- Top row, always visible -->
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-         
-        <span class="mdl-layout-title">Student Profiles</span>
-          
-        <br>
-
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-        mdl-textfield--floating-label mdl-textfield--align-right">
-        
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-          id="waterfall-exp" />
-        </div>
-        
-      </div>
-    </div>
-    
-    <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="waterfall-demo-header-nav mdl-navigation">
-        <!-- <p class='links_show'>
-          <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
-          </p> -->
-          <p class='links_show'>
-            <% if current_user and current_user.type_of_user != "admin" %>
-            <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
-          </p>
-          <% end %>
-
-        <p class='links_show'>
-          <% if user_signed_in? %>
-                <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "login") %>
-          <% else %>
-                <%= link_to('Login', new_user_session_path, class: "login") %>
-          <% end %>
-        </p>
-        
-        </nav>
-      </div>
-    </header>
-
-
-
-  <div class='student_flex_index'>
- <% @student_profiles.each do |student_profile| %>
-<div class='card_index_student'>
-
-      
-
-         <p id="index_student_name"> <h4><%= student_profile.first_name %></h4><span><%= student_profile.three_descriptive_words %></span> <%= image_tag avatar_url(student_profile) %></p>
-           
-             <p> <%= student_profile.short_description %></p>
-
-      <p><%= link_to 'VIEW PROFILE', student_profile %></p>
-
+<div class="instructions">
+	<p> Below view Coding Program Students who are seeking a job. Remember you can also sponsor students to learn skills and employ them within 6 months. To sponsor a student or to find out more e-mail Tom Hacquoil at thomas@hacqouil.com. In the navigation bar you can find links to set your company profile and post jobs.</p>
 </div>
+
+
+
+<div class="iso_sort">
+	<button id='sortNameAsc'>Ascending</button>
+	<button id='sortNameDesc'>Descending</button>
+</div>
+<div class='student_flex_index'>
+	<% @student_profiles.each do |student_profile| %>	
+	<%= link_to(student_profile, class: "item card_index_student", data: { name: student_profile.last_name }) do %>     
+
+		<h4 class="student_name"><%= student_profile.first_name %></h4>
+		<p><%= student_profile.three_descriptive_words %></p> 
+		<p><%= image_tag avatar_url(student_profile), :class => "s_img_index" %></p>
+
+		<p class="three_words"> <%= student_profile.short_description %></p>
+
+
+	<% end %>
 <% end %>
+
 </div>
 
 
-
-
-
-
-
-
-
-
- 
 
 
 

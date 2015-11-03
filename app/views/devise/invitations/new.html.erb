@@ -1,32 +1,47 @@
-<head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Preloader -->
+	<div id="preloader">
+	  <div id="load"></div>
+	</div>
 
-<link rel="stylesheet" type="text/css" href="student_profiles.scss">
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 
-</head>
+      <div class="logo">
+        <p class="logo-text">Recruitment<br>Platform</p>
+        <%= image_tag 'logo.png', class: "logo-img" %>
+      </div>
+<!--         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+            <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.html"></a>
+      </div>
+ -->
+<!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+      <ul class="nav navbar-nav">
 
+        <li class="active">
+          <% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+            <%= link_to('Home', admin_path) %>
+          <% end %>
+        </li>
 
-
-<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-    <header class="mdl-layout__header mdl-layout__header--waterfall">
-      <!-- Top row, always visible -->
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-         
-        <span class="mdl-layout-title"><h1>INVITATIONs</h1></span>
-          
-        
        
-        </div>
-        
-      </div>
+        <li class="dropdown">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path, class: "login") %>
+        <% end %>
+              
+      </ul>
     </div>
-    
-    
-          
-        
-        </nav>
-      </div>
-    </header>
+  </nav>
+
+
+
+
+
 
 <div class="invite_page">
 <h2><%= t "devise.invitations.new.header" %></h2>
@@ -40,15 +55,28 @@
   <%= f.text_field field %></p>
 <% end -%>
 
+
   <p><%= f.submit t("devise.invitations.new.submit_button") %></p>
 <% end %>
 
 </div>
 
+<br>
+<br>
+<br>
 
-<footer class="invite_footer">
- 
-     Digital Jersey 2015
-      <span>Christine Harris Morti Alexandra  Dan Le Cornu Ben Whitley</span>
-    
+
+<footer>
+  <div>
+    <ul>
+      <li class="copyright">Copyright &#0169; 2015 Digital Jersey Limited</li>
+      <div class="creators">
+      <li>Ben Whitley</li>
+      <li>Dan Le Cornu</li>
+      <li>Morti Alexandru</li>
+      <li>Christine Harris</li>
+      </div>
+    </ul>
+  </div>
 </footer>
+

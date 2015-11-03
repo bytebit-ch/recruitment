@@ -1,4 +1,15 @@
-<%= form_for(@business_profile) do |f| %>
+<div class="business-prof-form">
+
+
+<% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
+<h2>Edit your Profile</h2>
+<% elsif user_signed_in? and current_user and current_user.type_of_user == "admin" %>
+<h2>Edit <%= @business_profile.business_name %>'s Profile</h2>
+<% end %>
+
+
+
+<%= simple_form_for (@business_profile), :html => {:class => "form-horizontal center"}  do |f| %>
   <% if @business_profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@business_profile.errors.count, "error") %> prohibited this business_profile from being saved:</h2>
@@ -11,20 +22,42 @@
     </div>
   <% end %>
 
+<div class="form-container new-bus-prof-form">
+ 
+ <div class="form-group">
+    <%= f.label :business_name, "Business Name", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :business_name, :maxlength => 50, class: "form-control", :placeholder => 'Name of Company' %>
+      </div>
+    </div>
+<br>
+      <div class="form-group">
+    <%= f.label :url_of_business, "Company Website", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_field :url_of_business, :maxlength => 200, class: "form-control", :placeholder => 'Website' %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :business_name %><br>
-    <%= f.text_area :business_name %>
+<br>
+  <div class="form-group">
+    
+    <%= f.label :description_business, "Type of Business", class: "col-md-4 control-label" %>
+    <div class="col-md-8">
+      <%= f.text_area :description_business, :maxlength => 140, :rows => 3, class: "form-control", :placeholder => 'Put what type of business you are such as development, finance, games, etc ' %>
+      </div>
+
   </div>
-  <div class="field">
-    <%= f.label :url_of_business %><br>
-    <%= f.text_area :url_of_business %>
-  </div>
-  <div class="field">
-    <%= f.label :description_business %><br>
-    <%= f.text_area :description_business %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <br>
+  <br>
+
+  <%  if can? :edit, BusinessProfile %>
+    <div class="login-field new-bus-prof-button">
+      <%= f.submit class: "button" %>
+    </div>
+  <% end %>
+
+</div>
+
 <% end %>
+
+</div>

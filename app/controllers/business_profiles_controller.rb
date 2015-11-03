@@ -28,6 +28,7 @@ class BusinessProfilesController < ApplicationController
 
   # GET /business_profiles/1/edit
   def edit
+    @business_profiles = BusinessProfile.all
   end
 
   # POST /business_profiles
@@ -65,6 +66,7 @@ class BusinessProfilesController < ApplicationController
   # DELETE /business_profiles/1.json
   def destroy
     @business_profile.destroy
+    
     respond_to do |format|
       format.html { redirect_to business_profiles_url, notice: 'Business profile was successfully destroyed.' }
       format.json { head :no_content }

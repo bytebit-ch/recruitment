@@ -1,103 +1,98 @@
+<br>
+<br>
+<br>
+<br>
+   <% if user_signed_in? and current_user and current_user.type_of_user == "business" %>
 
-  <div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
-    <header class="mdl-layout__header mdl-layout__header--waterfall">
-      <!-- Top row, always visible -->
-      <div class="mdl-layout__header-row">
-        <!-- Title -->
-       
-        <p class='biz_title'>
-        <span class="mdl-layout-title"><%= @business_profile.business_name %></span>
+<div class="business-profile-header">
+  <h2>My Profile</h2> <%  if can? :edit, BusinessProfile %>
+  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
+<% end %>
+</div>
 
-        <br>
+<div class="business-profile-info">
+  <ul>
+    <li><strong>Business Name:</strong>  <%= @business_profile.business_name %></li>
+    <li><strong>Company Website:</strong>  <%= @business_profile.url_of_business %></li>
+    <li><strong>Business Sector:</strong>  <%= @business_profile.description_business %></li>
+  </ul>
+</div>
 
-        <div class="mdl-layout-spacer"></div>
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-        mdl-textfield--floating-label mdl-textfield--align-right">
-        
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-          id="waterfall-exp" />
-        </div>
-        
-      </div>
-    </div>
-   
-    <!-- Bottom row, not visible on scroll -->
-    <div class="mdl-layout__header-row">
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="waterfall-demo-header-nav mdl-navigation">
-        <p class='links_show'>
-          <a class="mdl-navigation__link" href=""><%= link_to 'Back', business_profiles_path %>
-          </p>
-          <p class='links_show'>
-            <% if current_user and current_user.type_of_user != "admin" %>
-            <a class="mdl-navigation__link" href=""><%= link_to 'View my profile', current_user %></a>
-          </p>
-          <% end %>
+<div class="job-listing-instructions">
+  <h2>My job listings</h2>
+  <p><%= link_to 'Post a new job listing', new_business_listing_path %></p>
+</div>
 
-        </nav>
-      </div>
-    </header>
+<% end %>
 
-    <br>
-    <br>
+<% if user_signed_in? and current_user and current_user.type_of_user == "admin" %>
 
-    <div class='biz_flex'>
+<div class="business-profile-header">
+  <h2>You are viewing <%= @business_profile.business_name %>'s Profile</h2> <%  if can? :edit, BusinessProfile %>
+  <%= link_to 'Edit Profile', edit_business_profile_path(@business_profile),  :class => "edit_profiles_biz" %>
+<% end %>
+</div>
+
+<div class="business-profile-info">
+  <ul>
+    <li><strong>Business Name:</strong>  <%= @business_profile.business_name %></li>
+    <li><strong>Company Website:</strong>  <%= @business_profile.url_of_business %></li>
+    <li><strong>Business Sector:</strong>  <%= @business_profile.description_business %></li>
+  </ul>
+</div>
+
+<div class="job-listing-instructions">
+  <h2><%= @business_profile.business_name %>'s job listings</h2>
+
+</div>
+<% end %>
+ 
+<% if @business_profile.business_listings.empty?  %>
+  
+   <div class="instructions_two"> There are no job listings for this company. Please check back at a later date.</div>
+  </div>
+
+
+<% else %>
+  <div class='biz_flex'>
     <% @business_profile.business_listings.each do |business_listing| %>
-
       <div class='bottom_card'>
-
         <p>
-
-         <h4> <%= business_listing.title %></h4>
-         <p class='created'> Job created: <%= business_listing.created_at %></p>
-       </p>
-
-       <p>
-        <% if business_listing.full_time == true %>
-        <strong> <%= 'Full Time' %></strong>
+          <h4> <%= business_listing.title %></h4>
+          <p class='created'> Job created: <%= business_listing.created_at %></p>
+        </p>
+        <p>
+          <% if business_listing.full_time == true %>
+            <strong> <%= 'Full Time' %></strong>
+          <% end %>
+          <% if business_listing.part_time == true %>
+            <strong> <%= 'Part Time' %> </strong>
+          <% end %>
+          <% if business_listing.contract == true %>
+            <strong> <%= 'Contract' %> </strong>
+          <% end %>
+        </p>
+        <p>
+          <strong>Skills:</strong>
+          <%= business_listing.skills_wanted %>
+        </p>
+        <p>
+          <%= business_listing.job_description %>
+        </p>
+        <p>
+          <strong>Contact:</strong>
+          <a href='mailto:<%= business_listing.contact_email %>'><%= business_listing.contact_email %></a>
+        </p>
+        <%  if can? :destroy, BusinessListing %>
+          <%= link_to 'Delete Job', business_listing_path(business_listing), :method => :delete  %>
         <% end %>
-        <% if business_listing.part_time == true %>
-        <strong> <%= 'Part Time' %> </strong>
+        <%  if can? :edit, BusinessListing %>
+          <%= link_to 'Edit Job', edit_business_listing_path(business_listing) %>
         <% end %>
-        <% if business_listing.contract == true %>
-        <strong> <%= 'Contract' %> </strong>
-        <% end %>
-      </p>
-
-      <p>
-        <strong>Skills:</strong>
-        <%= business_listing.skills_wanted %>
-      </p>
-
-      <p>
-        <%= business_listing.job_description %>
-      </p>
-
-      <p>
-       <strong>Contact:</strong> <%= business_listing.contact_email %>
-     </p>
-   </div>
-<%#  if can? :manage, :all %>
-  <%#= link_to '[Destroy Business Listing]', @business_listing,  :method => :delete  %>
-<%# end %>
-<%#  if can? :edit, BusinessListing %>
-  <%#= link_to 'Edit', edit_business_listing_path(@business_listing) %>
-<%# end %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
-</div>
-
-
-<div class="edit_profiles">
-<%  if can? :edit, BusinessProfile %>
-  <%= link_to 'Edit', edit_business_profile_path(@business_profile) %>
-<% end %>
-</div>
-<div class="destroy_profiles">
 <%  if can? :manage, :all %>
-  <%= link_to 'Destroy', @business_profile,  :method => :delete  %>
+  <%= link_to 'Delete Profile', @business_profile,  :method => :delete,  :class => "edit_profiles_destroy_biz"  %>
 <% end %>
-
-</div>
-

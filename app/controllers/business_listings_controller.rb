@@ -14,6 +14,7 @@ class BusinessListingsController < ApplicationController
   # GET /business_listings/1
   # GET /business_listings/1.json
   def show
+     @business_profiles = BusinessProfile.all
   end
 
   # GET /business_listings/new
@@ -23,6 +24,8 @@ class BusinessListingsController < ApplicationController
 
   # GET /business_listings/1/edit
   def edit
+    @business_profiles = BusinessProfile.all
+
   end
 
   def view_profile
@@ -38,7 +41,7 @@ class BusinessListingsController < ApplicationController
 
     respond_to do |format|
       if @business_listing.save
-        format.html { redirect_to @business_listing, notice: 'Business listing was successfully created.' }
+        format.html { redirect_to current_user, notice: 'Business listing was successfully created.' }
         format.json { render :show, status: :created, location: @business_listing }
       else
         format.html { render :new }
@@ -52,7 +55,7 @@ class BusinessListingsController < ApplicationController
   def update
     respond_to do |format|
       if @business_listing.update(business_listing_params)
-        format.html { redirect_to @business_listing, notice: 'Business listing was successfully updated.' }
+        format.html { redirect_to current_user, notice: 'Business listing was successfully updated.' }
         format.json { render :show, status: :ok, location: @business_listing }
       else
         format.html { render :edit }
@@ -65,9 +68,17 @@ class BusinessListingsController < ApplicationController
   # DELETE /business_listings/1.json
   def destroy
     @business_listing.destroy
-    respond_to do |format|
-      format.html { redirect_to business_listings_url, notice: 'Business listing was successfully destroyed.' }
-      format.json { head :no_content }
+    
+    if current_user.type_of_user == "admin"
+      respond_to do |format|
+        format.html { redirect_to business_profiles_path, notice: 'Business listing was successfully destroyed.' }
+       format.json { head :no_content }
+      end
+    else current_user.type_of_user != "admin"
+      respond_to do |format|
+        format.html { redirect_to business_profile_path(current_user.business_profile), notice: 'Business listing was successfully destroyed.' }
+       format.json { head :no_content }
+      end
     end
   end
 

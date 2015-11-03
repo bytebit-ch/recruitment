@@ -8,7 +8,9 @@ body {
     font-family: 'Lato',sans-serif;
     font-weight: 300;
     color: #666;
-    background-color: #fff;
+    background-color: #eee;
+    position: absolute;
+    top: 0;
 }
 
 html {
@@ -22,15 +24,10 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 21px 0px 19px;
-    margin-left: 166px;
-    text-transform: uppercase;
+    margin: 0 0 30px;
     font-family: Montserrat,sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
-}
-h3{
-  margin: 21px 0px 19px;
 }
 
 p {
@@ -60,112 +57,6 @@ a:focus {
     font-weight: 400;
 }
 
-.navbar {
-    margin-bottom: 0;
-    border-bottom: 1px solid rgba(255,255,255,.3);
-
-}
-
-.navbar-brand {
-    font-weight: 700;
-}
-.navbar-brand {
-  height: 40px;
-  padding: 5px 15px;
-  font-size: 18px;
-  line-height: 1em;
-}
-
-.navbar-brand h1{
-  color: #fff;
-  font-size: 20px;
-  line-height: 40px;
-}
-
-.navbar-brand:focus {
-    outline: 0;
-}
-
-.nav.navbar-nav {
-    background-color: rgba(255,255,255,0.8);
-}
-
-.navbar-custom.top-nav-collapse .nav.navbar-nav {
-    background-color: rgba(0,0,0,0);
-}
-
-
-.navbar-custom ul.nav li a {
-  font-size: 12px;
-  letter-spacing: 1px;
-    color: #444;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.navbar-custom.top-nav-collapse ul.nav li a {
-      -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  color: #fff;
-}
-
-.navbar-custom ul.nav ul.dropdown-menu {
-    border-radius: 0;
-}
-
-.navbar-custom ul.nav ul.dropdown-menu li {
-  border-bottom: 1px solid #f5f5f5;
-
-}
-
-.navbar-custom ul.nav ul.dropdown-menu li:last-child{
-  border-bottom: none;
-}
-
-.navbar-custom ul.nav ul.dropdown-menu li a {
-  padding: 10px 20px;
-}
-
-.navbar-custom ul.nav ul.dropdown-menu li a:hover {
-  background: #fefefe;
-}
-
-.navbar-custom.top-nav-collapse ul.nav ul.dropdown-menu li a {
-  color: #666;
-}
-
-.navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-}
-
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li.active {
-    outline: 0;
-    background-color: rgba(255,255,255,.2);
-}
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li.active {
-    outline: 0;
-    background-color: rgba(255,255,255,.2);
-}
-
-.navbar-toggle {
-    padding: 4px 6px;
-    font-size: 14px;
-    color: #fff;
-}
-
-.navbar-toggle:focus,
-.navbar-toggle:active {
-    outline: 0;
-}
-
-
 /* loader */
 #preloader {
     background: #ffffff;
@@ -192,7 +83,7 @@ a:focus {
 
 @keyframes boxSpin{
   0%{
-    transform: translate(-10px, 0px);
+    transform: translate(-100px, 0px);
   }
   25%{
     transform: translate(10px, 10px);
@@ -244,29 +135,47 @@ a:focus {
   animation: shadowSpin 1s ease-in-out infinite;
 }
 
+
 /* misc */
 hr {
   margin-top: 10px;
+  border-color: #666;
+}
+
+.student-header-underline {
+  margin-left: 40.6%;
 }
 
 /* margins */
-.marginbot-0{margin-bottom:0 !important;}
-.marginbot-10{margin-bottom:10px !important;}
-.marginbot-20{margin-bottom:20px !important;}
-.marginbot-30{margin-bottom:30px !important;}
-.marginbot-40{margin-bottom:40px !important;}
-.marginbot-50{margin-bottom:50px !important;}
+.marginbot-0 {
+  margin-bottom:0 !important;
+}
+.marginbot-10 {
+  margin-bottom:10px !important;
+}
+.marginbot-20 {
+  margin-bottom:20px !important;
+}
+.marginbot-30 {
+  margin-bottom:30px !important;
+}
+.marginbot-40 {
+  margin-bottom:40px !important;
+}
+.marginbot-50 {
+  margin-bottom:50px !important;
+}
 
 /* ===========================
 --- General sections
 ============================ */
 
 .home-section {
-    padding-top: 110px;
-    padding-bottom: 0;
+  padding-top: 5%;
+  padding-bottom: 0;
   display:block;
-    position:relative;
-    z-index:120;
+  position:relative;
+  z-index:120;
 }
 
 
@@ -275,8 +184,8 @@ hr {
 }
 .section-heading i {
   margin-bottom: 20px;
+  color: #666;
 }
-
 
 /* --- section bg var --- */
 
@@ -299,17 +208,6 @@ hr {
   color: #fff;
 }
 
-/* ===========================
---- Logo
-============================ */
-
-.logo {
-  border-radius: 30%;
-  width: 60px;
-  height: 50px;
-  margin: 5px 0px;
-}
-
 /*===========================
 --- Hero Image
 ============================ */
@@ -327,10 +225,11 @@ body#page-top {
 ============================ */
 
 .intro {
-  width:100%;
+  width:100vw;
   position:relative;
-  background: url("students.JPG") no-repeat top center;
+  background: asset-url("students.JPG") no-repeat top center;
   background-size: 100%;
+  height: 75vh;
 
 }
 
@@ -340,13 +239,14 @@ body#page-top {
 
 .intro .slogan {
   text-align: center;
-  margin-top: -140px;
+  margin-top: -145px;
 
 }
 
 .intro .page-scroll {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
+
 }
 
 .brand-heading {
@@ -355,22 +255,6 @@ body#page-top {
 
 .intro-text {
     font-size: 18px;
-}
-
-.intro .slogan h2 {
-  color: #FFF;
-  text-shadow: none;
-  font-size: 60px;
-  line-height: 90px;
-  font-weight: 700;
-  font-family: Montserrat, sans-serif;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  text-transform: uppercase;
-  border-width: 0px;
-  border-color: #000;
-  border-style: none;
-  text-shadow: -1px 0 1px #000;
 }
 
 .intro .slogan h4 {
@@ -384,13 +268,9 @@ body#page-top {
 ============================ */
 
 .boxed-grey {
-  background: #f9f9f9;
   padding: 20px;
 }
 
-.team h5 {
-  margin-bottom: 10px;
-}
 
 .team p.subtitle {
   margin-bottom: 10px;
@@ -403,7 +283,7 @@ body#page-top {
 .team-social {
   margin-left: 0;
   padding-left: 0;
-
+  
 }
 
 .team-social {
@@ -455,7 +335,7 @@ body#page-top {
 
 .service-icon {
   margin-bottom: 20px;
-}
+} 
 
 
 
@@ -540,30 +420,16 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 .company-social .social-google a:hover{background: #333;}
 .company-social .social-vimeo a:hover{background: #71c6f3;}
 
-/* ===========================
---- Footer
-============================ */
-
-footer {
-  display: none;
-  text-align: center;
-  position: relative;
-  bottom: 0px;
-}
-
-footer p {
-  color: #f8f8f8;
-}
 
 /* ==========================
 Parallax
 ============================= */
 
-#parallax1{
+#parallax1{ 
   background-image: url(../img/parallax/1.jpg);
 }
 
-#parallax1:after {
+#parallax1:after {  
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
   content: "";
   position: absolute;
@@ -576,12 +442,12 @@ Parallax
 }
 
 
-#parallax2{
+#parallax2{ 
   background-image: url(../img/parallax/2.jpg);
 
 }
 
-#parallax2:after  {
+#parallax2:after  { 
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
   content: "";
   position: absolute;
@@ -598,6 +464,41 @@ Parallax
 --- Elements
 ============================ */
 
+.hero-text {
+  border-style: none;
+  font-family: 'Roboto';
+  border-width: 0;
+  color: #eee;
+  font-size: 60px;
+  line-height: 65px;
+  font-weight: 700;
+  background-color: rgba(0,0,0,.5);
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+
+/* text above scroll button */
+
+.scroll-text {
+  color: #FFF;
+  font-size: 2rem;
+  top: 105px;
+  font-family: 'roboto', sans-serif;
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+  width: 6%;
+  left: 47%;
+  border-radius: 5px;   
+
+}
+
+
+
+
+
+/* Scroll button */
+
 .btn {
   border-radius: 0;
     text-transform: uppercase;
@@ -608,22 +509,27 @@ Parallax
     transition: all .3s ease-in-out;
 }
 
+i {
+  color: #FFF;
+  padding-top: 5px; 
+}
+
+
 
 .btn-circle {
     width: 70px;
     height: 70px;
-    margin-top: 15px;
-    margin-right: 47.4%;
+    margin-top: 130px;
     margin-bottom: 45px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 50%;
     font-size: 40px;
     color: #fff;
-    background: 0 0;
+    background: rgba(255,255,255,.5);
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;  
 }
 
 .btn-circle.btn-dark {
@@ -631,13 +537,21 @@ Parallax
     color: #666;
 }
 
+.btn-circle:hover {
+  color: #000;
+  background-color: #FFF;
 
-.btn-circle:hover,
-.btn-circle:focus {
-    outline: 0;
-    color: #fff;
-    background: rgba(255,255,255,.1);
+  i {
+    color: #000;
+  }
+
 }
+
+.btn-circle:focus {
+  color: #FFF;
+  background: rgba(255,255,255,.5);
+}
+
 
 .btn-circle.btn-dark :hover,
 .btn-circle.btn-dark :focus {
@@ -669,7 +583,7 @@ Parallax
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulse {    
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -686,7 +600,7 @@ Parallax
     }
 }
 
-@-moz-keyframes pulse {
+@-moz-keyframes pulse {    
     0% {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -742,38 +656,20 @@ Parallax
 }
 
 
+
+
+
+
+
+
 /* Media queries */
 
 @media(min-width:767px) {
-
-    .navbar {
-        padding: 20px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .top-nav-collapse {
-        padding: 0;
-        background-color: #67B0D1;
-    }
-
-    .navbar-custom.top-nav-collapse {
-        border-bottom: 1px solid rgba(255,255,255,.3);
-    }
-
-    .intro {
-        height: 100%;
-        padding: 0;
-    }
-
+  
     .brand-heading {
         font-size: 100px;
     }
-
+  
 
     .intro-text {
         font-size: 25px;
@@ -782,28 +678,20 @@ Parallax
 
 }
 @media (max-width:768px) {
-
+  
   .team.boxed-grey {
     margin-bottom: 30px;
   }
-
+  
   .boxed-grey {
     margin-bottom: 30px;
   }
 
-
+  
 }
 
 @media (max-width:480px) {
-
-  .navbar-custom .nav.navbar-nav {
-    background-color: rgba(255,255,255,.4);
-  }
-
-  .navbar.navbar-custom.navbar-fixed-top {
-    margin-bottom: 30px;
-  }
-
+  
   .tp-banner-container {
     padding-top:40px;
   }
@@ -817,7 +705,7 @@ Parallax
     border-radius: 50%;
     font-size: 20px;
   }
-
+  
 }
 
 .business-profile-body {
@@ -833,3 +721,135 @@ Parallax
 .heading-about h2 {
   margin-top: 20px;
 }
+
+
+/* Landing page - 'why join?' section */
+
+#service p {
+  font-size: 2.3rem;
+}
+
+.why-join-1 {
+  width: 26.666%;
+  margin-left: 5%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.why-join-2 {
+  width: 26.666%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.why-join-3 {
+  width: 26.666%;
+  margin-right: 5%;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+/* Landing page - student preview section */
+
+.student-preview-card {
+  background-color: #F8F8F8;
+  
+  min-height: 177px;
+}
+
+.student-preview-name {
+  float: left;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.student-preview-avatar img {
+  float: right;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.student-preview-year {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.student-preview-skills {
+  text-align: left;
+  margin: 0;
+}
+
+
+/* sign up now button */
+
+#sign-up {
+  margin: 25px 0;
+  padding: 0;
+  height: 100px;
+}
+
+.sign-up-now {
+  width: 20%;
+  height: 100px;
+  background-color: #67B0D1;
+  border-radius: 25px;  
+  margin: 0 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  padding: 20px 55px;
+  text-align: center;
+}
+
+.sign-up-now:hover {
+      background-color: rgba(103,176,209,.5);
+}
+
+
+.sign-up-now a {
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family: 'roboto', sans-serif;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+
+/* New Business profile form */
+
+.new-bus-prof-header {
+  margin: 135px 30% 35px 30%;
+  width: 40%;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
+.new-bus-prof-form {
+  margin: 80px 10% 115px 0;
+  width: 70%;
+}
+
+.new-bus-prof-button {
+  margin: 0 0 0 35%;
+}
+
+/* New business job posting form */
+
+.business-listing-form {
+
+  h2 {
+    width: 50%;
+    margin: 150px 25% 0 25%;
+    text-align: center;
+  }
+}
+
+
+
+

@@ -24,4 +24,78 @@
 }
 
 
+/* This is styling the business profile information */
+
+.business-profile-header {
+  margin: 40px 25% 20px 25%;
+  width: 50%;
+  text-align: center; 
+}
+
+.business-profile-info {
+  margin: 20px 25%;
+  width: 50%;
+  background-color: #FFF;
+  border-style: none;
+ 
+  text-align: center;
+  padding: 2%;
+  
+  ul {
+  list-style: none;
+  }
+
+  li {
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+
+}
+
+.job-listing-instructions {
+
+  h2 {
+  margin: 60px 25% 20px 25%;
+  width: 50%;
+  text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+}
+
+
+/* This is styling the business listings 'show' page */
+
+.your-job-listing-info {
+
+  h3 {
+    margin: 40px 25% 20px 25%;
+    width: 50%;
+    text-align: center; 
+  }
+
+  p {
+    text-align: center; 
+  }
+
+}
+
+/*This is styling the business profile form*/
+
+.business-prof-form {
+  margin-top: 150px;
+
+  h2 {
+    width: 50%;
+    margin: 0 25%;
+    text-align: center;
+  }
+
+}
+
+
+
 

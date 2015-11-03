@@ -1,11 +1,10 @@
 $(document).ready(function(){
 
 	new WOW().init();
-
-	jQuery(window).load(function() { 
-		jQuery("#preloader").delay(100).fadeOut("slow");
-		jQuery("#load").delay(100).fadeOut("slow");
-	});
+	
+	djcpReady();
+		
+	
 
 
 	//jQuery to collapse the navbar on scroll
@@ -35,4 +34,66 @@ $(document).ready(function(){
 		});
 	});
 
+	$('.progress-bar').each(function(i,o) {
+		var $o = $(o);
+		$o.width($o.attr('data-percent') + '%')
+	});
 });
+
+$(document).on('ready page:load', function () {
+  djcpReady();
+});
+
+function djcpReady() {
+	$("#preloader").delay(500).fadeOut("slow");
+	$("#load").delay(500).fadeOut("slow");
+}
+
+
+//sorting 
+
+$(document).ready(function() {
+  var $container = $('.student_flex_index').isotope({
+    itemSelector: '.item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      last: '[data-last]'
+    }
+  });
+
+  $('#sortNameAsc').click(function() {
+    $container.isotope({
+      sortBy: 'last',
+      sortAscending: true
+    })
+  });
+$('#sortNameDesc').click(function() {
+    $container.isotope({
+      sortBy: 'last',
+      sortAscending: false
+    });
+  });
+ })
+
+$(document).ready(function() {
+  var $container = $('.biz_flex_index').isotope({
+    itemSelector: '.item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      name: '[data-name]'
+    }
+  });
+
+  $('#sortNameAsc').click(function() {
+    $container.isotope({
+      sortBy: 'name',
+      sortAscending: true
+    })
+  });
+$('#sortNameDesc').click(function() {
+    $container.isotope({
+      sortBy: 'name',
+      sortAscending: false
+    });
+  });
+ })

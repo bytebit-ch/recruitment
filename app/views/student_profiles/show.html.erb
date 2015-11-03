@@ -5,8 +5,9 @@
                     <!-- <img class="img-responsive" src='<%= image_tag avatar_url(@student_profile) %>'> -->
                     <div class="intro-text">
                         <p class="name">  <%= @student_profile.first_name %><br> <%= @student_profile.last_name %></p>
+                        <p><%= image_tag avatar_url(@student_profile), :class => "s_img" %></p>
                         <% if @student_profile.sponsor == true %>
-                            <p>Student already has a sponsor</p>
+                            <p class="sponsor">Student already has a sponsor</p>
                         <% end %>
 
 
@@ -14,8 +15,8 @@
                         <br>
                         <br>
                         <br>
-                        <p><hr class="star-light"></p>
-                        <span class="skills"><%= @student_profile.three_descriptive_words %></span>
+                       <!-- <p><hr class="star-light"></p> --> 
+                        
                     </div>
                 </div>
             </div>
@@ -30,7 +31,49 @@
                     <hr class="star-primary">
                 </div>
             </div>
-             <h1> <%= @student_profile.skills %></h1>
+                <div id="Proficiencies">
+    
+       
+
+    <div id="ProficienciesTop"><p>Ruby</p></div><!-- END ProficienciesTop -->
+
+    <div id="ProficienciesBottom">
+      <div class="progress">
+        <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%" data-percent="<%= @student_profile.ruby %>"></div>
+      </div>
+    </div><!--END ProficienciesBottom-->
+    <div id="ProficienciesTop"><p>Rails</p></div><!-- END ProficienciesTop -->
+
+    <div id="ProficienciesBottom">
+      <div class="progress">
+        <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%" data-percent="<%= @student_profile.rails %>"></div>
+      </div>
+    </div><!--END ProficienciesBottom-->
+    <div id="ProficienciesTop"><p>SQL</p></div><!-- END ProficienciesTop -->
+
+    <div id="ProficienciesBottom">
+      <div class="progress">
+        <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%" data-percent="<%= @student_profile.sql %>"></div>
+      </div>
+    </div><!--END ProficienciesBottom-->
+    <div id="ProficienciesTop"><p>HTML5</p></div><!-- END ProficienciesTop -->
+
+    <div id="ProficienciesBottom">
+      <div class="progress">
+        <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%" data-percent="<%= @student_profile.html %>"></div>
+      </div>
+    </div><!--END ProficienciesBottom-->
+    <div id="ProficienciesTop"><p>CSS</p></div><!-- END ProficienciesTop -->
+
+    <div id="ProficienciesBottom">
+      <div class="progress">
+        <div class="jquery progress-bar progress-bar-info" role="progressbar" style="width: 0%" data-percent="<%= @student_profile.css %>"></div>
+      </div>
+    </div><!--END ProficienciesBottom-->
+</div>
+
+
+             <p class="s_skills"> <%= @student_profile.skills %></p>
     </section>
 <section class="success" id="about">
         <div class="container">
@@ -40,26 +83,16 @@
                     <hr class="star-light">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>  <%= @student_profile.long_decription %></p>
-                </div>
-                <div class="col-lg-4">
-                    
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#" class="btn btn-lg btn-outline">
-                        
-                    </a>
-                </div>
-            </div>
-        </div>
+            
+                    <p class="s_skills">  <%= sanitize @student_profile.long_decription.html_safe %></p>
+                
+            
     </section>
  <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
+                    <h2>Contact <%= @student_profile.first_name %></h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -70,19 +103,20 @@
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>GitHub: <%= @student_profile.github_url %></p>
+                                <p> GitHub: <%= link_to @student_profile.github_url, "http://#{@student_profile.github_url}" %> </p>
                                 
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>Email: <%= @student_profile.user.email %></p>
+                                <p>Email: <a href='mailto:<%= @student_profile.user.email %>'><%= @student_profile.user.email %></p></a>
                                
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
-                                <p>Blog: <%= @student_profile.website %></p>
+                                <p>
+                                    Website: <%= link_to @student_profile.website, "http://#{@student_profile.website}" %></p>
                                 
                             </div>
                         </div>
@@ -115,12 +149,11 @@
             </div>
         </div>
     </section>
-<div class="edit_profiles">
+
 <%  if can? :edit, StudentProfile %>
-  <%= link_to 'Edit', edit_student_profile_path(@student_profile) %>
+  <%= link_to 'Edit ', edit_student_profile_path(@student_profile),  :class => "edit_profiles" %>
 <% end %>
 
 <%  if can? :manage, :all %>
-  <%= link_to 'Destroy', @student_profile,  :method => :delete  %>
+  <%= link_to 'Delete ', @student_profile,  :method => :delete,  :class => "edit_profiles_destroy"  %>
 <% end %>
-</div>
