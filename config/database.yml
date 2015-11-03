@@ -17,7 +17,7 @@ development:
   password: Iloverecruitment
   host: localhost
 
-  # socket: /Applications/MAMP/tmp/mysql/mysql.sock
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 
 # Warning: The database defined as "test" will be erased and

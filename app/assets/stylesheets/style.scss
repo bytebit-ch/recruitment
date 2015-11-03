@@ -283,7 +283,7 @@ body#page-top {
 .team-social {
   margin-left: 0;
   padding-left: 0;
-  
+
 }
 
 .team-social {
@@ -335,7 +335,7 @@ body#page-top {
 
 .service-icon {
   margin-bottom: 20px;
-} 
+}
 
 
 
@@ -425,11 +425,11 @@ form#contact-form input:focus,form#contact-form select:focus,form#contact-form t
 Parallax
 ============================= */
 
-#parallax1{ 
+#parallax1{
   background-image: url(../img/parallax/1.jpg);
 }
 
-#parallax1:after {  
+#parallax1:after {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
   content: "";
   position: absolute;
@@ -442,12 +442,12 @@ Parallax
 }
 
 
-#parallax2{ 
+#parallax2{
   background-image: url(../img/parallax/2.jpg);
 
 }
 
-#parallax2:after  { 
+#parallax2:after  {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC);
   content: "";
   position: absolute;
@@ -489,7 +489,7 @@ Parallax
   background-color: rgba(0,0,0,0.5);
   width: 6%;
   left: 47%;
-  border-radius: 5px;   
+  border-radius: 5px;
 
 }
 
@@ -511,7 +511,7 @@ Parallax
 
 i {
   color: #FFF;
-  padding-top: 5px; 
+  padding-top: 5px;
 }
 
 
@@ -529,7 +529,7 @@ i {
     background: rgba(255,255,255,.5);
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;  
+    transition: background .3s ease-in-out;
 }
 
 .btn-circle.btn-dark {
@@ -583,7 +583,7 @@ i {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -600,7 +600,7 @@ i {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0% {
         -moz-transform: scale(1);
         transform: scale(1);
@@ -665,11 +665,11 @@ i {
 /* Media queries */
 
 @media(min-width:767px) {
-  
+
     .brand-heading {
         font-size: 100px;
     }
-  
+
 
     .intro-text {
         font-size: 25px;
@@ -678,20 +678,20 @@ i {
 
 }
 @media (max-width:768px) {
-  
+
   .team.boxed-grey {
     margin-bottom: 30px;
   }
-  
+
   .boxed-grey {
     margin-bottom: 30px;
   }
 
-  
+
 }
 
 @media (max-width:480px) {
-  
+
   .tp-banner-container {
     padding-top:40px;
   }
@@ -705,7 +705,7 @@ i {
     border-radius: 50%;
     font-size: 20px;
   }
-  
+
 }
 
 .business-profile-body {
@@ -755,7 +755,7 @@ i {
 
 .student-preview-card {
   background-color: #F8F8F8;
-  
+
   min-height: 177px;
 }
 
@@ -794,26 +794,23 @@ i {
 }
 
 .sign-up-now {
-  width: 20%;
-  height: 100px;
+  width: 450px;
   background-color: #67B0D1;
-  border-radius: 25px;  
-  margin: 0 40%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
   position: relative;
   padding: 20px 55px;
   text-align: center;
 }
 
 .sign-up-now:hover {
-      background-color: rgba(103,176,209,.5);
+      background-color: rgba(103,176,209,.9);
 }
 
 
 .sign-up-now a {
   color: #FFF;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-family: 'roboto', sans-serif;
   line-height: 3rem;
   text-transform: uppercase;
